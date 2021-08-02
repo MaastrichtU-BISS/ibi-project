@@ -1,6 +1,6 @@
-import Amplify from 'aws-amplify'
-import awsExports from '../aws-exports'
+// import Amplify from 'aws-amplify'
+// import awsExports from '../aws-exports'
 
-Amplify.configure(awsExports)
+// Amplify.configure(awsExports)
 
-export * from './apollo'
+// export * from './apollo'
