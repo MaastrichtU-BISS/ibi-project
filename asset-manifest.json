@@ -1,0 +1,34 @@
+{
+  "files": {
+    "app.js": "/ibi-project/static/js/app.4d75b227.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.4d75b227.chunk.js.map",
+    "runtime~app.js": "/ibi-project/static/js/runtime~app.b52537db.js",
+    "runtime~app.js.map": "/ibi-project/static/js/runtime~app.b52537db.js.map",
+    "static/js/2.ad705bee.chunk.js": "/ibi-project/static/js/2.ad705bee.chunk.js",
+    "static/js/2.ad705bee.chunk.js.map": "/ibi-project/static/js/2.ad705bee.chunk.js.map",
+    "fonts/AntDesign.ttf": "/ibi-project/./fonts/AntDesign.ttf",
+    "fonts/Entypo.ttf": "/ibi-project/./fonts/Entypo.ttf",
+    "fonts/Feather.ttf": "/ibi-project/./fonts/Feather.ttf",
+    "fonts/FontAwesome.ttf": "/ibi-project/./fonts/FontAwesome.ttf",
+    "fonts/FontAwesome5_Brands.ttf": "/ibi-project/./fonts/FontAwesome5_Brands.ttf",
+    "fonts/FontAwesome5_Solid.ttf": "/ibi-project/./fonts/FontAwesome5_Solid.ttf",
+    "fonts/Fontisto.ttf": "/ibi-project/./fonts/Fontisto.ttf",
+    "fonts/Foundation.ttf": "/ibi-project/./fonts/Foundation.ttf",
+    "fonts/Ionicons.ttf": "/ibi-project/./fonts/Ionicons.ttf",
+    "fonts/MaterialCommunityIcons.ttf": "/ibi-project/./fonts/MaterialCommunityIcons.ttf",
+    "fonts/MaterialIcons.ttf": "/ibi-project/./fonts/MaterialIcons.ttf",
+    "fonts/SimpleLineIcons.ttf": "/ibi-project/./fonts/SimpleLineIcons.ttf",
+    "favicon-16.png": "/ibi-project/favicon-16.png",
+    "favicon-32.png": "/ibi-project/favicon-32.png",
+    "favicon.ico": "/ibi-project/favicon.ico",
+    "index.html": "/ibi-project/index.html",
+    "manifest.json": "/ibi-project/manifest.json",
+    "serve.json": "/ibi-project/serve.json",
+    "static/js/2.ad705bee.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.ad705bee.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.b52537db.js",
+    "static/js/2.ad705bee.chunk.js",
+    "static/js/app.4d75b227.chunk.js"
+  ]
+}
