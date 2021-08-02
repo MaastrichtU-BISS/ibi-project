@@ -53,6 +53,7 @@ jobs:
           else
           npm i
           fi
+          export CI=true
           env
           expo build:web
       - name: Deploy
