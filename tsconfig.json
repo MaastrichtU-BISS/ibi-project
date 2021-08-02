@@ -1,6 +1,59 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": [
+        "./components/*"
+      ],
+      "@components": [
+        "./components"
+      ],
+      "@utils": [
+        "./utils"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@hooks": [
+        "./hooks"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@constants": [
+        "./constants"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@core/*": [
+        "./core/*"
+      ],
+      "@core": [
+        "./core"
+      ],
+      "@store/*": [
+        "./store/*"
+      ],
+      "@store": [
+        "./store"
+      ],
+      "@type": [
+        "./type"
+      ],
+      "@root": [
+        "./src"
+      ],
+      "@root/*": [
+        "./*"
+      ]
+    }
+  },
+  "exclude": ["./amplify"]
 }
