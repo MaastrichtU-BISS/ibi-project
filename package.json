@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://maastrichtu-biss.github.io/ibi-project/",
+  "homepage": "http://maastrichtu-biss.github.io/ibi-project",
   "scripts": {
     "start": "expo start",
     "deploy": "gh-pages -d web-build",
