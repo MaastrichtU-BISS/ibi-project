@@ -53,6 +53,7 @@ jobs:
           else
           npm i
           fi
+          env
           expo build:web
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
