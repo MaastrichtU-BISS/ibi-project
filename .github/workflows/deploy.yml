@@ -45,6 +45,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "gh-actions"
+          yarn global add expo-cli
           if [ -e yarn.lock ]; then
           yarn install --frozen-lockfile
           elif [ -e package-lock.json ]; then
@@ -52,7 +53,6 @@ jobs:
           else
           npm i
           fi
-          yarn global add expo-cli
           expo build:web
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
