@@ -52,7 +52,7 @@ jobs:
           else
           npm i
           fi
-          yarn add expo-cli -D
+          yarn global add expo-cli
           npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
