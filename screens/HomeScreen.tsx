@@ -165,6 +165,7 @@ export const HomeScreen = (props: any) => {
       </Paper>
     )
   }
+  const DATA  = jsonFile
   return (
     <ScreenContainer
       scrollable

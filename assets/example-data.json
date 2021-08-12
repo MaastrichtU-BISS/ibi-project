@@ -1,0 +1,73 @@
+{
+  "PieChart": [
+      {
+          "id": "FONDS",
+          "label": "FONDS",
+          "value": 119,
+          "color": "#18376D"
+      },
+      {
+          "id": "VERGELIJKBARE PENSIOENFONDSEN",
+          "label": "VERGELIJKBARE PENSIOENFONDSEN",
+          "value": 69,
+          "color": "#B8CCE4"
+      },
+      {
+          "id": "ALLE DEELNEMENDE PENSIOENFONDSEN",
+          "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
+          "value": 495,
+          "color": "#F57F17"
+      }
+  ],
+  "RadarChart": [
+      {
+          "FONDS": 10,
+          "VERGELIJKBARE PENSIOENFONDSEN": 60,
+          "ALLE DEELNEMENDE PENSIOENFONDSEN": 32,
+          "color": "#18376D"
+      },
+      {
+          "FONDS": 20,
+          "VERGELIJKBARE PENSIOENFONDSEN": 70,
+          "ALLE DEELNEMENDE PENSIOENFONDSEN": 72,
+          "color": "#B8CCE4"
+      },
+      {
+          "FONDS": 30,
+          "VERGELIJKBARE PENSIOENFONDSEN": 28,
+          "ALLE DEELNEMENDE PENSIOENFONDSEN": 75,
+          "color": "#F57F17"
+      }
+  ],
+  "BarChart": [
+      {
+          "country": "AD",
+          "FONDS": 24,
+          "FONDSColor": "#18376D",
+          "VERGELIJKBARE PENSIOENFONDSEN": 187,
+          "VERGELIJKBARE PENSIOENFONDSENColor": "#B8CCE4",
+          "ALLE DEELNEMENDE PENSIOENFONDSEN": 86,
+          "ALLE DEELNEMENDE PENSIOENFONDSENColor": "#F57F17"
+      }
+  ],
+  "HalfPieChart": [
+      {
+          "id": "FONDS",
+          "label": "FONDS",
+          "value": 119,
+          "color": "#18376D"
+      },
+      {
+          "id": "VERGELIJKBARE PENSIOENFONDSEN",
+          "label": "VERGELIJKBARE PENSIOENFONDSEN",
+          "value": 69,
+          "color": "#B8CCE4"
+      },
+      {
+          "id": "ALLE DEELNEMENDE PENSIOENFONDSEN",
+          "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
+          "value": 495,
+          "color": "#F57F17"
+      }
+  ]
+}
