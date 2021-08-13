@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/ibi-project/static/js/app.bc573287.chunk.js",
-    "app.js.map": "/ibi-project/static/js/app.bc573287.chunk.js.map",
+    "app.js": "/ibi-project/static/js/app.66e7b799.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.66e7b799.chunk.js.map",
     "runtime~app.js": "/ibi-project/static/js/runtime~app.b52537db.js",
     "runtime~app.js.map": "/ibi-project/static/js/runtime~app.b52537db.js.map",
-    "static/js/2.395aee21.chunk.js": "/ibi-project/static/js/2.395aee21.chunk.js",
-    "static/js/2.395aee21.chunk.js.map": "/ibi-project/static/js/2.395aee21.chunk.js.map",
+    "static/js/2.8faef7e8.chunk.js": "/ibi-project/static/js/2.8faef7e8.chunk.js",
+    "static/js/2.8faef7e8.chunk.js.map": "/ibi-project/static/js/2.8faef7e8.chunk.js.map",
     "fonts/AntDesign.ttf": "/ibi-project/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/ibi-project/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/ibi-project/./fonts/Feather.ttf",
@@ -24,11 +24,11 @@
     "index.html": "/ibi-project/index.html",
     "manifest.json": "/ibi-project/manifest.json",
     "serve.json": "/ibi-project/serve.json",
-    "static/js/2.395aee21.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.395aee21.chunk.js.LICENSE.txt"
+    "static/js/2.8faef7e8.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.8faef7e8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.b52537db.js",
-    "static/js/2.395aee21.chunk.js",
-    "static/js/app.bc573287.chunk.js"
+    "static/js/2.8faef7e8.chunk.js",
+    "static/js/app.66e7b799.chunk.js"
   ]
 }
