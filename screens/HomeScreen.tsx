@@ -2,6 +2,7 @@ import * as ChartExamples from '@components/ChartExamples'
 import { IconSet } from '@components/IconSet'
 import { Lottie } from '@components/Lottie'
 import { Paper } from '@components/Paper'
+import * as R from 'colay/ramda'
 import {
   readTextFile,
 } from '@utils'
@@ -11,17 +12,20 @@ import {
   Button, Center, Divider, FlatList,
   Heading, HStack, PresenceTransition,
   useBreakpointValue, useColorMode, useToast,
+  Stack,
 } from 'native-base'
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
 // import { PDFDocument } from 'pdf-lib'
 // import * as R from 'colay/ramda'
 import html2canvas from 'html2canvas'
-import { DATA } from '@constants'
+import Form from 'colay-form'
 import { ScreenContainer } from '@components/ScreenContainer'
 import {
   download,
 } from 'colay-ui/utils/download'
+import { INPUT_JSON_SCHEMA } from '../constants/inputJsonSchema'
+import { DATA as SAMPLE_DATA } from '../constants'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
 
@@ -29,8 +33,9 @@ export const HomeScreen = (props: any) => {
   const { } = props
   const toast = useToast()
   const windowDimensions = useWindowDimensions()
-  const [jsonFile, setJSONFile] = React.useState(null)
+  const [data, setData] = React.useState(null)
   const [status, setStatus] = React.useState('idle')
+  const [formVisible, setFormVisible] = React.useState(false)
   const { toggleColorMode } = useColorMode()
   const numColumns = useBreakpointValue({
     base: 1,
@@ -42,7 +47,7 @@ export const HomeScreen = (props: any) => {
         const result = await DocumentPicker.getDocumentAsync({ type: 'application/json' })
         if (result.type === 'success') {
           const fileText = await readTextFile(result.file!)
-          setJSONFile(JSON.parse(fileText))
+          setData(JSON.parse(fileText))
           setStatus('loading')
           setTimeout(() => setStatus('idle'), 2500)
         }
@@ -134,8 +139,18 @@ export const HomeScreen = (props: any) => {
         })
       })
     },
-    [jsonFile],
+    [data],
   )
+  const onPressUpdateData = () => R.callLater(
+    () => setFormVisible(!formVisible),
+    0,
+  )
+  const onUpdateData = React.useMemo(() => R.debounce(
+    ({ formData }) => {
+      setTimeout(() => setData(formData), 0)
+    },
+    300,
+  ), [])
   if (status === 'loading') {
     return (
       <Paper
@@ -165,7 +180,7 @@ export const HomeScreen = (props: any) => {
       </Paper>
     )
   }
-  const DATA  = jsonFile
+
   return (
     <ScreenContainer
       scrollable
@@ -180,7 +195,7 @@ export const HomeScreen = (props: any) => {
           size="lg"
           fontWeight="bold"
         >
-          {/* {jsonFile ? 'Results' : 'Chart Creator' } */}
+          {/* {data ? 'Results' : 'Chart Creator' } */}
           Chart Creator
         </Heading>
         <HStack
@@ -193,7 +208,7 @@ export const HomeScreen = (props: any) => {
           />
 
           {
-          jsonFile
+          data
           && (
             false && (
               <Button
@@ -202,6 +217,16 @@ export const HomeScreen = (props: any) => {
                 Download
               </Button>
             )
+          )
+}
+          {
+          data
+          && false && (
+          <Button
+            onPress={onPressUpdateData}
+          >
+            { formVisible ? 'Close Form' : 'Update Data'}
+          </Button>
           )
 }
           <Button
@@ -213,28 +238,30 @@ export const HomeScreen = (props: any) => {
       </Box>
       <Divider w="100%" />
       {
-        !jsonFile
+        !data
           ? (
-            <Center
-              flex={1}
-            >
-              <Lottie
-                source={{
-                  uri: 'https://assets6.lottiefiles.com/packages/lf20_q5qeoo3q.json',
-                }}
-                style={{
-                  width: '65%',
-                  height: '73%',
-                }}
-                resizeMode="cover"
-              />
-              <Heading
-                size="md"
-                fontWeight="bold"
+            <>
+              <Center
+                flex={1}
               >
-                Let's Build Perfect Charts!
-              </Heading>
-            </Center>
+                <Lottie
+                  source={{
+                    uri: 'https://assets6.lottiefiles.com/packages/lf20_q5qeoo3q.json',
+                  }}
+                  style={{
+                    width: '65%',
+                    height: '73%',
+                  }}
+                  resizeMode="cover"
+                />
+                <Heading
+                  size="md"
+                  fontWeight="bold"
+                >
+                  Let's Build Perfect Charts!
+                </Heading>
+              </Center>
+            </>
           )
           : (
             <>
@@ -256,13 +283,23 @@ export const HomeScreen = (props: any) => {
                   height: '90%',
                 }}
               >
-                <FlatList
-                  key={`FlatList:${numColumns}`}
-                  nativeID="ChartContainer"
+                <Stack
+                  direction="row"
+                  space={2}
+                >
+                  <Center
+                    flex={1}
+                  >
+                    <FlatList
+                      key={`FlatList:${numColumns}`}
+                      style={{
+                        flex: 1,
+                      }}
+                      nativeID="ChartContainer"
                   // extraData={[window.width]}
-                  numColumns={numColumns}
-                  data={CHART_KEYS}
-                  {...(
+                      numColumns={numColumns}
+                      data={CHART_KEYS}// CHART_KEYS}
+                      {...(
                   numColumns > 1
                     ? {
                       columnWrapperStyle: {
@@ -271,24 +308,41 @@ export const HomeScreen = (props: any) => {
                     }
                     : {}
                     )}
-                  renderItem={({ item: chartName }) => {
-                    const Chart = ChartExamples[chartName]
-                    return (
-                      <Box
-                        p={2}
-                        h={400}
-                        w={windowDimensions.width}
-                        alignItems="center"
-                        justifyContent="center"
-                        nativeID={`ChartContainer${chartName}`}
-                      >
-                        <Chart
-                          data={DATA[chartName]}
-                        />
-                      </Box>
-                    )
-                  }}
-                />
+                      renderItem={({ item: chartName }) => {
+                        const Chart = ChartExamples[chartName]
+                        return (
+                          <Box
+                            p={2}
+                            h={400}
+                            w={windowDimensions.width}
+                            alignItems="center"
+                            justifyContent="center"
+                            nativeID={`ChartContainer${chartName}`}
+                          >
+                            <Chart
+                              data={data[chartName]}
+                            />
+                          </Box>
+                        )
+                      }}
+                    />
+                  </Center>
+                  {
+              formVisible && (
+                <Center
+                  flex={1}
+                  // height={500}
+                >
+                  <Form
+                    formData={data}
+                    schema={INPUT_JSON_SCHEMA}
+                    onChange={onUpdateData}
+                  />
+                </Center>
+              )
+            }
+                </Stack>
+
               </PresenceTransition>
 
             </>
