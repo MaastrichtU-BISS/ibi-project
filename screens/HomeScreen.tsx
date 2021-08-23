@@ -19,7 +19,8 @@ import { useWindowDimensions } from 'react-native'
 // import { PDFDocument } from 'pdf-lib'
 // import * as R from 'colay/ramda'
 import html2canvas from 'html2canvas'
-import Form from 'colay-form'
+// import Form from 'colay-form'
+import { JSONEditor } from '@components/JSONEditor'
 import { ScreenContainer } from '@components/ScreenContainer'
 import {
   download,
@@ -221,7 +222,7 @@ export const HomeScreen = (props: any) => {
 }
           {
           data
-          && false && (
+          && true && (
           <Button
             onPress={onPressUpdateData}
           >
@@ -286,6 +287,7 @@ export const HomeScreen = (props: any) => {
                 <Stack
                   direction="row"
                   space={2}
+                  height="100%"
                 >
                   <Center
                     flex={1}
@@ -329,16 +331,22 @@ export const HomeScreen = (props: any) => {
                   </Center>
                   {
               formVisible && (
-                <Center
+                <Stack
                   flex={1}
                   // height={500}
+                  height="100%"
                 >
-                  <Form
+                  {/* <Form
                     formData={data}
                     schema={INPUT_JSON_SCHEMA}
                     onChange={onUpdateData}
+                  /> */}
+                  <JSONEditor
+                    
+                    value={data}
+                    onChange={(value) => onUpdateData({ formData: value })}
                   />
-                </Center>
+                </Stack>
               )
             }
                 </Stack>
