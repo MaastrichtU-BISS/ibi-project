@@ -16,6 +16,7 @@ import {
 } from 'native-base'
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
+import * as Clipboard from 'expo-clipboard'
 // import { PDFDocument } from 'pdf-lib'
 // import * as R from 'colay/ramda'
 import html2canvas from 'html2canvas'
@@ -34,7 +35,12 @@ export const HomeScreen = (props: any) => {
   const { } = props
   const toast = useToast()
   const windowDimensions = useWindowDimensions()
-  const [data, setData] = React.useState(null)
+  const initialData = React.useMemo(() => {
+    const urlSearchParams = new URLSearchParams(window.location.search)
+    const params = Object.fromEntries(urlSearchParams.entries())
+    return params?.data && JSON.parse(params?.data)
+  }, [])
+  const [data, setData] = React.useState(initialData)
   const [status, setStatus] = React.useState('idle')
   const [formVisible, setFormVisible] = React.useState(false)
   const { toggleColorMode } = useColorMode()
@@ -63,6 +69,15 @@ export const HomeScreen = (props: any) => {
     },
     [],
   )
+  const onShare = React.useCallback(() => {
+    const link = `${window.location.origin}?${jsonToQuery({ data })}`
+    Clipboard.setString(link)
+    toast.show({
+      title: 'Share',
+      description: 'Sharing link copied to clipboard!',
+      status: 'success',
+    })
+  }, [data])
   const onDownload = React.useCallback(
     async () => {
       // const pdfDoc = await PDFDocument.create()
@@ -222,6 +237,18 @@ export const HomeScreen = (props: any) => {
 }
           {
           data
+          && (
+            (
+            <Button
+              onPress={onShare}
+            >
+              Share
+            </Button>
+            )
+          )
+}
+          {
+          data
           && true && (
           <Button
             onPress={onPressUpdateData}
@@ -342,7 +369,6 @@ export const HomeScreen = (props: any) => {
                     onChange={onUpdateData}
                   /> */}
                   <JSONEditor
-                    
                     value={data}
                     onChange={(value) => onUpdateData({ formData: value })}
                   />
@@ -358,4 +384,14 @@ export const HomeScreen = (props: any) => {
       }
     </ScreenContainer>
   )
+}
+
+const jsonToQuery = (obj: any) => {
+  const str = []
+  for (const p in obj) {
+    if (obj.hasOwnProperty(p)) {
+      str.push(`${encodeURIComponent(p)}=${encodeURIComponent(JSON.stringify(obj[p]))}`)
+    }
+  }
+  return str.join('&')
 }
