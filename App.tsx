@@ -1,6 +1,3 @@
-import {
-  ApolloProvider,
-} from '@apollo/client'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { StatusBar } from 'expo-status-bar'
 import {
@@ -11,6 +8,7 @@ import 'react-native-gesture-handler'
 import './config'
 // import { apolloClient } from './config/apollo'
 import useInitializer from './hooks/useInitializer'
+import AuthDemo from '@components/Auth'
 // import useColorScheme from './hooks/useColorScheme'
 // import Navigation from './navigation'
 import { HomeScreen } from './screens/HomeScreen'
@@ -49,6 +47,7 @@ export default function App() {
       {/* <Navigation colorScheme={colorScheme} /> */}
       {/* <Example /> */}
       <HomeScreen />
+      {/* <AuthDemo /> */}
       <StatusBar />
     </NativeBaseProvider>
   // </ApolloProvider>

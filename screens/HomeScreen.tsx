@@ -70,7 +70,7 @@ export const HomeScreen = (props: any) => {
     [],
   )
   const onShare = React.useCallback(() => {
-    const link = `${window.location.origin}?${jsonToQuery({ data })}`
+    const link = `${window.location.origin}${window.location.pathname}?${jsonToQuery({ data })}`
     Clipboard.setString(link)
     toast.show({
       title: 'Share',
