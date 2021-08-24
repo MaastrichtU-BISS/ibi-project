@@ -7,11 +7,9 @@ type OptionsType = {
   storageKey?: string
   paths: {
     accessTokenExpirationDate: string;
-    refreshToken: string;
-    accessToken: string
   }
-  revokeAsync: (accessToken: string) => Promise<any | void>
-  refreshAsync: (refreshToken: string) => Promise<any | void>
+  revokeAsync: (authState: AuthState) => Promise<any | void>
+  refreshAsync: (authState: AuthState) => Promise<any | void>
 }
 
 type AuthState = any
@@ -23,11 +21,13 @@ export const createAuthSessionManager = (options: OptionsType) => {
     refreshAsync,
     revokeAsync,
   } = options
+
   const signInAsync = async (authState: AuthState) => {
     await cacheAuthAsync(authState)
     return authState
   }
   const cacheAuthAsync = async (authState: AuthState) => {
+    ref.currentAuthState = authState
     const storageValue = JSON.stringify(authState)
     let result
     if (Platform.OS !== 'web') {
@@ -74,29 +74,21 @@ export const createAuthSessionManager = (options: OptionsType) => {
   }
 
   const refreshAuthAsync = async (authState: AuthState) => {
-    const refreshToken = R.path(
-      paths.refreshToken,
-      authState,
-    ) as string
-    const newAuthState = await refreshAsync(refreshToken)
+    const newAuthState = await refreshAsync?.(authState)
     await cacheAuthAsync(newAuthState)
     return newAuthState
   }
 
   const signOutAsync = async (authState: AuthState) => {
-    const accessToken = R.path(
-      paths.accessToken,
-      authState,
-    ) as string
     try {
-      await revokeAsync(accessToken)
+      await revokeAsync?.(authState)
       await removeCachedAuthAsync()
       return null
     } catch (e) {
       alert(`Failed to revoke token: ${e.message}`)
     }
   }
-  return {
+  const ref = {
     signInAsync,
     signOutAsync,
     cacheAuthAsync,
@@ -104,5 +96,12 @@ export const createAuthSessionManager = (options: OptionsType) => {
     removeCachedAuthAsync,
     checkIfTokenExpired,
     refreshAuthAsync,
+    currentAuthState: getCachedAuthAsync(),
+    isReady: false,
   }
+  setTimeout(async () => {
+    ref.currentAuthState = await getCachedAuthAsync()
+    ref.isReady = true
+  }, 0)
+  return ref
 }

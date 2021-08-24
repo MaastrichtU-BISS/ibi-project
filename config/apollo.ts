@@ -3,10 +3,16 @@ import {
 } from '@apollo/client'
 import { setContext } from '@apollo/client/link/context'
 import { Auth } from 'aws-amplify'
-import awsExports from '../aws-exports'
+// import awsExports from '../aws-exports'
+const awsExports = {
+  aws_appsync_graphqlEndpoint: 'http://localhost:3000/graphql',
+  aws_appsync_apiKey: '123aws_appsync_apiKey',
+}
+
+const URI = awsExports.aws_appsync_graphqlEndpoint
 
 const httpLink = createHttpLink({
-  uri: awsExports.aws_appsync_graphqlEndpoint,
+  uri: URI,
 })
 
 const authLink = setContext(async (_, { headers }) => {

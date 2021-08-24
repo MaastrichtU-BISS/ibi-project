@@ -1,0 +1,6 @@
+query findManyPost {
+  findManyPost {
+    id
+    title
+  }
+}

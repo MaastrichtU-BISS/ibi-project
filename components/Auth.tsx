@@ -1,57 +1,80 @@
 import * as React from 'react'
-import { Button, Text, View } from 'react-native'
+import { Button, View } from 'react-native'
 import * as AuthSession from 'expo-auth-session'
 import * as WebBrowser from 'expo-web-browser'
+import { isBrowser } from 'colay-ui'
 import { createAuthSessionManager } from '../utils/Auth'
 
 WebBrowser.maybeCompleteAuthSession()
 
-const useProxy = true
+const useProxy = false
 
 const redirectUri = AuthSession.makeRedirectUri({
   useProxy,
   // scheme: 'your.app',
 })
 
-const discovery = AuthSession.fetchDiscoveryAsync('https://demo.identityserver.io')
+const AuthProviders = {
+  callbackURL: 'http://localhost:19006',
+  github: {
+    discovery: {
+      authorizationEndpoint: 'http://localhost:3000/auth-github',
+      // authorizationEndpoint: 'https://github.com/login/oauth/authorize',
+      tokenEndpoint: 'https://github.com/login/oauth/access_token',
+      revocationEndpoint: 'https://github.com/settings/connections/applications/3b4d51e89cd0216dc26a',
+    },
+    config: {
+      clientId: '3b4d51e89cd0216dc26a',
+      scopes: ['identity', 'user', 'email', 'phone'],
+    },
+    useProxy: false,
+  },
+} as const
+const authSessionManager = createAuthSessionManager({
 
-// {
-//   authorizationEndpoint: 'https://github.com/login/oauth/authorize',
-//   tokenEndpoint: 'https://github.com/login/oauth/access_token',
-//   revocationEndpoint: 'https://github.com/settings/connections/applications/<CLIENT_ID>',
-// }
-
-
-// const authSessionManager = createAuthSessionManager({
-
-// })
+})
 
 export default function App() {
-  // Create and load an auth request
-  const currentAuthRef = React.useRef()
+  React.useEffect(() => {
+    if (!isBrowser) {
+      WebBrowser.warmUpAsync()
+    }
+
+    return () => {
+      if (!isBrowser) {
+        WebBrowser.coolDownAsync()
+      }
+    }
+  }, [])
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Button
         title="Login!"
         onPress={async () => {
-          currentAuthRef.current = new AuthSession.AuthRequest({
-            clientId: 'native.code',
+          const authRequest = new AuthSession.AuthRequest({
+            ...AuthProviders.github.config,
             redirectUri,
-            scopes: ['identity'],
           })
-          const discovery = await AuthSession.fetchDiscoveryAsync('https://demo.identityserver.io')
-          const response = await currentAuthRef.current.promptAsync({
-            ...discovery,
-            useProxy,
+          const result = await authRequest.promptAsync({
+            ...AuthProviders.github.discovery,
+          }, {
+            useProxy: AuthProviders.github.useProxy,
           })
-          if (response && response.type === 'success') {
-            const authState = response.params
-            console.log(authState)
+          // const {
+          //   url,
+          //   type,
+          // } = await WebBrowser.openAuthSessionAsync(
+          //   AuthProviders.github.discovery.authorizationEndpoint,
+          //   AuthProviders.callbackURL,
+          //   { showInRecents: false },
+          // )
+          if (result.type === 'cancel' || result.type === 'dismiss') {
+            return { type: result.type }
           }
-          console.log('A', response)
+          console.log('AA', result)
+          return result
         }}
       />
-      {/* {response && <Text>{JSON.stringify(response, null, 2)}</Text>} */}
     </View>
   )
 }

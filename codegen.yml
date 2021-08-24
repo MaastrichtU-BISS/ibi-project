@@ -1,0 +1,8 @@
+schema: ./api/graphql/schema.graphql
+documents: "./api/graphql/**/*.graphql"
+generates:
+  ./api/graphql/index.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo

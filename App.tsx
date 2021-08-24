@@ -6,12 +6,14 @@ import {
 import React from 'react'
 import 'react-native-gesture-handler'
 import './config'
-// import { apolloClient } from './config/apollo'
 import useInitializer from './hooks/useInitializer'
-import AuthDemo from '@components/Auth'
+import { HomeScreen } from './screens/HomeScreen'
+// import { ApolloProvider } from '@apollo/client'
+// import AuthDemo from '@components/Auth'
+// import { GraphqlTest } from '@components/GraphqlTest'
+// import { apolloClient } from './config/apollo'
 // import useColorScheme from './hooks/useColorScheme'
 // import Navigation from './navigation'
-import { HomeScreen } from './screens/HomeScreen'
 
 const colorModeManager: StorageManager = {
   get: async () => {
@@ -47,6 +49,7 @@ export default function App() {
       {/* <Navigation colorScheme={colorScheme} /> */}
       {/* <Example /> */}
       <HomeScreen />
+      {/* <GraphqlTest /> */}
       {/* <AuthDemo /> */}
       <StatusBar />
     </NativeBaseProvider>
