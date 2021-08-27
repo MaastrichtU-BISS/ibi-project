@@ -1,32 +1,35 @@
 import * as ChartExamples from '@components/ChartExamples'
 import { IconSet } from '@components/IconSet'
+// import Form from 'colay-form'
+import { JSONEditor } from '@components/JSONEditor'
 import { Lottie } from '@components/Lottie'
 import { Paper } from '@components/Paper'
-import * as R from 'colay/ramda'
+import { ScreenContainer } from '@components/ScreenContainer'
 import {
   readTextFile,
 } from '@utils'
-import * as DocumentPicker from 'expo-document-picker'
-import {
-  Box,
-  Button, Center, Divider, FlatList,
-  Heading, HStack, PresenceTransition,
-  useBreakpointValue, useColorMode, useToast,
-  Stack,
-} from 'native-base'
-import React from 'react'
-import { useWindowDimensions } from 'react-native'
-import * as Clipboard from 'expo-clipboard'
-// import { PDFDocument } from 'pdf-lib'
-// import * as R from 'colay/ramda'
-import html2canvas from 'html2canvas'
-// import Form from 'colay-form'
-import { JSONEditor } from '@components/JSONEditor'
-import { ScreenContainer } from '@components/ScreenContainer'
 import {
   download,
 } from 'colay-ui/utils/download'
-import { INPUT_JSON_SCHEMA } from '../constants/inputJsonSchema'
+import * as R from 'colay/ramda'
+import * as Clipboard from 'expo-clipboard'
+import * as DocumentPicker from 'expo-document-picker'
+// import { PDFDocument } from 'pdf-lib'
+// import * as R from 'colay/ramda'
+import html2canvas from 'html2canvas'
+import {
+  Box,
+  Button, Center, Divider, Heading, HStack, NativeBaseProvider,
+  PresenceTransition, Stack, useBreakpointValue, useColorMode, useToast,
+  ScrollView,
+} from 'native-base'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { useWindowDimensions, View } from 'react-native'
+import 'react-native-gesture-handler'
+import {
+  colorModeManager, NATIVE_BASE_CONFIG,
+} from '@root/config/native-base'
 import { DATA as SAMPLE_DATA } from '../constants'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
@@ -40,7 +43,7 @@ export const HomeScreen = (props: any) => {
     const params = Object.fromEntries(urlSearchParams.entries())
     return params?.data && JSON.parse(params?.data)
   }, [])
-  const [data, setData] = React.useState(initialData)
+  const [data, setData] = React.useState(SAMPLE_DATA)
   const [status, setStatus] = React.useState('idle')
   const [formVisible, setFormVisible] = React.useState(false)
   const { toggleColorMode } = useColorMode()
@@ -80,64 +83,6 @@ export const HomeScreen = (props: any) => {
   }, [data])
   const onDownload = React.useCallback(
     async () => {
-      // const pdfDoc = await PDFDocument.create()
-      // try {
-      //   let index = 0
-      //   await R.mapAsyncSeries(
-      //     async (chartName) => {
-      //       try {
-      //         const page = pdfDoc.addPage()
-      // const source = document.getElementById(`ChartContainer${chartName}`)
-      // const width = source?.scrollWidth
-      // const height = source?.scrollHeight
-      // const canvas = await html2canvas(source, {
-      //   windowWidth: source?.scrollWidth,
-      //   windowHeight: source?.scrollHeight,
-      //   width,
-      //   height,
-      // })
-      //         const arrayBuffer = await new Promise(async (res, rej) => {
-      //           canvas.toBlob((blob) => {
-      //             const reader = new FileReader()
-      //             reader.addEventListener('loadend', () => {
-      //               const arrayBuffer = reader.result
-      //               // Dispay Blob content in an Image.
-      //               const blob = new Blob([arrayBuffer], { type: 'image/jpg' })
-      //               res(arrayBuffer)
-      //             })
-      //             reader.readAsArrayBuffer(blob)
-      //           }, 'image/jpg')
-      //         })
-      //         // canvas.getContext('2d')?.scale(1 / (width / 1123), 1 / (height / 794))
-      //         await pdfDoc.embedJpg(
-      //           arrayBuffer,
-      //         )
-      //         // canvas.toBlob((blob) => {
-      //         //   window.open(URL.createObjectURL(blob), '__blank')
-      //         // })
-      //         index += 1
-      //       } catch (error) {
-      //         console.log(error)
-      //       }
-      //       return 1
-      //     },
-      //   )(CHART_KEYS)
-      //   console.log('FINISH')
-      //   const pdfBytes = await pdfDoc.save()
-
-      // Trigger the browser to download the PDF document
-      // download(pdfBytes, {
-      //   name: 'pdf-lib_image_embedding_example.pdf',
-      //   mimeType: '"application/pdf"',
-      // })
-      // } catch (error) {
-      //   console.error(error)
-      //   toast.show({
-      //     title: 'Something went wrong',
-      //     status: 'error',
-      //     description: error.message,
-      //   })
-      // }
       const source = document.getElementById('ChartContainer')
       const width = source?.scrollWidth
       const height = source?.scrollHeight
@@ -167,6 +112,44 @@ export const HomeScreen = (props: any) => {
     },
     300,
   ), [])
+
+  const containerID = React.useMemo(() => R.uuid(), [])
+  React.useEffect(() => {
+    if (data) {
+      CHART_KEYS.map((chartName) => {
+        const chartData = data[chartName]
+        if (chartData && document.getElementById(chartName)) {
+          const Chart = ChartExamples[chartName]
+          ReactDOM.render(
+            <View
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+            >
+              <NativeBaseProvider
+                config={NATIVE_BASE_CONFIG}
+                colorModeManager={colorModeManager}
+              >
+                <Box
+                  p={2}
+                  w="100%"
+                  h="100%"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Chart
+                    data={chartData}
+                  />
+                </Box>
+              </NativeBaseProvider>
+            </View>,
+            document.getElementById(chartName),
+          )
+        }
+      })
+    }
+  }, [data])
   if (status === 'loading') {
     return (
       <Paper
@@ -196,7 +179,6 @@ export const HomeScreen = (props: any) => {
       </Paper>
     )
   }
-
   return (
     <ScreenContainer
       scrollable
@@ -316,10 +298,25 @@ export const HomeScreen = (props: any) => {
                   space={2}
                   height="100%"
                 >
-                  <Center
+                  <Box
                     flex={1}
                   >
-                    <FlatList
+                    {/* <ScrollView
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                      }}
+                    > */}
+                    <div
+                      style={{
+                        overflow: 'visible',
+                      }}
+                      id={containerID}
+                      dangerouslySetInnerHTML={{ __html: data.html }}
+                    />
+                    {/* </ScrollView> */}
+
+                    {/* <FlatList
                       key={`FlatList:${numColumns}`}
                       style={{
                         flex: 1,
@@ -354,8 +351,8 @@ export const HomeScreen = (props: any) => {
                           </Box>
                         )
                       }}
-                    />
-                  </Center>
+                    /> */}
+                  </Box>
                   {
               formVisible && (
                 <Stack

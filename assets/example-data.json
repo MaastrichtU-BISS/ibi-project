@@ -1,4 +1,5 @@
 {
+  "html": "<!DOCTYPE html>\n  <html>\n  <head>\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <style>\n  .card {\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);\n    transition: 0.3s;\n    width: 500px;\n    height: 500px;\n  }\n  \n  .card:hover {\n    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);\n  }\n  \n  .container {\n    padding: 2px 16px;\n  }\n\n  .content {\n    max-width: 500px;\n    margin: auto;\n  }\n  </style>\n  </head>\n  <body>\n  <div class=\"content\">\n    <h2>PieChart</h2>\n    \n    <div id=\"PieChart\" class=\"card\">\n    \n    </div>\n    <h2>RadarChart</h2>\n    \n    <div id=\"RadarChart\" class=\"card\">\n    \n    </div>\n    <h2>BarChart</h2>\n    \n    <div id=\"BarChart\" class=\"card\">\n    \n    </div>\n    <h2>HalfPieChart</h2>\n    \n    <div id=\"HalfPieChart\" class=\"card\">\n    \n    </div>\n  </div>\n  \n  </body>\n  </html>",
   "PieChart": [
       {
           "id": "FONDS",

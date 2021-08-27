@@ -14,6 +14,58 @@ export const BRAND_COLORS = Object.values(BRAND_COLORS_MAP).sort()
 export const KEYS = ['FONDS', 'VERGELIJKBARE PENSIOENFONDSEN', 'ALLE DEELNEMENDE PENSIOENFONDSEN']
 
 export const DATA = {
+  html: `<!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
+  .content {
+    max-width: 500px;
+    margin: auto;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="content">
+    <h2>PieChart</h2>
+    
+    <div id="PieChart" class="card">
+    
+    </div>
+    <h2>RadarChart</h2>
+    
+    <div id="RadarChart" class="card">
+    
+    </div>
+    <h2>BarChart</h2>
+    
+    <div id="BarChart" class="card">
+    
+    </div>
+    <h2>HalfPieChart</h2>
+    
+    <div id="HalfPieChart" class="card">
+    
+    </div>
+  </div>
+  
+  </body>
+  </html> `,
   PieChart: [
     {
       id: KEYS[0],
