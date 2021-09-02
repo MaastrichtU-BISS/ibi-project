@@ -71,26 +71,42 @@ export const DATA = {
   
   </body>
   </html> `,
-  Speedometer: [
-    {
-      id: KEYS[0],
-      label: KEYS[0],
-      value: 119,
-      color: BRAND_COLORS[0],
-    },
-    {
-      id: KEYS[1],
-      label: KEYS[1],
-      value: 69,
-      color: BRAND_COLORS[1],
-    },
-    {
-      id: KEYS[2],
-      label: KEYS[2],
-      value: 495,
-      color: BRAND_COLORS[2],
-    },
-  ],
+  Speedometer: {
+    values: [
+      {
+        value: 100,
+        label: KEYS[0],
+        needleColor: BRAND_COLORS[0],
+      },
+      {
+        value: 200,
+        label: KEYS[1],
+        needleColor: BRAND_COLORS[1],
+      },
+      {
+        value: 300,
+        label: KEYS[2],
+        needleColor: BRAND_COLORS[2],
+      },
+    ],
+    segments: [
+      {
+        // text: KEYS[0],
+        value: 119,
+        color: BRAND_COLORS[0],
+      },
+      {
+        // text: KEYS[1],
+        value: 69,
+        color: BRAND_COLORS[1],
+      },
+      {
+        // text: KEYS[2],
+        value: 495,
+        color: BRAND_COLORS[2],
+      },
+    ],
+  },
   PieChart: [
     {
       id: KEYS[0],

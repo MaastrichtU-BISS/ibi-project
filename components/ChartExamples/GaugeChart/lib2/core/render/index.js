@@ -159,14 +159,14 @@ export function _renderLabels({
 
         const newAngle = config.minAngle + ratio * range
 
-        return `rotate(${newAngle + 70}) translate(0, ${config.labelInset - r})`
+        return `rotate(${-newAngle - 38}) translate(${config.labelInset - r - 50}, 0)`
       })
       .text((d, i) => config.needles[i].label)
     // add class for text label
       .attr('class', 'segment-value')
     // styling stuffs
       .style('text-anchor', 'middle')
-      .style('font-size', config.labelFontSize)
+      .style('font-size', config.needleLabelFontSize ?? 10)
       .style('font-weight', 'bold')
     // .style("fill", "#666");
       .style('fill', config.textColor)

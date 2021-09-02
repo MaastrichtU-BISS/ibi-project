@@ -4,22 +4,27 @@ import GaugeChart from './GaugeChart/lib2'
 
 export default (props) => {
   const {
-
+    data: {
+      values,
+      segments,
+    },
   } = props
   const arcsLength = React.useMemo(() => {
     const total = R.reduce((acc, item) => item.value + acc, 0, segments)
     return segments.map((item) => item.value / total)
   }, [segments])
-  console.log('A', arcsLength)
+  const segmentColors = React.useMemo(() => segments.map((item) => item.color), [segments])
   return (
     <GaugeChart
-      style={{
-        width: '100%',
-        height: '100%',
-      }}
+      width={350}
+      height={350}
+      paddingVertical={70}
+      paddingHorizontal={70}
+      needleLabelFontSize={10}
       needles={values}
       customSegmentLabels={segments}
       segments={segments.length}
+      segmentColors={segmentColors}
       arcsLength={arcsLength}
     />
   )
@@ -27,13 +32,11 @@ export default (props) => {
 
 const values = [
   {
-    percent: 0.4,
     needleColor: '#5BE12C',
     value: 400,
     label: 'A',
   },
   {
-    percent: 0.8,
     needleColor: '#5BE12C',
     value: 100,
     label: 'BB',
