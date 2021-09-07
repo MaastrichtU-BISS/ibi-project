@@ -1,0 +1,146 @@
+#PieChart0Container {
+  position: absolute;
+  left: 20px;
+  top: 330px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+}
+
+#PieChart0 {
+  width: 1000px;
+  height: 500px;
+}
+
+#PieChart1Container {
+  position: absolute;
+  left: 20px;
+  top: 460px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+}
+
+#PieChart1 {
+  width: 600px;
+  height: 400px;
+}
+
+#PieChart2Container {
+  position: absolute;
+  left: 160px;
+  top: 460px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+}
+
+#PieChart2 {
+  width: 600px;
+  height: 400px;
+}
+
+#Speedometer0Container {
+  position: absolute;
+  left: 320px;
+  top: 400px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+  background-color: white;
+  width: 1020px;
+  height: 500px;
+  padding-top: 60px;
+}
+
+#Speedometer0 {
+  width: 620px;
+  height: 500px;
+}
+
+#Speedometer1Container {
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+}
+
+#Speedometer1 {
+  width: 600px;
+  height: 500px;
+}
+
+#Speedometer2Container {
+  position: absolute;
+  left: 150px;
+  top: 200px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+}
+
+#Speedometer2 {
+  width: 600px;
+  height: 500px;
+}
+
+#Speedometer3Container {
+  position: absolute;
+  left: 20px;
+  top: 385px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+  background-color: white;
+  width: 1120px;
+  height: 500px;
+  padding-top: 120px;
+}
+
+#Speedometer3 {
+  width: 600px;
+  height: 500px;
+}
+
+#Speedometer4Container {
+  position: absolute;
+  left: 310px;
+  top: 112px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+}
+
+#Speedometer4 {
+  width: 750px;
+  height: 500px;
+}
+
+#Speedometer5Container {
+  position: absolute;
+  left: 310px;
+  top: 250px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+  background-color: white;
+  width: 1120px;
+  height: 500px;
+  padding-top: 100px;
+}
+
+#Speedometer5 {
+  width: 600px;
+  height: 500px;
+}
+
+#BarChart0Container {
+  position: absolute;
+  left: 320px;
+  top: 436px;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+  background-color: white;
+  width: 1140px;
+  height: 1000px;
+}
+
+#BarChart0 {
+  width: 1000px;
+  height: 1000px;
+  padding-left: 150px;
+  padding-top: 250px;
+}

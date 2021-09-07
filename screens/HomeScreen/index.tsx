@@ -30,7 +30,8 @@ import 'react-native-gesture-handler'
 import {
   colorModeManager, NATIVE_BASE_CONFIG,
 } from '@root/config/native-base'
-import { DATA as SAMPLE_DATA } from '../constants'
+import { DATA as SAMPLE_DATA } from '../../constants'
+import { OverrideHTML } from './Override'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
 
@@ -112,44 +113,44 @@ export const HomeScreen = (props: any) => {
     },
     300,
   ), [])
-
   const containerID = React.useMemo(() => R.uuid(), [])
-  React.useEffect(() => {
-    if (data) {
-      CHART_KEYS.map((chartName) => {
-        const chartData = data[chartName]
-        if (chartData && document.getElementById(chartName)) {
-          const Chart = ChartExamples[chartName]
-          ReactDOM.render(
-            <View
-              style={{
-                width: '100%',
-                height: '100%',
-              }}
-            >
-              <NativeBaseProvider
-                config={NATIVE_BASE_CONFIG}
-                colorModeManager={colorModeManager}
-              >
-                <Box
-                  p={2}
-                  w="100%"
-                  h="100%"
-                  alignItems="center"
-                  justifyContent="center"
-                >
-                  <Chart
-                    data={chartData}
-                  />
-                </Box>
-              </NativeBaseProvider>
-            </View>,
-            document.getElementById(chartName),
-          )
-        }
-      })
-    }
-  }, [data])
+
+  // React.useEffect(() => {
+  //   if (data) {
+  //     CHART_KEYS.map((chartName) => {
+  //       const chartData = data[chartName]
+  //       if (chartData && document.getElementById(chartName)) {
+  //         const Chart = ChartExamples[chartName]
+  //         ReactDOM.render(
+  //           <View
+  //             style={{
+  //               width: '100%',
+  //               height: '100%',
+  //             }}
+  //           >
+  //             <NativeBaseProvider
+  //               config={NATIVE_BASE_CONFIG}
+  //               colorModeManager={colorModeManager}
+  //             >
+  //               <Box
+  //                 p={2}
+  //                 w="100%"
+  //                 h="100%"
+  //                 alignItems="center"
+  //                 justifyContent="center"
+  //               >
+  //                 <Chart
+  //                   data={chartData}
+  //                 />
+  //               </Box>
+  //             </NativeBaseProvider>
+  //           </View>,
+  //           document.getElementById(chartName),
+  //         )
+  //       }
+  //     })
+  //   }
+  // }, [data])
   if (status === 'loading') {
     return (
       <Paper
@@ -312,7 +313,7 @@ export const HomeScreen = (props: any) => {
                         overflow: 'visible',
                       }}
                       id={containerID}
-                      dangerouslySetInnerHTML={{ __html: data.html }}
+                      // dangerouslySetInnerHTML={{ __html: data.html }}
                     />
                     {/* </ScrollView> */}
 
@@ -379,6 +380,7 @@ export const HomeScreen = (props: any) => {
             </>
           )
       }
+      <OverrideHTML containerID={containerID} data={data} />
     </ScreenContainer>
   )
 }

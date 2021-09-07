@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
-import { BRAND_COLORS, KEYS } from '@constants'
+import { BRAND_COLORS, KEYS, RESPONSIVE_CHARTS } from '@constants'
 import { useChartTheme } from './utils'
 
 export default (props) => {
