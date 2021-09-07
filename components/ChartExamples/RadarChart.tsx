@@ -30,7 +30,12 @@ export default (props) => {
       enableDotLabel
       dotLabel="value"
       dotLabelYOffset={-12}
-      colors={({ index }) => data[index].color}
+      colors={(params) => {
+        const {
+          index
+        } = params
+        return data[index].color
+      }}
       fillOpacity={0.25}
       // blendMode="multiply"
       animate
