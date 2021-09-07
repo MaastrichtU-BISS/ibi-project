@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsiveBar, BarDatum } from '@nivo/bar'
-import { BRAND_COLORS, KEYS } from '@constants'
+import { BRAND_COLORS, KEYS, BRAND_COLORS_MAP } from '@constants'
 import { useChartTheme } from './utils'
 
 export default (props) => {
@@ -52,6 +52,20 @@ export default (props) => {
           //     },
           //   },
           // ],
+        },
+      ]}
+      markers={[
+        {
+          axis: 'x',
+          value: 150,
+          lineStyle: {
+            stroke: BRAND_COLORS_MAP.orange,
+            strokeWidth: 4,
+            strokeDasharray: '25, 3',
+          },
+          legend: 'y marker at 300',
+          legendOrientation: 'horizontal',
+          legendPosition: 'top',
         },
       ]}
     />
