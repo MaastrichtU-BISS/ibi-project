@@ -22,6 +22,7 @@ export const TextBox = (props) => {
               mr={1}
               py={1}
               px={1}
+              width={'61px'}
             >
               <Text
                 fontSize={5}

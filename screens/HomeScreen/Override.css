@@ -380,7 +380,7 @@
 
 #Speedometer0ExtraContainer0 {
   position: absolute;
-  left: 590px;
+  left: 565px;
   top: 430px;
   width: 80px;
   height: 70px;
@@ -388,7 +388,7 @@
 
 #Speedometer1ExtraContainer0 {
   position: absolute;
-  left: 171px;
+  left: 178px;
   top: 190px;
   width: 80px;
   height: 70px;
@@ -404,15 +404,15 @@
 
 #Speedometer4ExtraContainer0 {
   position: absolute;
-  left: 564px;
-  top: 50px;
+  left: 577px;
+  top: 65px;
   width: 80px;
   height: 70px;
 }
 
 #Speedometer5ExtraContainer0 {
   position: absolute;
-  left: 580px;
+  left: 560px;
   top: 250px;
   width: 80px;
   height: 70px;
@@ -452,8 +452,8 @@
 
 #Speedometer6ExtraContainer0 {
   position: absolute;
-  left: 540px;
-  top: 125px;
+  left: 535px;
+  top: 127px;
   width: 80px;
   height: 70px;
 }
