@@ -27,6 +27,10 @@
   top: 3000px;
 }
 
+.x0 {
+  z-index: -1;
+}
+
 #PieChart0Container {
   position: absolute;
   left: 25px;
@@ -107,7 +111,7 @@
   width: 600px;
   height: 500px;
   padding-left: 70px;
-  padding-top: 220px;
+  padding-top: 300px;
 }
 
 #Speedometer2Container {
@@ -125,7 +129,7 @@
   width: 600px;
   height: 500px;
   padding-left: 70px;
-  padding-top: 220px;
+  padding-top: 300px;
 }
 
 #Speedometer3Container {
@@ -190,10 +194,10 @@
 }
 
 #BarChart0 {
-  width: 1300px;
-  height: 1000px;
-  padding-left: 150px;
-  padding-top: 280px;
+  width: 1000px;
+  height: 1100px;
+  padding-left: 520px;
+  padding-top: 250px;
 }
 
 #BarChart1Container {
@@ -208,10 +212,10 @@
 }
 
 #BarChart1 {
-  width: 1300px;
+  width: 1050px;
   height: 500px;
-  padding-left: 150px;
-  padding-top: 260px;
+  padding-left: 390px;
+  padding-top: 200px;
 }
 
 #BarChart2Container {
@@ -226,10 +230,10 @@
 }
 
 #BarChart2 {
-  width: 1300px;
+  width: 1050px;
   height: 400px;
-  padding-left: 150px;
-  padding-top: 280px;
+  padding-left: 390px;
+  padding-top: 200px;
 }
 
 #RadarChart0Container {
@@ -264,7 +268,7 @@
 #Speedometer6 {
   width: 700px;
   height: 500px;
-  padding-top: 60px;
+  padding-top: 110px;
 }
 
 #Speedometer7Container {
@@ -281,7 +285,7 @@
 #Speedometer7 {
   width: 700px;
   height: 500px;
-  padding-top: 60px;
+  padding-top: 110px;
 }
 
 #BarChart3Container {
@@ -296,10 +300,10 @@
 }
 
 #BarChart3 {
-  width: 1300px;
-  height: 1000px;
-  padding-left: 150px;
-  padding-top: 310px;
+  width: 1000px;
+  height: 1100px;
+  padding-left: 520px;
+  padding-top: 250px;
 }
 
 #BarChart4Container {
@@ -314,10 +318,10 @@
 }
 
 #BarChart4 {
-  width: 1300px;
+  width: 1050px;
   height: 500px;
-  padding-left: 100px;
-  padding-top: 340px;
+  padding-left: 400px;
+  padding-top: 260px;
 }
 
 #BarChart5Container {
@@ -332,10 +336,10 @@
 }
 
 #BarChart5 {
-  width: 1300px;
-  height: 700px;
-  padding-left: 100px;
-  padding-top: 300px;
+  width: 1050px;
+  height: 500px;
+  padding-left: 400px;
+  padding-top: 240px;
 }
 
 #BarChart6Container {
@@ -350,10 +354,10 @@
 }
 
 #BarChart6 {
-  width: 1300px;
-  height: 700px;
-  padding-left: 100px;
-  padding-top: 300px;
+  width: 1050px;
+  height: 500px;
+  padding-left: 400px;
+  padding-top: 240px;
 }
 
 #RadarChart1Container {
@@ -368,8 +372,128 @@
 }
 
 #RadarChart1 {
-  width: 1300px;
-  height: 1300px;
+  width: 1200px;
+  height: 1200px;
   padding-left: 90px;
   /* padding-top: 220px; */
+}
+
+#Speedometer0ExtraContainer0 {
+  position: absolute;
+  left: 590px;
+  top: 430px;
+  width: 80px;
+  height: 70px;
+}
+
+#Speedometer1ExtraContainer0 {
+  position: absolute;
+  left: 171px;
+  top: 190px;
+  width: 80px;
+  height: 70px;
+}
+
+#Speedometer3ExtraContainer0 {
+  position: absolute;
+  left: 295px;
+  top: 420px;
+  width: 80px;
+  height: 70px;
+}
+
+#Speedometer4ExtraContainer0 {
+  position: absolute;
+  left: 564px;
+  top: 50px;
+  width: 80px;
+  height: 70px;
+}
+
+#Speedometer5ExtraContainer0 {
+  position: absolute;
+  left: 580px;
+  top: 250px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart0ExtraContainer0 {
+  position: absolute;
+  left: 425px;
+  top: 562px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart1ExtraContainer0 {
+  position: absolute;
+  left: 25px;
+  top: 167px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart2ExtraContainer0 {
+  position: absolute;
+  left: 25px;
+  top: 333px;
+  width: 80px;
+  height: 70px;
+}
+
+#RadarChart0ExtraContainer0 {
+  position: absolute;
+  left: 25px;
+  top: 570px;
+  width: 80px;
+  height: 70px;
+}
+
+#Speedometer6ExtraContainer0 {
+  position: absolute;
+  left: 540px;
+  top: 125px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart3ExtraContainer0 {
+  position: absolute;
+  left: 425px;
+  top: 502px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart4ExtraContainer0 {
+  position: absolute;
+  left: 25px;
+  top: 182px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart5ExtraContainer0 {
+  position: absolute;
+  left: 25px;
+  top: 362px;
+  width: 80px;
+  height: 70px;
+}
+
+#BarChart6ExtraContainer0 {
+  position: absolute;
+  left: 25px;
+  top: 562px;
+  width: 80px;
+  height: 70px;
+}
+
+#RadarChart1ExtraContainer0 {
+  position: absolute;
+  left: 425px;
+  top: 482px;
+  width: 80px;
+  height: 70px;
 }

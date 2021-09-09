@@ -2,6 +2,8 @@ export const BRAND_COLORS_MAP = {
   blue: '#18376D',
   orange: '#F57F17',
   lightBlue: '#B8CCE4',
+  cream: 'rgb(245, 239, 228)',
+  grean: '#32a866',
 }
 // export const BRAND_COLORS_MAP = {
 //   blue: '#203c65',
@@ -14,7 +16,7 @@ export const BRAND_COLORS = Object.values(BRAND_COLORS_MAP).sort()
 export const KEYS = ['FONDS', 'VERGELIJKBARE PENSIOENFONDSEN', 'ALLE DEELNEMENDE PENSIOENFONDSEN']
 
 export const DATA = {
-  html: ``,
+  html: '',
   Speedometer: {
     values: [
       {

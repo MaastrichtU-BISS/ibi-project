@@ -4,8 +4,9 @@ import { BRAND_COLORS, KEYS, BRAND_COLORS_MAP } from '@constants'
 import { useChartTheme } from './utils'
 
 export default (props) => {
-  const { data } = props
+  const { keys, data, value } = props
   const [chartTheme] = useChartTheme()
+  console.log('CCCC', props)
   return (
     <ResponsiveBar
       // width: '100%',
@@ -16,8 +17,8 @@ export default (props) => {
       data={data}
       theme={chartTheme}
       // data={data as BarDatum[]}
-      indexBy="country"
-      keys={KEYS}
+      indexBy="type"
+      keys={keys}
       padding={0.2}
   // labelTextColor={'inherit:darker(1.4)'}
       labelTextColor={{ from: 'theme', theme: 'labels.text.fill' }}
@@ -32,38 +33,38 @@ export default (props) => {
       layout="horizontal"
       enableGridY={false}
       enableGridX
-      legends={[
-        {
-          dataFrom: 'keys',
-          anchor: 'top-left',
-          direction: 'column',
-          translateX: -50,
-          translateY: -60,
-          itemWidth: 80,
-          itemHeight: 20,
-          itemTextColor: '#999',
-          symbolSize: 12,
-          symbolShape: 'circle',
-          // effects: [
-          //   {
-          //     on: 'hover',
-          //     style: {
-          //       itemTextColor: '#000',
-          //     },
-          //   },
-          // ],
-        },
-      ]}
+      // legends={[
+      //   {
+      //     dataFrom: 'keys',
+      //     anchor: 'top-left',
+      //     direction: 'column',
+      //     translateX: -50,
+      //     translateY: -60,
+      //     itemWidth: 80,
+      //     itemHeight: 20,
+      //     itemTextColor: '#999',
+      //     symbolSize: 12,
+      //     symbolShape: 'circle',
+      //     // effects: [
+      //     //   {
+      //     //     on: 'hover',
+      //     //     style: {
+      //     //       itemTextColor: '#000',
+      //     //     },
+      //     //   },
+      //     // ],
+      //   },
+      // ]}
       markers={[
         {
           axis: 'x',
-          value: 150,
+          value,
           lineStyle: {
             stroke: BRAND_COLORS_MAP.orange,
             strokeWidth: 4,
             strokeDasharray: '25, 3',
           },
-          legend: 'y marker at 300',
+          legend: '',
           legendOrientation: 'horizontal',
           legendPosition: 'top',
         },
@@ -74,7 +75,7 @@ export default (props) => {
 
 const data = [
   {
-    country: 'AD',
+    // country: 'AD',
     [KEYS[0]]: 24,
     [`${KEYS[0]}Color`]: BRAND_COLORS[0],
     [KEYS[1]]: 187,

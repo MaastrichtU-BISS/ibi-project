@@ -52,9 +52,11 @@ export const render = ({ container, config }) => {
   const svg = _renderSVG({ container, config })
 
   _renderArcs({ config, svg, centerTx })
-  _renderLabels({
-    config, svg, centerTx, r,
-  })
+  if (config.labelsEnabled) {
+    _renderLabels({
+      config, svg, centerTx, r,
+    })
+  }
   return {
     current_value_text: config.needles.map(
       (needleProps) => _renderCurrentValueText({
@@ -70,6 +72,7 @@ export const render = ({ container, config }) => {
         config: {
           ...config,
           ...needleProps,
+          needleColor: needleProps.color,
         },
         svg,
         r,
@@ -159,7 +162,7 @@ export function _renderLabels({
 
         const newAngle = config.minAngle + ratio * range
 
-        return `rotate(${-newAngle - 38}) translate(${config.labelInset - r - 50}, 0)`
+        return `rotate(${-newAngle - 38}) translate(${config.labelInset - r - 150}, 0)`
       })
       .text((d, i) => config.needles[i].label)
     // add class for text label
@@ -336,7 +339,6 @@ function _renderNeedle({
     .attr('class', 'pointer')
     .attr('transform', centerTx)
     .style('fill', config.needleColor)
-
   return pg
     .append('path')
     .attr('d', pointerLine)

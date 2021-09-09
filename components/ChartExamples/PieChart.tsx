@@ -96,50 +96,50 @@ export default (props) => {
           id: 'lines',
         },
       ]}
-      legends={[
-        {
-          anchor: 'top-left',
-          direction: 'column',
-          translateX: -50,
-          translateY: -40,
-          itemWidth: 80,
-          itemHeight: 20,
-          itemTextColor: '#999',
-          symbolSize: 12,
-          symbolShape: 'circle',
-          // effects: [
-          //   {
-          //     on: 'hover',
-          //     style: {
-          //       itemTextColor: '#000',
-          //     },
-          //   },
-          // ],
-        },
-        // {
-        //   anchor: 'top',
-        //   direction: 'column',
-        //   justify: false,
-        //   translateX: -250,
-        //   translateY: 0,
-        //   itemsSpacing: 0,
-        //   itemWidth: 100,
-        //   itemHeight: 18,
-        //   itemTextColor: '#999',
-        //   itemDirection: 'left-to-right',
-        //   itemOpacity: 1,
-        //   symbolSize: 18,
-        //   symbolShape: 'circle',
-        //   effects: [
-        //     {
-        //       on: 'hover',
-        //       style: {
-        //         itemTextColor: '#000',
-        //       },
-        //     },
-        //   ],
-        // },
-      ]}
+      // legends={[
+      //   {
+      //     anchor: 'top-left',
+      //     direction: 'column',
+      //     translateX: -50,
+      //     translateY: -40,
+      //     itemWidth: 80,
+      //     itemHeight: 20,
+      //     itemTextColor: '#999',
+      //     symbolSize: 12,
+      //     symbolShape: 'circle',
+      //     // effects: [
+      //     //   {
+      //     //     on: 'hover',
+      //     //     style: {
+      //     //       itemTextColor: '#000',
+      //     //     },
+      //     //   },
+      //     // ],
+      //   },
+      //   // {
+      //   //   anchor: 'top',
+      //   //   direction: 'column',
+      //   //   justify: false,
+      //   //   translateX: -250,
+      //   //   translateY: 0,
+      //   //   itemsSpacing: 0,
+      //   //   itemWidth: 100,
+      //   //   itemHeight: 18,
+      //   //   itemTextColor: '#999',
+      //   //   itemDirection: 'left-to-right',
+      //   //   itemOpacity: 1,
+      //   //   symbolSize: 18,
+      //   //   symbolShape: 'circle',
+      //   //   effects: [
+      //   //     {
+      //   //       on: 'hover',
+      //   //       style: {
+      //   //         itemTextColor: '#000',
+      //   //       },
+      //   //     },
+      //   //   ],
+      //   // },
+      // ]}
     />
   )
 }
