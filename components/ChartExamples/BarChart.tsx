@@ -6,7 +6,6 @@ import { useChartTheme } from './utils'
 export default (props) => {
   const { keys, data, value } = props
   const [chartTheme] = useChartTheme()
-  console.log('CCCC', props)
   return (
     <ResponsiveBar
       // width: '100%',

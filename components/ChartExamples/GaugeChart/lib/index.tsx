@@ -324,7 +324,6 @@ const renderChart = (
     });
     
     if (props.needles) {
-      console.log('AA', needle.current)
       props.needles.map((needleProps) => {
         drawNeedle(
           resize,

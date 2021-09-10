@@ -24,7 +24,9 @@ import {
   ScrollView,
 } from 'native-base'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import {
+  useImmer,
+} from 'colay-ui/hooks/useImmer'
 import { useWindowDimensions, View } from 'react-native'
 import 'react-native-gesture-handler'
 import {
@@ -44,9 +46,15 @@ export const HomeScreen = (props: any) => {
     const params = Object.fromEntries(urlSearchParams.entries())
     return params?.data && JSON.parse(params?.data)
   }, [])
-  const [data, setData] = React.useState(SAMPLE_DATA)
-  const [status, setStatus] = React.useState('idle')
-  const [formVisible, setFormVisible] = React.useState(false)
+  const [{
+    data,
+    status,
+    formVisible,
+  }, update] = useImmer({
+    data: initialData,
+    status: 'idle',
+    formVisible: false,
+  })
   const { toggleColorMode } = useColorMode()
   const numColumns = useBreakpointValue({
     base: 1,
@@ -58,9 +66,15 @@ export const HomeScreen = (props: any) => {
         const result = await DocumentPicker.getDocumentAsync({ type: 'application/json' })
         if (result.type === 'success') {
           const fileText = await readTextFile(result.file!)
-          setData(JSON.parse(fileText))
-          setStatus('loading')
-          setTimeout(() => setStatus('idle'), 2500)
+          update((draft) => {
+            draft.data = JSON.parse(fileText)
+            draft.status = 'loading'
+          })
+          setTimeout(() => {
+            update((draft) => {
+              draft.status = 'idle'
+            })
+          }, 2500)
         }
       } catch (error) {
         console.error(error)
@@ -104,16 +118,20 @@ export const HomeScreen = (props: any) => {
     [data],
   )
   const onPressUpdateData = () => R.callLater(
-    () => setFormVisible(!formVisible),
+    () => update((draft) => {
+      draft.formVisible = !draft.formVisible
+    }),
     0,
   )
   const onUpdateData = React.useMemo(() => R.debounce(
     ({ formData }) => {
-      setTimeout(() => setData(formData), 0)
+      console.log('A', formData)
+      setTimeout(() => update((draft) => {
+        draft.data = formData
+      }), 0)
     },
     300,
   ), [])
-  const containerID = React.useMemo(() => R.uuid(), [])
 
   // React.useEffect(() => {
   //   if (data) {
@@ -276,7 +294,7 @@ export const HomeScreen = (props: any) => {
           )
           : (
             <>
-              <PresenceTransition
+              {/* <PresenceTransition
                 visible
                 initial={{
                   opacity: 0,
@@ -293,31 +311,29 @@ export const HomeScreen = (props: any) => {
                   width: '100%',
                   height: '90%',
                 }}
+              > */}
+              <Stack
+                direction="row"
+                space={2}
+                height="100%"
               >
-                <Stack
-                  direction="row"
-                  space={2}
-                  height="100%"
+                <Box
+                  flex={1}
                 >
-                  <Box
-                    flex={1}
-                  >
-                    {/* <ScrollView
+                  {/* <ScrollView
                       style={{
                         width: '100%',
                         height: '100%',
                       }}
                     > */}
-                    <div
-                      style={{
-                        overflow: 'visible',
-                      }}
-                      id={containerID}
-                      // dangerouslySetInnerHTML={{ __html: data.html }}
-                    />
-                    {/* </ScrollView> */}
 
-                    {/* <FlatList
+                  <OverrideHTML
+                    data={data}
+                  />
+
+                  {/* </ScrollView> */}
+
+                  {/* <FlatList
                       key={`FlatList:${numColumns}`}
                       style={{
                         flex: 1,
@@ -353,8 +369,8 @@ export const HomeScreen = (props: any) => {
                         )
                       }}
                     /> */}
-                  </Box>
-                  {
+                </Box>
+                {
               formVisible && (
                 <Stack
                   flex={1}
@@ -373,14 +389,13 @@ export const HomeScreen = (props: any) => {
                 </Stack>
               )
             }
-                </Stack>
+              </Stack>
 
-              </PresenceTransition>
+              {/* </PresenceTransition> */}
 
             </>
           )
       }
-      <OverrideHTML containerID={containerID} data={data} />
     </ScreenContainer>
   )
 }

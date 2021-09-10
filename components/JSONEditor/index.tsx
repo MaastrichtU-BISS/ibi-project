@@ -18,7 +18,6 @@ export const JSONEditor = (props: JSONEditorProps) => {
   return (
     <>
       <Editor
-        ref={(ref)=> console.log('REF',ref)}
         htmlElementProps={{
           style: {
             width: '100%',

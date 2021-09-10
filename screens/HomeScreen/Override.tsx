@@ -4,7 +4,7 @@ import { BRAND_COLORS_MAP } from '@constants'
 import {
   colorModeManager, NATIVE_BASE_CONFIG,
 } from '@root/config/native-base'
-import merge from 'lodash.merge'
+import deepmerge from 'deepmerge'
 import {
   Box, NativeBaseProvider,
 } from 'native-base'
@@ -14,22 +14,43 @@ import * as R from 'colay/ramda'
 import { View } from 'react-native'
 import './Override.css'
 
+const combineMerge = (target, source, options) => {
+  const destination = target.slice()
+
+  source.forEach((item, index) => {
+    if (typeof destination[index] === 'undefined') {
+      destination[index] = options.cloneUnlessOtherwiseSpecified(item, options)
+    } else if (options.isMergeableObject(item)) {
+      destination[index] = merge(target[index], item, options)
+    } else if (target.indexOf(item) === -1) {
+      destination.push(item)
+    }
+  })
+  return destination
+}
+
+const merge = (val: any, val2: any) => deepmerge(
+  val,
+  val2,
+  { arrayMerge: combineMerge },
+)
+
 export const OverrideHTML = (props) => {
   const {
-    containerID,
     data,
   } = props
-
+  const containerID = React.useMemo(() => R.uuid(), [])
   React.useEffect(() => {
     const call = async () => {
       const result = await (await fetch('/report.html')).text()
-      const containerNode = document.getElementById(containerID)
+      const containerNode = document.getElementById(containerID)!
       containerNode.innerHTML = result
-      Pages.forEach((chartList, pageIndex) => {
+      data.forEach((chartList, pageIndex) => {
         const pageNode = document.getElementsByClassName(`pc pc${pageIndex + 1} w0 h0`)[0]!
         const image = pageNode.getElementsByTagName('img')[0]!
         chartList.forEach((chart, chartIndex) => {
           const bindChart = Bind[pageIndex]?.[chartIndex] ?? {}
+
           const {
             id,
             data: chartData,
@@ -40,6 +61,10 @@ export const OverrideHTML = (props) => {
             chart,
             bindChart,
           )
+          console.log(bindChart, chart, merge(
+            chart,
+            bindChart,
+          ))
           const chartContainer = document.createElement('div')
           chartContainer.id = `${id}Container`
           const chartWrapper = document.createElement('div')
@@ -97,9 +122,14 @@ export const OverrideHTML = (props) => {
       // return
     }
     call()
-  }, [])
+  }, [data])
   return (
-    null
+    <div
+      style={{
+        overflow: 'visible',
+      }}
+      id={containerID}
+    />
   )
 }
 const KEYS = {
