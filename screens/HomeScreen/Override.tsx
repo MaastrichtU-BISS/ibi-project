@@ -13,6 +13,7 @@ import ReactDOM from 'react-dom'
 import * as R from 'colay/ramda'
 import { View } from 'react-native'
 import './Override.css'
+import { html } from './html'
 
 const combineMerge = (target, source, options) => {
   const destination = target.slice()
@@ -42,7 +43,8 @@ export const OverrideHTML = (props) => {
   const containerID = React.useMemo(() => R.uuid(), [])
   React.useEffect(() => {
     const call = async () => {
-      const result = await (await fetch('/report.html')).text()
+      // const result = await (await fetch('/report.html')).text()
+      const result = html
       const containerNode = document.getElementById(containerID)!
       containerNode.innerHTML = result
       data.forEach((chartList, pageIndex) => {
