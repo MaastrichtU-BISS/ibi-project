@@ -9,8 +9,8 @@ import {
   readTextFile,
 } from '@utils'
 import {
-  download,
-} from 'colay-ui/utils/download'
+  useImmer,
+} from 'colay-ui/hooks/useImmer'
 import * as R from 'colay/ramda'
 import * as Clipboard from 'expo-clipboard'
 import * as DocumentPicker from 'expo-document-picker'
@@ -19,19 +19,11 @@ import html2canvas from 'html2canvas'
 import { jsPDF } from 'jspdf'
 import {
   Box,
-  Button, Center, Divider, Heading, HStack, NativeBaseProvider,
-  PresenceTransition, Stack, useBreakpointValue, useColorMode, useToast,
-  ScrollView,
+  Button, Center, Divider, Heading, HStack, Stack, useColorMode, useToast,
 } from 'native-base'
 import React from 'react'
-import {
-  useImmer,
-} from 'colay-ui/hooks/useImmer'
-import { useWindowDimensions, View } from 'react-native'
+import { useWindowDimensions } from 'react-native'
 import 'react-native-gesture-handler'
-import {
-  colorModeManager, NATIVE_BASE_CONFIG,
-} from '@root/config/native-base'
 // import { DATA as SAMPLE_DATA } from '../../constants'
 import { OverrideHTML, Pages } from './Override'
 
@@ -50,16 +42,15 @@ export const HomeScreen = (props: any) => {
     data,
     status,
     formVisible,
+    isDownloading,
   }, update] = useImmer({
-    data: initialData ?? Pages,
+    data: initialData, // ?? Pages
     status: 'idle',
     formVisible: false,
+    isDownloading: false,
   })
   const { toggleColorMode } = useColorMode()
-  const numColumns = useBreakpointValue({
-    base: 1,
-    md: 1,
-  })
+
   const onCreateCharts = React.useCallback(
     async () => {
       try {
@@ -98,41 +89,67 @@ export const HomeScreen = (props: any) => {
   }, [data])
   const onDownload = React.useCallback(
     async () => {
-      const width = 1180// source?.scrollWidth
-      const height = 900// source?.scrollHeight || 1000
-      // return
-      const pages = ['pf1', ] // , 'pf2', 'pf3', 'pf4'
-      const imageList = await R.mapAsync(async (pageId) => {
-        const source = document.getElementById(pageId)
-        // const source = document.getElementById('ChartContainer')
-        const canvas = await html2canvas(source, {
-          windowWidth: width, // source?.scrollWidth,
-          windowHeight: height, // source?.scrollHeight,
-          width,
-          height,
-        })
-        return canvas.toDataURL('image/jpeg')
+      toast.show({
+        title: 'Download',
+        description: 'We are building the report. Please wait!',
+        status: 'success',
+      })
+      update((draft) => {
+        draft.isDownloading = true
+      })
+      setTimeout(async () => {
+        const width = 1180// source?.scrollWidth
+        const height = 900// source?.scrollHeight || 1000
+        // return
+        const pages = ['pf1', 'pf2', 'pf3', 'pf4'] // , 'pf2', 'pf3', 'pf4'
+        const imageList = await R.mapAsync(async (pageId) => {
+          const source = document.getElementById(pageId)
+          // const source = document.getElementById('ChartContainer')
+          const canvas = await html2canvas(source, {
+            windowWidth: width, // source?.scrollWidth,
+            windowHeight: height, // source?.scrollHeight,
+            width,
+            height,
+          })
+          return canvas.toDataURL('image/jpeg')
         // const imageData = canvas.toDataURL
-        canvas.toBlob((blob) => {
-          window.open(URL.createObjectURL(blob), '__blank')
-          // download(blob, {
-          //   name: 'charts.jpeg',
-          //   // mimeType: '"application/pdf"',
-          // })
+        // canvas.toBlob((blob) => {
+        //   window.open(URL.createObjectURL(blob), '__blank')
+        //   // download(blob, {
+        //   //   name: 'charts.jpeg',
+        //   //   // mimeType: '"application/pdf"',
+        //   // })
+        // })
+        })(pages)
+        const doc = new jsPDF({
+        // unit: 'px',
+        // hotfixes: ['px_scaling'],
         })
-      })(pages)
-      const doc = new jsPDF({
+        imageList.map((imageData, index) => {
+          if (index !== 0) {
+            doc.addPage()
+          }
 
+          doc.setFontSize(40)
+          doc.addImage(imageData, 'JPEG', 0, 30, 210, 217)// 297
+          // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
+          if (index === 0) {
+            doc.setTextColor('#FFFFFF')
+            doc.setFontSize(24)
+            doc.text('PENSIOENFONDS X ', 5, 60)
+            doc.setFontSize(12)
+            doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, 68)
+            doc.setFontSize(9)
+            doc.text('IBI BENCHMARKING', 5, 82)
+            doc.setFontSize(7)
+            doc.text('info@institutionalbenchmarking.org', 50, 82)
+          }
+        })
+        doc.save('report.pdf')
+      }, 500)
+      update((draft) => {
+        draft.isDownloading = false
       })
-      imageList.map((imageData, index) => {
-        if (index !== 0) {
-          doc.addPage()
-        }
-        doc.setFontSize(40)
-        // doc.text(35, 25, 'Paranyan loves jsPDF')
-        doc.addImage(imageData, 'JPEG', 0, 30, 210, 217)// 297
-      })
-      doc.save('report.pdf')
     },
     [data],
   )
@@ -144,7 +161,6 @@ export const HomeScreen = (props: any) => {
   )
   const onUpdateData = React.useMemo(() => R.debounce(
     ({ formData }) => {
-      console.log('A', formData)
       setTimeout(() => update((draft) => {
         draft.data = formData
       }), 0)
@@ -152,42 +168,7 @@ export const HomeScreen = (props: any) => {
     300,
   ), [])
 
-  // React.useEffect(() => {
-  //   if (data) {
-  //     CHART_KEYS.map((chartName) => {
-  //       const chartData = data[chartName]
-  //       if (chartData && document.getElementById(chartName)) {
-  //         const Chart = ChartExamples[chartName]
-  //         ReactDOM.render(
-  //           <View
-  //             style={{
-  //               width: '100%',
-  //               height: '100%',
-  //             }}
-  //           >
-  //             <NativeBaseProvider
-  //               config={NATIVE_BASE_CONFIG}
-  //               colorModeManager={colorModeManager}
-  //             >
-  //               <Box
-  //                 p={2}
-  //                 w="100%"
-  //                 h="100%"
-  //                 alignItems="center"
-  //                 justifyContent="center"
-  //               >
-  //                 <Chart
-  //                   data={chartData}
-  //                 />
-  //               </Box>
-  //             </NativeBaseProvider>
-  //           </View>,
-  //           document.getElementById(chartName),
-  //         )
-  //       }
-  //     })
-  //   }
-  // }, [data])
+  
   if (status === 'loading') {
     return (
       <Paper
@@ -249,6 +230,7 @@ export const HomeScreen = (props: any) => {
             true && (
               <Button
                 onPress={onDownload}
+                isLoading={isDownloading}
               >
                 Download
               </Button>
