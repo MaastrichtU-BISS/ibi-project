@@ -1,11 +1,15 @@
 {
   "files": {
-    "app.js": "/ibi-project/static/js/app.154db8a9.chunk.js",
-    "app.js.map": "/ibi-project/static/js/app.154db8a9.chunk.js.map",
-    "runtime~app.js": "/ibi-project/static/js/runtime~app.b52537db.js",
-    "runtime~app.js.map": "/ibi-project/static/js/runtime~app.b52537db.js.map",
-    "static/js/2.f2a0acc8.chunk.js": "/ibi-project/static/js/2.f2a0acc8.chunk.js",
-    "static/js/2.f2a0acc8.chunk.js.map": "/ibi-project/static/js/2.f2a0acc8.chunk.js.map",
+    "app.js": "/ibi-project/static/js/app.915b1a87.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.915b1a87.chunk.js.map",
+    "runtime~app.js": "/ibi-project/static/js/runtime~app.a37224d3.js",
+    "runtime~app.js.map": "/ibi-project/static/js/runtime~app.a37224d3.js.map",
+    "static/js/2.dc233ab3.chunk.js": "/ibi-project/static/js/2.dc233ab3.chunk.js",
+    "static/js/2.dc233ab3.chunk.js.map": "/ibi-project/static/js/2.dc233ab3.chunk.js.map",
+    "static/js/3.48c8c7e2.chunk.js": "/ibi-project/static/js/3.48c8c7e2.chunk.js",
+    "static/js/3.48c8c7e2.chunk.js.map": "/ibi-project/static/js/3.48c8c7e2.chunk.js.map",
+    "static/js/4.c367d609.chunk.js": "/ibi-project/static/js/4.c367d609.chunk.js",
+    "static/js/4.c367d609.chunk.js.map": "/ibi-project/static/js/4.c367d609.chunk.js.map",
     "fonts/AntDesign.ttf": "/ibi-project/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/ibi-project/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/ibi-project/./fonts/Feather.ttf",
@@ -29,12 +33,14 @@
     "reportOriginal copy.html": "/ibi-project/reportOriginal copy.html",
     "reportOriginal.html": "/ibi-project/reportOriginal.html",
     "serve.json": "/ibi-project/serve.json",
-    "static/js/2.f2a0acc8.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.f2a0acc8.chunk.js.LICENSE.txt",
+    "static/js/2.dc233ab3.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.dc233ab3.chunk.js.LICENSE.txt",
+    "static/js/3.48c8c7e2.chunk.js.LICENSE.txt": "/ibi-project/static/js/3.48c8c7e2.chunk.js.LICENSE.txt",
+    "static/js/4.c367d609.chunk.js.LICENSE.txt": "/ibi-project/static/js/4.c367d609.chunk.js.LICENSE.txt",
     "static/media/jsoneditor-icons.svg": "/ibi-project/static/media/jsoneditor-icons.15f2789d.svg"
   },
   "entrypoints": [
-    "static/js/runtime~app.b52537db.js",
-    "static/js/2.f2a0acc8.chunk.js",
-    "static/js/app.154db8a9.chunk.js"
+    "static/js/runtime~app.a37224d3.js",
+    "static/js/2.dc233ab3.chunk.js",
+    "static/js/app.915b1a87.chunk.js"
   ]
 }
