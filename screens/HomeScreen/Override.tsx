@@ -40,7 +40,10 @@ export const OverrideHTML = (props) => {
   const {
     data,
   } = props
-  const containerID = React.useMemo(() => R.uuid(), [])
+  const containerID = React.useMemo(
+    () => 'HTML_CONTAINER', // R.uuid(),
+    [],
+  )
   React.useEffect(() => {
     const call = async () => {
       // const result = await (await fetch('/report.html')).text()
@@ -700,7 +703,7 @@ const Bind = [
   ],
 ]
 
-const Pages = [
+export const Pages = [
   [
     {
       id: 'PieChart0',
