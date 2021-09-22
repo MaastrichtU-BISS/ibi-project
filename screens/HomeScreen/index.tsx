@@ -122,6 +122,7 @@ export const HomeScreen = (props: any) => {
         // })
         })(pages)
         const doc = new jsPDF({
+          orientation: 'landscape',
         // unit: 'px',
         // hotfixes: ['px_scaling'],
         })
@@ -129,20 +130,35 @@ export const HomeScreen = (props: any) => {
           if (index !== 0) {
             doc.addPage()
           }
-
+          //   doc.setFontSize(40)
+          //   doc.addImage(imageData, 'JPEG', 0, 30, 210, 217)// 297
+          //   // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
+          //   if (index === 0) {
+          //     doc.setTextColor('#FFFFFF')
+          //     doc.setFontSize(24)
+          //     doc.text('PENSIOENFONDS X ', 5, 60)
+          //     doc.setFontSize(12)
+          //     doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, 68)
+          //     doc.setFontSize(9)
+          //     doc.text('IBI BENCHMARKING', 5, 82)
+          //     doc.setFontSize(7)
+          //     doc.text('info@institutionalbenchmarking.org', 50, 82)
+          //   }
+          // })
           doc.setFontSize(40)
-          doc.addImage(imageData, 'JPEG', 0, 30, 210, 217)// 297
+          doc.addImage(imageData, 'JPEG', 0, 0, 297, 210)// 297
           // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
           if (index === 0) {
+            const MARGIN = 10
             doc.setTextColor('#FFFFFF')
             doc.setFontSize(24)
-            doc.text('PENSIOENFONDS X ', 5, 60)
+            doc.text('PENSIOENFONDS X ', 5, MARGIN + 20)
             doc.setFontSize(12)
-            doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, 68)
+            doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, MARGIN + 28)
             doc.setFontSize(9)
-            doc.text('IBI BENCHMARKING', 5, 82)
+            doc.text('IBI BENCHMARKING', 5, MARGIN + 42)
             doc.setFontSize(7)
-            doc.text('info@institutionalbenchmarking.org', 50, 82)
+            doc.text('info@institutionalbenchmarking.org', 50, MARGIN + 42)
           }
         })
         doc.save('report.pdf')
@@ -168,7 +184,6 @@ export const HomeScreen = (props: any) => {
     300,
   ), [])
 
-  
   if (status === 'loading') {
     return (
       <Paper
