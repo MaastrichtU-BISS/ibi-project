@@ -378,6 +378,16 @@
   /* padding-top: 220px; */
 }
 
+#PieChart0ExtraContainer0 {
+  position: absolute;
+  left: 107px;
+  top: 270px;
+  width: 279px;
+  height: 50px;
+  background-color: white;
+  z-index: 10;
+}
+
 #Speedometer0ExtraContainer0 {
   position: absolute;
   left: 565px;

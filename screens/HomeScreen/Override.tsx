@@ -6,11 +6,10 @@ import {
 } from '@root/config/native-base'
 import deepmerge from 'deepmerge'
 import {
-  Box, NativeBaseProvider,
+  Box, NativeBaseProvider, Text,
 } from 'native-base'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import * as R from 'colay/ramda'
 import { View } from 'react-native'
 import './Override.css'
 import { html } from './html'
@@ -61,15 +60,12 @@ export const OverrideHTML = (props) => {
             data: chartData,
             type: chartType,
             extraElements = [],
+            extraElementsData = [{}],
             ...rest
           } = merge(
             chart,
             bindChart,
           )
-          console.log(bindChart, chart, merge(
-            chart,
-            bindChart,
-          ))
           const chartContainer = document.createElement('div')
           chartContainer.id = `${id}Container`
           const chartWrapper = document.createElement('div')
@@ -84,7 +80,7 @@ export const OverrideHTML = (props) => {
                 config={NATIVE_BASE_CONFIG}
                 colorModeManager={colorModeManager}
               >
-                {extraElement.component()}
+                {extraElement.component(extraElementsData?.[index] ?? {})}
               </NativeBaseProvider>,
               chartExtraContainer,
             )
@@ -226,6 +222,20 @@ const Bind = [
         },
         {
           color: BRAND_COLORS_MAP.blue,
+        },
+      ],
+      extraElements: [
+        {
+          component: (props) => (
+            <Text
+              fontSize="8.7px"
+              fontFamily="ff2"
+              fontWeight={500}
+              color="rgb(0,0,0)"
+            >
+              {props.value}
+            </Text>
+          ),
         },
       ],
     },
@@ -724,6 +734,7 @@ export const Pages = [
           value: 72.8,
         },
       ],
+      extraElementsData: [{ value: 'Uitvoeringskosten bestaan uit drie categorieën:  Vermogensbeheerkosten (€ 4.000.000; 0.4% van beheerd vermogen), transactiekosten (€ 1.000.000, 0.1% van beheerd vermogen) en pensioenbeheerkosten (€ 400.000, €170 per deelnemer).' }],
     },
     {
       id: 'PieChart1',

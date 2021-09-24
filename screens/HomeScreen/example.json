@@ -18,7 +18,8 @@
                   "label": "Vermogensbeheerkosten",
                   "value": 72.8
               }
-          ]
+          ],
+          "extraElementsData": [{ "value": "Uitvoeringskosten bestaan uit drie categorieën:  Vermogensbeheerkosten (€ 4.000.000; 0.4% van beheerd vermogen), transactiekosten (€ 1.000.000, 0.1% van beheerd vermogen) en pensioenbeheerkosten (€ 400.000, €170 per deelnemer)." }]
       },
       {
           "id": "PieChart1",
