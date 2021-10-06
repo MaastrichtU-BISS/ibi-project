@@ -44,7 +44,7 @@ export const HomeScreen = (props: any) => {
     formVisible,
     isDownloading,
   }, update] = useImmer({
-    data: initialData, // ?? Pages
+    data: initialData ?? Pages,
     status: 'idle',
     formVisible: false,
     isDownloading: false,

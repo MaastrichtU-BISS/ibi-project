@@ -156,9 +156,9 @@ const SPEEDOMETER_SEGMENTS_BIND = [
   {
     color: BRAND_COLORS_MAP.blue,
   },
-  {
-    color: BRAND_COLORS_MAP.blue,
-  },
+  // {
+  //   color: BRAND_COLORS_MAP.blue,
+  // },
 ]
 const SPEEDOMETER_SECOND_SEGMENTS = [
   {
@@ -167,9 +167,9 @@ const SPEEDOMETER_SECOND_SEGMENTS = [
   {
     color: BRAND_COLORS_MAP.cream,
   },
-  {
-    color: BRAND_COLORS_MAP.cream,
-  },
+  // {
+  //   color: BRAND_COLORS_MAP.cream,
+  // },
 ]
 
 const SPEEDOMETER_VALUES_BIND = [
@@ -186,13 +186,18 @@ const SPEEDOMETER_VALUES_BIND = [
 
 const SEGMENTS = [
   {
-    value: 50,
-  },
-  {
     value: 150,
   },
   {
-    value: 200,
+    value: 250,
+  },
+]
+const SECOND_SEGMENTS = [
+  {
+    value: 100,
+  },
+  {
+    value: 250,
   },
 ]
 
@@ -794,6 +799,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
   ],
@@ -812,11 +818,13 @@ export const Pages = [
             label: KEYS.pension,
           },
           {
-            value: 120,
+            value: 105,
             label: KEYS.fonds,
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
+        
       },
     },
     {
@@ -838,6 +846,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
     {
@@ -859,6 +868,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
     {
@@ -876,6 +886,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
     {
@@ -897,6 +908,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
     {
@@ -986,6 +998,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
     {
@@ -1007,6 +1020,7 @@ export const Pages = [
           },
         ],
         segments: SEGMENTS,
+        secondSegments: SECOND_SEGMENTS,
       },
     },
     {

@@ -4,7 +4,7 @@ import React from 'react'
 import 'react-native-gesture-handler'
 import './config'
 import {
-  colorModeManager, NATIVE_BASE_CONFIG
+  colorModeManager, NATIVE_BASE_CONFIG,
 } from './config/native-base'
 import useInitializer from './hooks/useInitializer'
 import { HomeScreen } from './screens/HomeScreen'

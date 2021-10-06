@@ -29,12 +29,21 @@ export default (props) => {
     return segments.map((item) => item.value / total)
   }, [segments])
   const segmentColors = React.useMemo(() => segments.map((item) => item.color), [segments])
+  const customSegmentStops = React.useMemo(
+    () => [0, ...segments.map((item) => item.value)],
+    [segments],
+  )
+
   const secondArcsLength = React.useMemo(() => {
     const total = R.reduce((acc, item) => item.value + acc, 0, secondSegments)
     return secondSegments.map((item) => item.value / total)
   }, [secondSegments])
   const secondSegmentColors = React.useMemo(
     () => secondSegments.map((item) => item.color),
+    [secondSegments],
+  )
+  const secondCustomSegmentStops = React.useMemo(
+    () => [0, ...secondSegments.map((item) => item.value)],
     [secondSegments],
   )
   const {
@@ -94,8 +103,12 @@ export default (props) => {
               segmentColors={segmentColors}
               arcsLength={arcsLength}
               minValue={0}
+              customSegmentStops={customSegmentStops}
               maxValue={maxValue}
               labelsEnabled={false}
+              labelFormat={() => ''}
+              currentValue={0}
+              valueTextFontSize={25}
             />
             <View
               style={[StyleSheet.absoluteFillObject, {
@@ -112,7 +125,8 @@ export default (props) => {
                     paddingVertical={70}
                     paddingHorizontal={70}
                     needleLabelFontSize={10}
-                    needles={values}
+                    needles={[]}
+                    customSegmentStops={secondCustomSegmentStops}
                     customSegmentLabels={secondSegments}
                     segments={secondSegments.length}
                     segmentColors={secondSegmentColors}
@@ -120,6 +134,9 @@ export default (props) => {
                     minValue={0}
                     maxValue={maxValue}
                     labelsEnabled={false}
+                    labelFormat={() => ''}
+                    currentValue={0}
+                    valueTextFontSize={25}
                   />
                 )
               }

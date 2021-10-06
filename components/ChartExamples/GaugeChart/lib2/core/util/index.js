@@ -121,7 +121,6 @@ export function formatCurrentValueText(currentValue, config) {
   const value = config.labelFormat(currentValue)
   // get the current placeholder style
   const placeholderStyle = config.currentValuePlaceholderStyle
-
   // replace the placeholder style in current text
   return config.currentValueText.replace(placeholderStyle, value)
 }

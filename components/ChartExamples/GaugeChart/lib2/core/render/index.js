@@ -37,7 +37,6 @@ export const update = ({ d3_refs, newValue, config }) => {
       .ease(getNeedleTransition(config.needleTransition))
       .attr('transform', `rotate(${newAngle})`)
   })
-
   d3_refs.current_value_text.map((item) => item.text(formatCurrentValueText(newValue, config)))
 }
 
@@ -296,18 +295,45 @@ function _renderCurrentValueText({ config, svg }) {
   const translateX = (config.width + 2 * config.paddingHorizontal) / 2
   // move the current value text down depending on padding vertical
   const translateY = (config.width + 4 * config.paddingVertical) / 2
-
+  svg
+    .append('g')
+    .attr('transform', `translate(${2 * config.paddingHorizontal}, ${translateY})`)
+    .append('text')
+  // add class for the text
+    .attr('class', 'current-value')
+    .attr('text-anchor', 'middle')
+  // position the text 23pt below
+    .attr('y', 23)
+  // add text
+    .text(config.minValue)
+    .style('font-size', config.valueTextFontSize)
+    .style('font-weight', config.valueTextFontWeight)
+    .style('fill', config.textColor)
+  svg
+    .append('g')
+    .attr('transform', `translate(${translateX * 2 - 2 * config.paddingHorizontal}, ${translateY})`)
+    .append('text')
+  // add class for the text
+    .attr('class', 'current-value')
+    .attr('text-anchor', 'middle')
+  // position the text 23pt below
+    .attr('y', 23)
+  // add text
+    .text(config.maxValue)
+    .style('font-size', config.valueTextFontSize)
+    .style('font-weight', config.valueTextFontWeight)
+    .style('fill', config.textColor)
   return (
     svg
       .append('g')
       .attr('transform', `translate(${translateX}, ${translateY})`)
       .append('text')
-      // add class for the text
+    // add class for the text
       .attr('class', 'current-value')
       .attr('text-anchor', 'middle')
-      // position the text 23pt below
+    // position the text 23pt below
       .attr('y', 23)
-      // add text
+    // add text
       .text(config.currentValue)
       .style('font-size', config.valueTextFontSize)
       .style('font-weight', config.valueTextFontWeight)

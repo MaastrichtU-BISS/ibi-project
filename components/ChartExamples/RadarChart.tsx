@@ -5,7 +5,9 @@ import { useChartTheme } from './utils'
 
 export default (props) => {
   const { keys, data, colors } = props
-  const [chartTheme] = useChartTheme()
+  const [chartTheme] = useChartTheme({
+    fontSize: 23
+  })
   return (
     <ResponsiveRadar
       data={data}
@@ -22,7 +24,7 @@ export default (props) => {
       borderColor={{ from: 'color' }}
       gridLevels={5}
       gridShape="circular"
-      gridLabelOffset={36}
+      gridLabelOffset={50}
       enableDots
       dotSize={10}
       dotColor={{ theme: 'background' }}

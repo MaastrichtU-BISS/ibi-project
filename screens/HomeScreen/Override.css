@@ -49,34 +49,34 @@
 
 #PieChart1Container {
   position: absolute;
-  left: 25px;
+  left: 15px;
   top: 500px;
   transform-origin: 0 0;
-  transform: scale(0.25);
-  width: 680px;
-  height: 400px;
+  transform: scale(0.2);
+  width: 880px;
+  height: 600px;
   background-color: white;
 }
 
 #PieChart1 {
-  width: 600px;
-  height: 400px;
+  width: 960px;
+  height: 500px;
 }
 
 #PieChart2Container {
   position: absolute;
-  left: 230px;
+  left: 201px;
   top: 500px;
   transform-origin: 0 0;
-  transform: scale(0.25);
-  width: 680px;
-  height: 400px;
+  transform: scale(0.2);
+  width: 880px;
+  height: 600px;
   background-color: white;
 }
 
 #PieChart2 {
-  width: 600px;
-  height: 400px;
+  width: 960px;
+  height: 500px;
 }
 
 #Speedometer0Container {
@@ -87,7 +87,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 1020px;
-  height: 550px;
+  height: 585px;
 }
 
 #Speedometer0 {
@@ -309,7 +309,7 @@
 #BarChart4Container {
   position: absolute;
   left: 25px;
-  top: 60px;
+  top: 56px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
