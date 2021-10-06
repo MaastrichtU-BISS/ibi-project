@@ -135,7 +135,7 @@
 #Speedometer3Container {
   position: absolute;
   left: 25px;
-  top: 419px;
+  top: 415px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -152,7 +152,7 @@
 #Speedometer4Container {
   position: absolute;
   left: 410px;
-  top: 60px;
+  top: 61px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -332,7 +332,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 1440px;
-  height: 700px;
+  height: 600px;
 }
 
 #BarChart5 {
@@ -396,6 +396,24 @@
   height: 70px;
 }
 
+#Speedometer0ExtraContainer1 {
+  position: absolute;
+  left: 767px;
+  top: 30px;
+  width: 80px;
+  height: 70px;
+  background-color: white;
+}
+
+#Speedometer0ExtraContainer2 {
+  position: absolute;
+  left: 408px;
+  top: 250px;
+  width: 361px;
+  height: 82px;
+  background-color: rgb(245, 239, 228)
+}
+
 #Speedometer1ExtraContainer0 {
   position: absolute;
   left: 178px;
@@ -418,6 +436,15 @@
   top: 65px;
   width: 80px;
   height: 70px;
+}
+
+#Speedometer4ExtraContainer1 {
+  position: absolute;
+  left: 411px;
+  top: 57px;
+  width: 190px;
+  height: 3px;
+  background-color: rgb(245, 239, 228);
 }
 
 #Speedometer5ExtraContainer0 {
@@ -498,6 +525,14 @@
   top: 562px;
   width: 80px;
   height: 70px;
+}
+#BarChart6ExtraContainer1 {
+  position: absolute;
+  left: 23px;
+  top: 422px;
+  width: 370px;
+  height: 5px;
+  background-color: white;
 }
 
 #RadarChart1ExtraContainer0 {

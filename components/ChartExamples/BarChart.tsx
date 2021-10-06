@@ -5,7 +5,9 @@ import { useChartTheme } from './utils'
 
 export default (props) => {
   const { keys, data, value } = props
-  const [chartTheme] = useChartTheme()
+  const [chartTheme] = useChartTheme({
+    textColor: 'white',
+  })
   return (
     <ResponsiveBar
       // width: '100%',
@@ -63,7 +65,10 @@ export default (props) => {
             strokeWidth: 4,
             strokeDasharray: '25, 3',
           },
-          legend: '',
+          textStyle: {
+            fontSize: chartTheme.fontSize,
+          },
+          legend: value,
           legendOrientation: 'horizontal',
           legendPosition: 'top',
         },

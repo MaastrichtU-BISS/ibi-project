@@ -74,6 +74,7 @@ export default (props) => {
             <Box
               flexDirection="row"
               alignItems="center"
+              mb={2}
             >
               <Box
                 width={5}
@@ -81,9 +82,8 @@ export default (props) => {
                 borderRadius={5}
                 backgroundColor={color}
                 mr={2}
-                mb={2}
               />
-              <Text>{label}</Text>
+              <Text fontSize="xl" justifyContent="center">{label}</Text>
             </Box>
           ))
         }

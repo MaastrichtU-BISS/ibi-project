@@ -24,6 +24,7 @@ import {
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
 import 'react-native-gesture-handler'
+import { download } from 'colay-ui/utils'
 // import { DATA as SAMPLE_DATA } from '../../constants'
 import { OverrideHTML, Pages } from './Override'
 
@@ -43,11 +44,13 @@ export const HomeScreen = (props: any) => {
     status,
     formVisible,
     isDownloading,
+  isDownloadingData,
   }, update] = useImmer({
     data: initialData ?? Pages,
     status: 'idle',
     formVisible: false,
     isDownloading: false,
+    isDownloadingData: false,
   })
   const { toggleColorMode } = useColorMode()
 
@@ -85,6 +88,20 @@ export const HomeScreen = (props: any) => {
       title: 'Share',
       description: 'Sharing link copied to clipboard!',
       status: 'success',
+    })
+  }, [data])
+  const onDownloadData = React.useCallback(() => {
+    toast.show({
+      title: 'Download',
+      description: 'Please wait!',
+      status: 'success',
+    })
+    update((draft) => {
+      draft.isDownloadingData = true
+    })
+    download(JSON.stringify(data), 'ibi-project.json')
+    update((draft) => {
+      draft.isDownloadingData = false
     })
   }, [data])
   const onDownload = React.useCallback(
@@ -242,12 +259,25 @@ export const HomeScreen = (props: any) => {
           {
           data
           && (
-            true && (
+            (
               <Button
                 onPress={onDownload}
                 isLoading={isDownloading}
               >
-                Download
+                Download PDF
+              </Button>
+            )
+          )
+}
+          {
+          data
+          && (
+            (
+              <Button
+                onPress={onDownloadData}
+                isLoading={isDownloadingData}
+              >
+                Download Data
               </Button>
             )
           )

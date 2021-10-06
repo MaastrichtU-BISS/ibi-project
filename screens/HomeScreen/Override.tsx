@@ -300,6 +300,16 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
       ],
     },
   ],
@@ -402,6 +412,11 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
       ],
     },
     {
@@ -435,8 +450,6 @@ const Bind = [
     {
       id: 'BarChart0',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
       extraElements: [
         {
           component: () => (
@@ -463,8 +476,6 @@ const Bind = [
     {
       id: 'BarChart1',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
       extraElements: [
         {
           component: () => (
@@ -489,8 +500,7 @@ const Bind = [
     {
       id: 'BarChart2',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
+
       extraElements: [
         {
           component: () => (
@@ -582,8 +592,7 @@ const Bind = [
     {
       id: 'BarChart3',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
+
       extraElements: [
         {
           component: () => (
@@ -610,8 +619,7 @@ const Bind = [
     {
       id: 'BarChart4',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
+
       extraElements: [
         {
           component: () => (
@@ -636,8 +644,7 @@ const Bind = [
     {
       id: 'BarChart5',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
+
       extraElements: [
         {
           component: () => (
@@ -662,8 +669,7 @@ const Bind = [
     {
       id: 'BarChart6',
       type: 'BarChart',
-      data: BARCHART_VALUES_BIND,
-      keys: ['0', '1', '2'],
+
       extraElements: [
         {
           component: () => (
@@ -681,6 +687,11 @@ const Bind = [
                 },
               ]}
             />
+          ),
+        },
+        {
+          component: () => (
+            <Box />
           ),
         },
       ],
@@ -824,7 +835,7 @@ export const Pages = [
         ],
         segments: SEGMENTS,
         secondSegments: SECOND_SEGMENTS,
-        
+
       },
     },
     {
@@ -915,6 +926,8 @@ export const Pages = [
       id: 'BarChart0',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
   ],
   [
@@ -922,11 +935,15 @@ export const Pages = [
       id: 'BarChart1',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
     {
       id: 'BarChart2',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
     {
       id: 'RadarChart0',
@@ -1027,6 +1044,8 @@ export const Pages = [
       id: 'BarChart3',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
   ],
   [
@@ -1034,16 +1053,22 @@ export const Pages = [
       id: 'BarChart4',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
     {
       id: 'BarChart5',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
     {
       id: 'BarChart6',
       type: 'BarChart',
       value: 90,
+      data: BARCHART_VALUES_BIND,
+      keys: ['0', '1', '2'],
     },
     {
       id: 'RadarChart1',
