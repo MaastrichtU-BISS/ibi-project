@@ -1,40 +1,51 @@
 import React from 'react'
 import { ResponsiveBar, BarDatum } from '@nivo/bar'
+import { Box } from 'native-base'
 import { BRAND_COLORS, KEYS, BRAND_COLORS_MAP } from '@constants'
 import { useChartTheme } from './utils'
 
 export default (props) => {
-  const { keys, data, value } = props
+  const {
+    keys, data, value, min, max,
+  } = props
   const [chartTheme] = useChartTheme({
     textColor: 'white',
   })
   return (
-    <ResponsiveBar
+    <Box
+      w="100%"
+      h="100%"
+      flexDirection="row"
+    >
+      <Box>{min}</Box>
+      <ResponsiveBar
       // width: '100%',
-      height={250}
-      margin={{
-        top: 60, right: 110, bottom: 60, left: 80,
-      }}
-      data={data}
-      theme={chartTheme}
+        height={250}
+        margin={{
+          top: 60, right: 110, bottom: 60, left: 80,
+        }}
+        data={data}
+        theme={chartTheme}
       // data={data as BarDatum[]}
-      indexBy="type"
-      keys={keys}
-      padding={0.2}
+        indexBy="type"
+        keys={keys}
+        padding={0.2}
+      // {...(min ? { minValue: min } : {})}
+      // {...(max ? { maxValue: max } : {})}
   // labelTextColor={'inherit:darker(1.4)'}
-      labelTextColor={{ from: 'theme', theme: 'labels.text.fill' }}
-      labelSkipWidth={16}
-      labelSkipHeight={16}
-      colors={(c) => {
-        const {
-          id, data,
-        } = c
-        return data[`${id}Color`]
-      }}
-      isInteractive={false}
-      layout="horizontal"
-      enableGridY={false}
-      enableGridX
+        labelTextColor={{ from: 'theme', theme: 'labels.text.fill' }}
+        labelSkipWidth={16}
+        labelSkipHeight={16}
+        colors={(c) => {
+          const {
+            id, data,
+          } = c
+          return data[`${id}Color`]
+        }}
+        isInteractive={false}
+        layout="horizontal"
+        enableGridY={false}
+        enableGridX
       // legends={[
       //   {
       //     dataFrom: 'keys',
@@ -57,24 +68,26 @@ export default (props) => {
       //     // ],
       //   },
       // ]}
-      markers={[
-        {
-          axis: 'x',
-          value,
-          lineStyle: {
-            stroke: BRAND_COLORS_MAP.orange,
-            strokeWidth: 4,
-            strokeDasharray: '25, 3',
+        markers={[
+          {
+            axis: 'x',
+            value,
+            lineStyle: {
+              stroke: BRAND_COLORS_MAP.orange,
+              strokeWidth: 4,
+              strokeDasharray: '25, 3',
+            },
+            textStyle: {
+              fontSize: chartTheme.fontSize,
+            },
+            legend: value,
+            legendOrientation: 'horizontal',
+            legendPosition: 'top',
           },
-          textStyle: {
-            fontSize: chartTheme.fontSize,
-          },
-          legend: value,
-          legendOrientation: 'horizontal',
-          legendPosition: 'top',
-        },
-      ]}
-    />
+        ]}
+      />
+      <Box>{min}</Box>
+    </Box>
   )
 }
 

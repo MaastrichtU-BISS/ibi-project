@@ -15,35 +15,48 @@ export default (props) => {
     data: {
       values,
       segments,
-      secondSegments,
+      secondSegments: secondSegments_,
+      min,
+      max,
     },
   } = props
+  const segmentsTotalValue = React.useMemo(() => R.reduce((acc, item) => item.value + acc, 0, segments), [segments])
+
+  const secondSegmentsTotalValue_ = React.useMemo(() => R.reduce((acc, item) => item.value + acc, 0, secondSegments_), [secondSegments_])
   const maxValue = React.useMemo(
     () => R.reduce(
       (acc, item) => (item.value > acc ? item.value : acc), 0, segments,
     ),
     [segments],
   )
-  const arcsLength = React.useMemo(() => {
-    const total = R.reduce((acc, item) => item.value + acc, 0, segments)
-    return segments.map((item) => item.value / total)
-  }, [segments])
+  const secondSegments = React.useMemo(() => [
+    ...secondSegments_,
+    {
+      value: max ?? maxValue,
+      color: BRAND_COLORS_MAP.blue,
+    },
+  ], [secondSegments_])
+  const secondSegmentsTotalValue = React.useMemo(() => R.reduce((acc, item) => item.value + acc, 0, secondSegments), [secondSegments])
+  const arcsLength = React.useMemo(() => segments.map((item) => item.value / segmentsTotalValue), [segments])
   const segmentColors = React.useMemo(() => segments.map((item) => item.color), [segments])
   const customSegmentStops = React.useMemo(
     () => [0, ...segments.map((item) => item.value)],
     [segments],
   )
 
-  const secondArcsLength = React.useMemo(() => {
-    const total = R.reduce((acc, item) => item.value + acc, 0, secondSegments)
-    return secondSegments.map((item) => item.value / total)
-  }, [secondSegments])
+  const secondArcsLength = React.useMemo(() => secondSegments.map((item) => item.value / segmentsTotalValue), [secondSegments])
   const secondSegmentColors = React.useMemo(
     () => secondSegments.map((item) => item.color),
     [secondSegments],
   )
   const secondCustomSegmentStops = React.useMemo(
-    () => [0, ...secondSegments.map((item) => item.value)],
+    () => {
+      let total = 0
+      return [0, ...secondSegments.map((item) => {
+        total += item.value
+        return item.value
+      })]
+    },
     [secondSegments],
   )
   const {
@@ -70,7 +83,7 @@ export default (props) => {
         }]}
       >
         {
-          values.map(({ label, color }) => (
+          values.map(({ label, color, value }) => (
             <Box
               flexDirection="row"
               alignItems="center"
@@ -83,7 +96,19 @@ export default (props) => {
                 backgroundColor={color}
                 mr={2}
               />
-              <Text fontSize="xl" justifyContent="center">{label}</Text>
+              <Text
+                fontSize="xl"
+                justifyContent="center"
+              >
+                {`${label}: `}
+              </Text>
+              <Text
+                fontSize="xl"
+                bold
+                justifyContent="center"
+              >
+                {value}
+              </Text>
             </Box>
           ))
         }
@@ -102,13 +127,16 @@ export default (props) => {
               segments={segments.length}
               segmentColors={segmentColors}
               arcsLength={arcsLength}
-              minValue={0}
               customSegmentStops={customSegmentStops}
-              maxValue={maxValue}
+              minValue={0}
+              maxValue={max ?? maxValue}
+              minLabel={min ?? 0}
+              maxLabel={max ?? maxValue}
               labelsEnabled={false}
               labelFormat={() => ''}
               currentValue={0}
               valueTextFontSize={25}
+              needleHeightRatio={1}
             />
             <View
               style={[StyleSheet.absoluteFillObject, {
@@ -132,7 +160,9 @@ export default (props) => {
                     segmentColors={secondSegmentColors}
                     arcsLength={secondArcsLength}
                     minValue={0}
-                    maxValue={maxValue}
+                    maxValue={max ?? maxValue}
+                    minLabel={min ?? 0}
+                    maxLabel={max ?? maxValue}
                     labelsEnabled={false}
                     labelFormat={() => ''}
                     currentValue={0}

@@ -44,9 +44,13 @@ export const HomeScreen = (props: any) => {
     status,
     formVisible,
     isDownloading,
-  isDownloadingData,
+    isDownloadingData,
   }, update] = useImmer({
-    data: initialData,// ?? Pages,
+    data: initialData ?? {
+      pages: Pages,
+      pensionFundName: 'PENSIONFUND NAME',
+      fundName: 'FUND NAME',
+    },
     status: 'idle',
     formVisible: false,
     isDownloading: false,
@@ -169,7 +173,7 @@ export const HomeScreen = (props: any) => {
             const MARGIN = 10
             doc.setTextColor('#FFFFFF')
             doc.setFontSize(24)
-            doc.text('PENSIOENFONDS X ', 5, MARGIN + 20)
+            doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
             doc.setFontSize(12)
             doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, MARGIN + 28)
             doc.setFontSize(9)

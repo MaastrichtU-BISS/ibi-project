@@ -100,6 +100,8 @@ export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
     // min/max values
     minValue: PROPS.minValue,
     maxValue: PROPS.maxValue,
+    minLabel: PROPS.minLabel,
+    maxLabel: PROPS.maxLabel,
     // color of the speedometer needle
     needleColor: PROPS.needleColor,
     // segments in the speedometer

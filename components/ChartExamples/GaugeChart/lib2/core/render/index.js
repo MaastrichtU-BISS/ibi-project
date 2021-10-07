@@ -305,7 +305,7 @@ function _renderCurrentValueText({ config, svg }) {
   // position the text 23pt below
     .attr('y', 23)
   // add text
-    .text(config.minValue)
+    .text(config.minLabel)
     .style('font-size', config.valueTextFontSize)
     .style('font-weight', config.valueTextFontWeight)
     .style('fill', config.textColor)
@@ -319,7 +319,7 @@ function _renderCurrentValueText({ config, svg }) {
   // position the text 23pt below
     .attr('y', 23)
   // add text
-    .text(config.maxValue)
+    .text(config.maxLabel)
     .style('font-size', config.valueTextFontSize)
     .style('font-weight', config.valueTextFontWeight)
     .style('fill', config.textColor)
@@ -344,6 +344,7 @@ function _renderCurrentValueText({ config, svg }) {
 function _renderNeedle({
   config, svg, r, centerTx,
 }) {
+  console.log('A', config.needleHeightRatio)
   const needleLength = calculateNeedleHeight({
     heightRatio: config.needleHeightRatio,
     radius: r,

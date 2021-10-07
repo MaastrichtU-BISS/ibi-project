@@ -46,10 +46,13 @@ export const OverrideHTML = (props) => {
   React.useEffect(() => {
     const call = async () => {
       // const result = await (await fetch('/report.html')).text()
-      const result = html
+      const result = html({
+        pensionFundName: data.pensionFundName,
+        fundName: data.fundName,
+      })
       const containerNode = document.getElementById(containerID)!
       containerNode.innerHTML = result
-      data.forEach((chartList, pageIndex) => {
+      data.pages.forEach((chartList, pageIndex) => {
         const pageNode = document.getElementsByClassName(`pc pc${pageIndex + 1} w0 h0`)[0]!
         const image = pageNode.getElementsByTagName('img')[0]!
         chartList.forEach((chart, chartIndex) => {
@@ -173,17 +176,17 @@ const SPEEDOMETER_SECOND_SEGMENTS = [
   // },
 ]
 
-const SPEEDOMETER_VALUES_BIND = [
-  {
-    color: BRAND_COLORS_MAP.grean,
-  },
-  {
-    color: BRAND_COLORS_MAP.lightBlue,
-  },
-  {
-    color: BRAND_COLORS_MAP.orange,
-  },
-]
+// const SPEEDOMETER_VALUES_BIND = [
+//   {
+//     color: BRAND_COLORS_MAP.grean,
+//   },
+//   {
+//     color: BRAND_COLORS_MAP.lightBlue,
+//   },
+//   {
+//     color: BRAND_COLORS_MAP.orange,
+//   },
+// ]
 
 const SEGMENTS = [
   {
@@ -198,7 +201,7 @@ const SECOND_SEGMENTS = [
     value: 100,
   },
   {
-    value: 250,
+    value: 220,
   },
 ]
 
@@ -279,7 +282,7 @@ const Bind = [
       id: 'Speedometer0',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -319,7 +322,7 @@ const Bind = [
       id: 'Speedometer1',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -347,7 +350,7 @@ const Bind = [
       id: 'Speedometer2',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -356,7 +359,7 @@ const Bind = [
       id: 'Speedometer3',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -424,7 +427,7 @@ const Bind = [
       id: 'Speedometer5',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -529,35 +532,35 @@ const Bind = [
       keys: [KEYS.alle, KEYS.pension, KEYS.fonds],
       colors: [BRAND_COLORS_MAP.blue, BRAND_COLORS_MAP.lightBlue, BRAND_COLORS_MAP.orange],
       extraElements: [
-        {
-          component: () => (
-            <TextBox
-              flexDirection="row"
-              data={[
-                {
-                  text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
-                  color: 'white',
-                  backgroundColor: BRAND_COLORS_MAP.blue,
-                },
-                {
-                  text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
-                },
-                {
-                  text: 'FONDS',
-                  backgroundColor: BRAND_COLORS_MAP.orange,
-                },
-              ]}
-            />
-          ),
-        },
+        // {
+        //   component: () => (
+        //     <TextBox
+        //       flexDirection="row"
+        //       data={[
+        //         {
+        //           text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
+        //           color: 'white',
+        //           backgroundColor: BRAND_COLORS_MAP.blue,
+        //         },
+        //         {
+        //           text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
+        //           backgroundColor: BRAND_COLORS_MAP.lightBlue,
+        //         },
+        //         {
+        //           text: 'FONDS',
+        //           backgroundColor: BRAND_COLORS_MAP.orange,
+        //         },
+        //       ]}
+        //     />
+        //   ),
+        // },
       ],
     },
     {
       id: 'Speedometer6',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -585,7 +588,7 @@ const Bind = [
       id: 'Speedometer7',
       type: 'Speedometer',
       data: {
-        values: SPEEDOMETER_VALUES_BIND,
+        // values: SPEEDOMETER_VALUES_BIND,
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
@@ -703,28 +706,28 @@ const Bind = [
       keys: [KEYS.alle, KEYS.pension, KEYS.fonds],
       colors: [BRAND_COLORS_MAP.blue, BRAND_COLORS_MAP.lightBlue, BRAND_COLORS_MAP.orange],
       extraElements: [
-        {
-          component: () => (
-            <TextBox
-              flexDirection="row"
-              data={[
-                {
-                  text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
-                  color: 'white',
-                  backgroundColor: BRAND_COLORS_MAP.blue,
-                },
-                {
-                  text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
-                },
-                {
-                  text: 'FONDS',
-                  backgroundColor: BRAND_COLORS_MAP.orange,
-                },
-              ]}
-            />
-          ),
-        },
+        // {
+        //   component: () => (
+        //     <TextBox
+        //       flexDirection="row"
+        //       data={[
+        //         {
+        //           text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
+        //           color: 'white',
+        //           backgroundColor: BRAND_COLORS_MAP.blue,
+        //         },
+        //         {
+        //           text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
+        //           backgroundColor: BRAND_COLORS_MAP.lightBlue,
+        //         },
+        //         {
+        //           text: 'FONDS',
+        //           backgroundColor: BRAND_COLORS_MAP.orange,
+        //         },
+        //       ]}
+        //     />
+        //   ),
+        // },
       ],
     },
   ],
@@ -796,18 +799,23 @@ export const Pages = [
     {
       id: 'Speedometer0',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 200,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -820,18 +828,23 @@ export const Pages = [
       id: 'Speedometer1',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 105,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -843,18 +856,23 @@ export const Pages = [
       id: 'Speedometer2',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -865,18 +883,23 @@ export const Pages = [
       id: 'Speedometer3',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -887,14 +910,18 @@ export const Pages = [
       id: 'Speedometer4',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
         ],
         segments: SEGMENTS,
@@ -905,18 +932,23 @@ export const Pages = [
       id: 'Speedometer5',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -926,6 +958,8 @@ export const Pages = [
     {
       id: 'BarChart0',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
@@ -935,6 +969,8 @@ export const Pages = [
     {
       id: 'BarChart1',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
@@ -942,6 +978,8 @@ export const Pages = [
     {
       id: 'BarChart2',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
@@ -1001,18 +1039,23 @@ export const Pages = [
       id: 'Speedometer6',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -1023,18 +1066,23 @@ export const Pages = [
       id: 'Speedometer7',
       type: 'Speedometer',
       data: {
+        min: 25,
+        max: 250,
         values: [
           {
             value: 100,
             label: KEYS.alle,
+            color: BRAND_COLORS_MAP.grean,
           },
           {
             value: 110,
             label: KEYS.pension,
+            color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
             label: KEYS.fonds,
+            color: BRAND_COLORS_MAP.orange,
           },
         ],
         segments: SEGMENTS,
@@ -1044,6 +1092,8 @@ export const Pages = [
     {
       id: 'BarChart3',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
@@ -1053,6 +1103,8 @@ export const Pages = [
     {
       id: 'BarChart4',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
@@ -1060,6 +1112,8 @@ export const Pages = [
     {
       id: 'BarChart5',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
@@ -1067,6 +1121,8 @@ export const Pages = [
     {
       id: 'BarChart6',
       type: 'BarChart',
+      min: 25,
+      max: 250,
       value: 90,
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
