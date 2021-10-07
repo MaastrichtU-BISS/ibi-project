@@ -172,7 +172,7 @@ const SPEEDOMETER_SECOND_SEGMENTS = [
     color: BRAND_COLORS_MAP.cream,
   },
   // {
-  //   color: BRAND_COLORS_MAP.cream,
+  //   color: BRAND_COLORS_MAP.grean,
   // },
 ]
 
@@ -389,7 +389,7 @@ const Bind = [
       data: {
         values: [
           {
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             color: BRAND_COLORS_MAP.lightBlue,
@@ -805,7 +805,7 @@ export const Pages = [
           {
             value: 200,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -834,7 +834,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -862,7 +862,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -889,7 +889,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -916,7 +916,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -938,7 +938,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -960,7 +960,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
@@ -971,7 +980,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
@@ -980,7 +998,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
@@ -1045,7 +1072,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -1072,7 +1099,7 @@ export const Pages = [
           {
             value: 100,
             label: KEYS.alle,
-            color: BRAND_COLORS_MAP.grean,
+            color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
@@ -1094,7 +1121,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
@@ -1105,7 +1141,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
@@ -1114,7 +1159,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
@@ -1123,7 +1177,16 @@ export const Pages = [
       type: 'BarChart',
       min: 25,
       max: 250,
-      value: 90,
+      values: [
+        {
+          value: 90,
+          color: BRAND_COLORS_MAP.orange,
+        },
+        {
+          value: 50,
+          color: BRAND_COLORS_MAP.green,
+        },
+      ],
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },

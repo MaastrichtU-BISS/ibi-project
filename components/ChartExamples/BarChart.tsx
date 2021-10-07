@@ -1,12 +1,14 @@
 import React from 'react'
-import { ResponsiveBar, BarDatum } from '@nivo/bar'
-import { Box } from 'native-base'
+import { ResponsiveBar } from '@nivo/bar'
+import { Box, Text } from 'native-base'
 import { BRAND_COLORS, KEYS, BRAND_COLORS_MAP } from '@constants'
 import { useChartTheme } from './utils'
 
+const FONT_SIZE = 25
+
 export default (props) => {
   const {
-    keys, data, value, min, max,
+    keys, data, values, min, max,
   } = props
   const [chartTheme] = useChartTheme({
     textColor: 'white',
@@ -17,12 +19,22 @@ export default (props) => {
       h="100%"
       flexDirection="row"
     >
-      <Box>{min}</Box>
+      <Box
+        ml={110}
+        mr={4}
+        mt={20}
+      >
+        <Text
+          fontSize={FONT_SIZE}
+        >
+          {min}
+        </Text>
+      </Box>
       <ResponsiveBar
       // width: '100%',
         height={250}
         margin={{
-          top: 60, right: 110, bottom: 60, left: 80,
+          top: 60, right: 0, bottom: 60, left: 0,
         }}
         data={data}
         theme={chartTheme}
@@ -68,25 +80,33 @@ export default (props) => {
       //     // ],
       //   },
       // ]}
-        markers={[
-          {
-            axis: 'x',
-            value,
-            lineStyle: {
-              stroke: BRAND_COLORS_MAP.orange,
-              strokeWidth: 4,
-              strokeDasharray: '25, 3',
-            },
-            textStyle: {
-              fontSize: chartTheme.fontSize,
-            },
-            legend: value,
-            legendOrientation: 'horizontal',
-            legendPosition: 'top',
+        markers={values.map(({ value, color }) => ({
+          axis: 'x',
+          value,
+          lineStyle: {
+            stroke: color,//BRAND_COLORS_MAP.orange,
+            strokeWidth: 4,
+            strokeDasharray: '25, 3',
           },
-        ]}
+          textStyle: {
+            fontSize: chartTheme.fontSize,
+          },
+          legend: value,
+          legendOrientation: 'horizontal',
+          legendPosition: 'top',
+        }))}
       />
-      <Box>{min}</Box>
+      <Box
+        mr={10}
+        ml={4}
+        mt={20}
+      >
+        <Text
+          fontSize={FONT_SIZE}
+        >
+          {max}
+        </Text>
+      </Box>
     </Box>
   )
 }

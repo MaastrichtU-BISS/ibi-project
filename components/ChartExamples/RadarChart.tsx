@@ -136,6 +136,7 @@ const LabelComponent = (props) => {
         style={{
           fontSize: theme.axis?.text?.fontSize ?? 20,
           fontWeight: 'bold',
+          fontFamily: 'ff2',
         }}
       >
         {id}
