@@ -24,7 +24,9 @@ export default (props) => {
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: 'color' }}
       arcLabelsSkipAngle={10}
-      arcLabelsTextColor={{ theme: 'labels.text.fill' }}
+      isInteractive={false}
+      // arcLabelsTextColor={{ theme: 'labels.text.fill' }}
+      arcLabelsTextColor="white"
       // arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
       defs={[
         {

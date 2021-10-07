@@ -23,6 +23,9 @@ export const useChartTheme = (override: any = {}) => {
               strokeWidth: 1,
             },
           },
+          text: {
+            fontSize: 20,
+          },
         },
         grid: {
           line: {

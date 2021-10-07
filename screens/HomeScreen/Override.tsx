@@ -108,6 +108,7 @@ export const OverrideHTML = (props) => {
                       justifyContent="center"
                     >
                       <Chart
+                        chartId={id}
                         data={chartData}
                         {...rest}
                       />

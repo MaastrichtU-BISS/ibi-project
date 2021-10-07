@@ -8,11 +8,17 @@ import {
 } from 'native-base'
 import { useChartTheme } from './utils'
 
+const DEFAULT_MARGIN = 50
 export default (props) => {
-  const { keys, data, colors } = props
+  const {
+    keys, data, colors, chartId,
+  } = props
   const [chartTheme] = useChartTheme({
-    fontSize: 23,
+    fontSize: 19,
   })
+  const MARGIN = chartId === 'RadarChart1'
+    ? DEFAULT_MARGIN + 50
+    : DEFAULT_MARGIN
   return (
     <View
       style={{
@@ -60,17 +66,26 @@ export default (props) => {
         indexBy="type"
         maxValue="auto"
         margin={{
-          top: 110, right: 100, bottom: 40, left: 100,
+          top: 40 + MARGIN,
+          right: 140 + MARGIN,
+          bottom: 40 + MARGIN,
+          left: 140 + MARGIN,
         }}
+        isInteractive={false}
         curve="linearClosed"
-        gridLabel={LabelComponent}
+        gridLabel={(props) => (
+          <LabelComponent
+            {...props}
+            theme={chartTheme}
+          />
+        )}
         borderWidth={2}
         borderColor={{ from: 'color' }}
         gridLevels={5}
         gridShape="circular"
         gridLabelOffset={50}
         enableDots
-        dotSize={10}
+        dotSize={5}
         dotColor={{ theme: 'background' }}
         dotBorderWidth={2}
         dotBorderColor={{ from: 'color' }}
@@ -87,7 +102,6 @@ export default (props) => {
       // blendMode="multiply"
         animate
         motionConfig="wobbly"
-        isInteractive
       />
     </View>
   )
@@ -114,20 +128,31 @@ const data = [
   },
 ]
 
-const LabelComponent = ({ id, anchor }) => (
-  <g transform={`translate(${anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0}, -20)`}>
-    <text>{id}</text>
-    <text
-      y={24}
-      style={{
-        fontSize: 24,
-        fontWeight: 'bold',
-        fill: '#3a9896',
-      }}
-    >
-      {/* +
-      {Math.round(Math.random() * 100)}
-      % */}
-    </text>
-  </g>
-)
+const LabelComponent = (props) => {
+  const { id, anchor, theme } = props
+  return (
+    <g transform={`translate(${anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0}, -20)`}>
+      <text
+        style={{
+          fontSize: theme.axis?.text?.fontSize ?? 20,
+          fontWeight: 'bold',
+        }}
+      >
+        {id}
+      </text>
+
+      {/* <text
+        y={24}
+        style={{
+          fontSize: theme.axis?.text?.fontSize ?? 20,
+          fontWeight: 'bold',
+          fill: '#3a9896',
+        }}
+      >
+        +
+        {Math.round(Math.random() * 100)}
+        %
+      </text> */}
+    </g>
+  )
+}

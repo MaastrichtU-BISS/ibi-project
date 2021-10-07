@@ -31,6 +31,7 @@ export default (props) => {
         } = c
         return data[`${id}Color`]
       }}
+      isInteractive={false}
       layout="horizontal"
       enableGridY={false}
       enableGridX
