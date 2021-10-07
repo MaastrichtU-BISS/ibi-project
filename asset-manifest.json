@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/ibi-project/static/js/app.ce3d848f.chunk.js",
-    "app.js.map": "/ibi-project/static/js/app.ce3d848f.chunk.js.map",
+    "app.js": "/ibi-project/static/js/app.62062688.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.62062688.chunk.js.map",
     "runtime~app.js": "/ibi-project/static/js/runtime~app.85426ed0.js",
     "runtime~app.js.map": "/ibi-project/static/js/runtime~app.85426ed0.js.map",
-    "static/js/2.86e0a808.chunk.js": "/ibi-project/static/js/2.86e0a808.chunk.js",
-    "static/js/2.86e0a808.chunk.js.map": "/ibi-project/static/js/2.86e0a808.chunk.js.map",
+    "static/js/2.a31debc8.chunk.js": "/ibi-project/static/js/2.a31debc8.chunk.js",
+    "static/js/2.a31debc8.chunk.js.map": "/ibi-project/static/js/2.a31debc8.chunk.js.map",
     "static/js/3.e33222c1.chunk.js": "/ibi-project/static/js/3.e33222c1.chunk.js",
     "static/js/3.e33222c1.chunk.js.map": "/ibi-project/static/js/3.e33222c1.chunk.js.map",
     "static/js/4.ea99278f.chunk.js": "/ibi-project/static/js/4.ea99278f.chunk.js",
@@ -33,14 +33,14 @@
     "reportOriginal copy.html": "/ibi-project/reportOriginal copy.html",
     "reportOriginal.html": "/ibi-project/reportOriginal.html",
     "serve.json": "/ibi-project/serve.json",
-    "static/js/2.86e0a808.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.86e0a808.chunk.js.LICENSE.txt",
+    "static/js/2.a31debc8.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.a31debc8.chunk.js.LICENSE.txt",
     "static/js/3.e33222c1.chunk.js.LICENSE.txt": "/ibi-project/static/js/3.e33222c1.chunk.js.LICENSE.txt",
     "static/js/4.ea99278f.chunk.js.LICENSE.txt": "/ibi-project/static/js/4.ea99278f.chunk.js.LICENSE.txt",
     "static/media/jsoneditor-icons.svg": "/ibi-project/static/media/jsoneditor-icons.15f2789d.svg"
   },
   "entrypoints": [
     "static/js/runtime~app.85426ed0.js",
-    "static/js/2.86e0a808.chunk.js",
-    "static/js/app.ce3d848f.chunk.js"
+    "static/js/2.a31debc8.chunk.js",
+    "static/js/app.62062688.chunk.js"
   ]
 }
