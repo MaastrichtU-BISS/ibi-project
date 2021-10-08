@@ -5,6 +5,8 @@ import { BRAND_COLORS, KEYS, BRAND_COLORS_MAP } from '@constants'
 import { useChartTheme } from './utils'
 
 const FONT_SIZE = 25
+const MARGIN_TOP = '205px'
+const HEIGHT = 20
 
 export default (props) => {
   const {
@@ -21,8 +23,8 @@ export default (props) => {
     >
       <Box
         ml={110}
-        mr={4}
-        mt={20}
+        mt={MARGIN_TOP}
+        h={HEIGHT}
       >
         <Text
           fontSize={FONT_SIZE}
@@ -46,6 +48,7 @@ export default (props) => {
       // {...(max ? { maxValue: max } : {})}
   // labelTextColor={'inherit:darker(1.4)'}
         labelTextColor={{ from: 'theme', theme: 'labels.text.fill' }}
+        enableLabel={false}
         labelSkipWidth={16}
         labelSkipHeight={16}
         colors={(c) => {
@@ -84,7 +87,7 @@ export default (props) => {
           axis: 'x',
           value,
           lineStyle: {
-            stroke: color,//BRAND_COLORS_MAP.orange,
+            stroke: color, // BRAND_COLORS_MAP.orange,
             strokeWidth: 4,
             strokeDasharray: '25, 3',
           },
@@ -98,8 +101,8 @@ export default (props) => {
       />
       <Box
         mr={10}
-        ml={4}
-        mt={20}
+        mt={MARGIN_TOP}
+        h={HEIGHT}
       >
         <Text
           fontSize={FONT_SIZE}

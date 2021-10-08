@@ -308,6 +308,7 @@ function _renderCurrentValueText({ config, svg }) {
     .text(config.minLabel)
     .style('font-size', config.valueTextFontSize)
     .style('font-weight', config.valueTextFontWeight)
+    .style('font-family', config.valueTextFontFamily)
     .style('fill', config.textColor)
   svg
     .append('g')
@@ -322,6 +323,7 @@ function _renderCurrentValueText({ config, svg }) {
     .text(config.maxLabel)
     .style('font-size', config.valueTextFontSize)
     .style('font-weight', config.valueTextFontWeight)
+    .style('font-family', config.valueTextFontFamily)
     .style('fill', config.textColor)
   return (
     svg
@@ -337,6 +339,7 @@ function _renderCurrentValueText({ config, svg }) {
       .text(config.currentValue)
       .style('font-size', config.valueTextFontSize)
       .style('font-weight', config.valueTextFontWeight)
+      .style('font-family', config.valueTextFontFamily)
       .style('fill', config.textColor)
   )
 }

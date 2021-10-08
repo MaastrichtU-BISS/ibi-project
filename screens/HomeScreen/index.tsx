@@ -50,7 +50,7 @@ export const HomeScreen = (props: any) => {
     //  ?? {
     //   pages: Pages,
     //   pensionFundName: 'PENSIONFUND NAME',
-    //   fundName: 'FUND NAME',
+    //   fundName: 'Fund Name',
     // },
     status: 'idle',
     formVisible: false,

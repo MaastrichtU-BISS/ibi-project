@@ -817,6 +817,11 @@ export const Pages = [
             label: KEYS.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
+          {
+            value: 150,
+            label: 'EXAMPLE 4 VALUE',
+            color: BRAND_COLORS_MAP.cream,
+          },
         ],
         segments: SEGMENTS,
         secondSegments: SECOND_SEGMENTS,

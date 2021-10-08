@@ -140,6 +140,7 @@ export const getConfig = ({ PROPS, parentWidth, parentHeight }) => {
     labelFontSize: PROPS.labelFontSize,
     valueTextFontSize: PROPS.valueTextFontSize,
     valueTextFontWeight: PROPS.valueTextFontWeight,
+    valueTextFontFamily: PROPS.valueTextFontFamily,
     needles: PROPS.needles,
   }
 

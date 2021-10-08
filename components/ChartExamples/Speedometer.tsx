@@ -115,7 +115,11 @@ export default (props) => {
       </View>
       {
         initialized && (
-          <>
+          <View
+            style={{
+              marginTop: values.length > 3 ? 35 : 0,
+            }}
+          >
             <GaugeChart
               width={width - 50}
               height={height}
@@ -136,6 +140,7 @@ export default (props) => {
               labelFormat={() => ''}
               currentValue={0}
               valueTextFontSize={25}
+              valueTextFontFamily="ff2"
               needleHeightRatio={1}
             />
             <View
@@ -171,7 +176,7 @@ export default (props) => {
                 )
               }
             </View>
-          </>
+          </View>
         )
       }
     </View>
