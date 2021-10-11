@@ -394,6 +394,7 @@
   top: 430px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #Speedometer0ExtraContainer1 {
@@ -420,6 +421,7 @@
   top: 190px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #Speedometer3ExtraContainer0 {
@@ -428,6 +430,7 @@
   top: 420px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #Speedometer4ExtraContainer0 {
@@ -436,6 +439,7 @@
   top: 65px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #Speedometer4ExtraContainer1 {
@@ -453,6 +457,7 @@
   top: 250px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart0ExtraContainer0 {
@@ -461,6 +466,7 @@
   top: 562px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart1ExtraContainer0 {
@@ -469,6 +475,7 @@
   top: 167px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart2ExtraContainer0 {
@@ -477,6 +484,7 @@
   top: 333px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #RadarChart0ExtraContainer0 {
@@ -493,6 +501,7 @@
   top: 127px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart3ExtraContainer0 {
@@ -501,6 +510,7 @@
   top: 502px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart4ExtraContainer0 {
@@ -509,6 +519,7 @@
   top: 182px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart5ExtraContainer0 {
@@ -517,6 +528,7 @@
   top: 362px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
 
 #BarChart6ExtraContainer0 {
@@ -525,7 +537,9 @@
   top: 562px;
   width: 80px;
   height: 70px;
+  /* visibility: hidden; */
 }
+
 #BarChart6ExtraContainer1 {
   position: absolute;
   left: 23px;
