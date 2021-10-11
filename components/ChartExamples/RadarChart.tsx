@@ -6,9 +6,10 @@ import {
   Box,
   Text,
 } from 'native-base'
+import * as R from 'colay/ramda'
 import { useChartTheme } from './utils'
 
-const DEFAULT_MARGIN = 50
+const DEFAULT_MARGIN = 0
 export default (props) => {
   const {
     keys, data, colors, chartId,
@@ -67,9 +68,9 @@ export default (props) => {
         maxValue="auto"
         margin={{
           top: 40 + MARGIN,
-          right: 140 + MARGIN,
-          bottom: 40 + MARGIN,
-          left: 140 + MARGIN,
+          right: 100 + MARGIN,
+          // bottom: 40 + MARGIN,
+          left: 100 + MARGIN,
         }}
         isInteractive={false}
         curve="linearClosed"
@@ -83,7 +84,7 @@ export default (props) => {
         borderColor={{ from: 'color' }}
         gridLevels={5}
         gridShape="circular"
-        gridLabelOffset={50}
+        gridLabelOffset={30}
         enableDots
         dotSize={5}
         dotColor={{ theme: 'background' }}
@@ -130,17 +131,44 @@ const data = [
 
 const LabelComponent = (props) => {
   const { id, anchor, theme } = props
+  console.log('A', id, anchor)
+  const width  = R.reduce(
+    (acc, val) => acc || val.length > 9,
+    false,
+    id.split(' '),
+  )
+    ? 200
+    : 150
+  const height  = id.split(' ').length > 3
+    ? 200
+    : 150
   return (
     <g transform={`translate(${anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0}, -20)`}>
-      <text
+      <foreignObject
+        width={width}
+        height={height}
+      >
+        <p
+          style={{
+            fontSize: theme.axis?.text?.fontSize ?? 20,
+            // fontWeight: 'bold',
+            fontFamily: 'ff2',
+          }}
+          xmlns="http://www.w3.org/1999/xhtml"
+        >
+          {id}
+        </p>
+      </foreignObject>
+      {/* <text
         style={{
           fontSize: theme.axis?.text?.fontSize ?? 20,
-          fontWeight: 'bold',
+          // fontWeight: 'bold',
           fontFamily: 'ff2',
+          width: 10,
         }}
       >
         {id}
-      </text>
+      </text> */}
 
       {/* <text
         y={24}

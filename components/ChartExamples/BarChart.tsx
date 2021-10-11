@@ -22,6 +22,38 @@ export default (props) => {
       flexDirection="row"
     >
       <Box
+        style={[{
+          position: 'absolute',
+          top: -40,
+          left: 132,
+          zIndex: 1,
+        }]}
+      >
+        {
+          values.map(({ label, color, value }) => (
+            <Box
+              flexDirection="row"
+              alignItems="center"
+              mb={2}
+            >
+              <Box
+                width={5}
+                height={5}
+                borderRadius={5}
+                backgroundColor={color}
+                mr={2}
+              />
+              <Text
+                fontSize="xl"
+                justifyContent="center"
+              >
+                {`${label}`}
+              </Text>
+            </Box>
+          ))
+        }
+      </Box>
+      <Box
         ml={110}
         mt={MARGIN_TOP}
         h={HEIGHT}

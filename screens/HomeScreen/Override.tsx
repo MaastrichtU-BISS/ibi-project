@@ -969,10 +969,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -989,10 +991,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -1007,10 +1011,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -1130,10 +1136,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -1150,10 +1158,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -1168,10 +1178,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -1186,10 +1198,12 @@ export const Pages = [
         {
           value: 90,
           color: BRAND_COLORS_MAP.orange,
+          label: 'LABEL1',
         },
         {
           value: 50,
           color: BRAND_COLORS_MAP.green,
+          label: 'LABEL2',
         },
       ],
       data: BARCHART_VALUES_BIND,
@@ -1200,14 +1214,14 @@ export const Pages = [
       type: 'RadarChart',
       data: [
         {
-          type: 'KOSTEN PENSIOENBEHEER\nPER DELNEMER(DEF, PF)',
+          type: 'KOSTEN PENSIOENBEHEER DELNEMER(DEF,PF)',
           [KEYS.alle]: 70,
           [KEYS.pension]: 20,
           [KEYS.fonds]: 130,
 
         },
         {
-          type: 'KOSTEN PENSIOENBEHEER\nPER DELNEMER(ALLE)',
+          type: 'KOSTEN PENSIOENBEHEER DELNEMER(ALLE)',
           [KEYS.alle]: 10,
           [KEYS.pension]: 70,
           [KEYS.fonds]: 20,
@@ -1221,25 +1235,25 @@ export const Pages = [
 
         },
         {
-          type: 'COMPLEXITEITS\nINDEX',
+          type: 'COMPLEXITEITS INDEX',
           [KEYS.alle]: 30,
           [KEYS.pension]: 50,
           [KEYS.fonds]: 160,
         },
         {
-          type: 'AUTOMATISERINGS\nINDEX',
+          type: 'AUTOMATISERINGS INDEX',
           [KEYS.alle]: 130,
           [KEYS.pension]: 10,
           [KEYS.fonds]: 50,
         },
         {
-          type: 'OVERDRACHTEN\nINDEX',
+          type: 'OVERDRACHTEN INDEX',
           [KEYS.alle]: 20,
           [KEYS.pension]: 130,
           [KEYS.fonds]: 40,
         },
         {
-          type: 'SLAPERS\nINDEX',
+          type: 'SLAPERS INDEX',
           [KEYS.alle]: 10,
           [KEYS.pension]: 20,
           [KEYS.fonds]: 130,
