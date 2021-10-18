@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/ibi-project/static/js/app.b8ce6f53.chunk.js",
-    "app.js.map": "/ibi-project/static/js/app.b8ce6f53.chunk.js.map",
+    "app.js": "/ibi-project/static/js/app.1ebaef38.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.1ebaef38.chunk.js.map",
     "runtime~app.js": "/ibi-project/static/js/runtime~app.85426ed0.js",
     "runtime~app.js.map": "/ibi-project/static/js/runtime~app.85426ed0.js.map",
     "static/js/2.d941e449.chunk.js": "/ibi-project/static/js/2.d941e449.chunk.js",
@@ -41,6 +41,6 @@
   "entrypoints": [
     "static/js/runtime~app.85426ed0.js",
     "static/js/2.d941e449.chunk.js",
-    "static/js/app.b8ce6f53.chunk.js"
+    "static/js/app.1ebaef38.chunk.js"
   ]
 }
