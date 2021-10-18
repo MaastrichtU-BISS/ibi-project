@@ -46,12 +46,12 @@ export const HomeScreen = (props: any) => {
     isDownloading,
     isDownloadingData,
   }, update] = useImmer({
-    data: initialData
-     ?? {
-      pages: Pages,
-      pensionFundName: 'PENSIONFUND NAME',
-      fundName: 'Fund Name',
-    },
+    data: initialData,
+    //  ?? {
+    //   pages: Pages,
+    //   pensionFundName: 'PENSIONFUND NAME',
+    //   fundName: 'Fund Name',
+    // },
     status: 'idle',
     formVisible: false,
     isDownloading: false,
