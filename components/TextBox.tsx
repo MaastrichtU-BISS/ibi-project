@@ -2,16 +2,21 @@ import React from 'react'
 import {
   Box,
   Text,
+  Stack,
 } from 'native-base'
 
 export const TextBox = (props) => {
   const {
     data,
     flexDirection = 'column',
+    space = 0,
+    fontSize = 5,
+    width = '61px',
   } = props
   return (
-    <Box
-      flexDirection={flexDirection}
+    <Stack
+      direction={flexDirection}
+      space={space}
     >
       {
           data.map(({ text, color = 'black', backgroundColor }) => (
@@ -22,10 +27,10 @@ export const TextBox = (props) => {
               mr={1}
               py={1}
               px={1}
-              width={'61px'}
+              width={width}
             >
               <Text
-                fontSize={5}
+                fontSize={fontSize}
                 color={color}
                 textAlign="center"
               >
@@ -34,6 +39,6 @@ export const TextBox = (props) => {
             </Box>
           ))
         }
-    </Box>
+    </Stack>
   )
 }

@@ -46,10 +46,11 @@ export const OverrideHTML = (props) => {
   React.useEffect(() => {
     const call = async () => {
       // const result = await (await fetch('/report.html')).text()
-      const result = html({
+      const variables = {
         pensionFundName: data.pensionFundName,
         fundName: data.fundName,
-      })
+      }
+      const result = html(variables)
       const containerNode = document.getElementById(containerID)!
       containerNode.innerHTML = result
       data.pages.forEach((chartList, pageIndex) => {
@@ -83,7 +84,7 @@ export const OverrideHTML = (props) => {
                 config={NATIVE_BASE_CONFIG}
                 colorModeManager={colorModeManager}
               >
-                {extraElement.component(extraElementsData?.[index] ?? {})}
+                {extraElement.component(extraElementsData?.[index] ?? {}, { variables })}
               </NativeBaseProvider>,
               chartExtraContainer,
             )
@@ -217,6 +218,16 @@ const BARCHART_VALUES_BIND = [
   },
 ]
 
+const ExplanationText = (props) => (
+  <Text
+    fontSize="8.3px"
+    fontFamily="ff2"
+    fontWeight={500}
+    color="rgb(0,0,0)"
+    {...props}
+  />
+)
+
 const Bind = [
   [
     {
@@ -244,6 +255,18 @@ const Bind = [
             >
               {props.value}
             </Text>
+          ),
+        },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
+        {
+          component: () => (
+            <ExplanationText>
+              Kosten  van  vermogensbeheer  inclusief transactiekosten  bepalen  grotendeels  de uitvoeringskosten
+            </ExplanationText>
           ),
         },
       ],
@@ -314,6 +337,34 @@ const Bind = [
             <Box />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'Uitgangspunt  voor de inrichting van vermogensbeheer is  het risico dat het pensioenfonds bereid is nemen waarbij rekening dient te worden gehouden met de huidige financiële positie. Bij een hoger risico dient een hoge buffer te worden aangehouden.\n\nEen  hoger  genomen  risico  geeft  een  hoger rendementspotentieel van het fonds. Van belang is dat gekeken wordt naar het meerjarig rendement van het pensioenfonds.  '}
+            </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <TextBox
+              flexDirection="row"
+              space={2}
+              fontSize={6}
+              width="72px"
+              data={[
+                {
+                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  color: 'white',
+                  backgroundColor: BRAND_COLORS_MAP.blue,
+                },
+                {
+                  text: 'RANGE VERGELIJKBARE\nPENSIOENFONDSEN',
+                  backgroundColor: BRAND_COLORS_MAP.cream,
+                },
+              ]}
+            />
+          ),
+        },
       ],
     },
   ],
@@ -381,6 +432,13 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd  wordt. Bij een  vergelijking  van  het  rendement  met  andere pensioenfondsen over slechts één jaar komt het beleid dat het  bestuur  heeft  bepaald  niet  goed  tot  zijn  recht.  Een vergelijking over een periode van 5 en 10 jaar geeft een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
+            </ExplanationText>
+          ),
+        },
       ],
     },
     {
@@ -421,6 +479,14 @@ const Bind = [
             <Box />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              Benchmarkkosten  is  een  door  het Institutioneel  Benchmarking  Instituut onafhankelijk  berekende  kostennorm  die past  bij  de  door  het  pensioenfonds gekozen  inrichting  van  de  vermogens-beheerportefeuille.  Indien  de  kosten  van het  pensioenfonds  hoger  zijn  dan  de berekende  benchmarkkosten  dan  zijn  de kosten van het pensioenfonds hoger dan je mag verwachten.
+            </ExplanationText>
+          ),
+        },
+
       ],
     },
     {
@@ -449,6 +515,14 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              De  hoogte  van  de  transactiekosten  is  afhankelijk  van  een aantal  factoren  zoals  bijvoorbeeld  de  beleggingscategorie waarin  belegd  wordt  alsmede  de  beleggingsstijl.  Ook  het gedurende  het  verslagjaar  inrichten  /  wijzigen  van  de beleggingsstrategie  gaat  gepaard  met  hogere  aan-  en verkoopkosten.
+            </ExplanationText>
+          ),
+        },
+
       ],
     },
     {
@@ -473,6 +547,14 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'De asset allocatie index geeft de spreiding van beleggingen weer waarbij 100 het gemiddelde is  van  alle  deelnemende  pensioenfondsen. Brede spreiding leidt tot hogere  kosten maar lager risico. \n\nDe asset allocatie heeft de grootste invloed op de vermogensbeheerkosten. '}
+            </ExplanationText>
+          ),
+        },
+
       ],
     },
   ],
@@ -497,6 +579,13 @@ const Bind = [
                 },
               ]}
             />
+          ),
+        },
+        {
+          component: () => (
+            <ExplanationText>
+              {'De alpha index geeft weer in welke mate actief wordt belegd waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\n\nActief beheer leidt tot hogere kosten maar ook tot potentieel een hoger rendement. '}
+            </ExplanationText>
           ),
         },
       ],
@@ -524,6 +613,13 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'De  implementatie  index  geeft  de  keuze  weer tussen  direct  beleggen  of  beleggen  via beleggingsfondsen, waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\n\nHoe hoger deze index, hoe meer het fonds via beleggingsfondsen belegd. '}
+            </ExplanationText>
+          ),
+        },
       ],
     },
     {
@@ -532,28 +628,35 @@ const Bind = [
       keys: [KEYS.alle, KEYS.pension, KEYS.fonds],
       colors: [BRAND_COLORS_MAP.blue, BRAND_COLORS_MAP.lightBlue, BRAND_COLORS_MAP.orange],
       extraElements: [
-        // {
-        //   component: () => (
-        //     <TextBox
-        //       flexDirection="row"
-        //       data={[
-        //         {
-        //           text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
-        //           color: 'white',
-        //           backgroundColor: BRAND_COLORS_MAP.blue,
-        //         },
-        //         {
-        //           text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-        //           backgroundColor: BRAND_COLORS_MAP.lightBlue,
-        //         },
-        //         {
-        //           text: 'FONDS',
-        //           backgroundColor: BRAND_COLORS_MAP.orange,
-        //         },
-        //       ]}
-        //     />
-        //   ),
-        // },
+        {
+          component: () => (
+            <TextBox
+              flexDirection="row"
+              data={[
+                {
+                  text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  color: 'white',
+                  backgroundColor: BRAND_COLORS_MAP.blue,
+                },
+                {
+                  text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
+                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                },
+                {
+                  text: 'FONDS',
+                  backgroundColor: BRAND_COLORS_MAP.orange,
+                },
+              ]}
+            />
+          ),
+        },
+        {
+          component: (_, props) => (
+            <ExplanationText>
+              {`De spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het  pensioenfonds  gemaakt  heeft  en die de uitkomsten bepalen.\n\nVoor  de  grafiek  zijn  de  cijfers geïndexeerd.  Dit  betekent  dat  het gemiddelde  van  alle  deelnemende fondsen een waarde van 100 heeft. De grafiek  laat  zien  in  hoeverre vergelijkbare fondsen en het ${props.variables.fundName} hoger  of  lager  scoren  dan  het gemiddelde.`}
+            </ExplanationText>
+          ),
+        },
       ],
     },
     {
@@ -582,6 +685,38 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'Kosten per deelnemer indien uitgegaan wordt van het  aantal  premiebetalende  deelnemers  en gepensioneerden aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van  de  kosten  per  deelnemer  die  ook  wettelijk gepubliceerd moet worden. '}
+            </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <>
+              <Text
+                fontSize={17}
+                color="rgb(24, 55, 109)"
+                bold
+              >
+                PENSIOENBEHEER
+              </Text>
+              <Text
+                fontSize={14}
+                color="rgb(24, 55, 109)"
+                italic
+                bold
+                mb={1}
+              >
+                WAT ZIJN DE KOSTEN PER DEELNEMER?
+              </Text>
+              <ExplanationText fontSize="7.93">
+                Bij pensioenbeheer worden kosten ook veroorzaakt door niet beïnvloedbare factoren. Dit betreft de samenstelling van de deelnemers. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal  waarde-overdrachten  (deelnemers  die  met  reeds  opgebouwde  vermogen  toetreden  of  vertrekken  bij  het pensioenfonds) heeft invloed op het kostenniveau
+              </ExplanationText>
+            </>
+          ),
+        },
       ],
     },
     {
@@ -592,6 +727,16 @@ const Bind = [
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
+      extraElements: [
+        {
+          component: () => (
+            <ExplanationText>
+              {'Aanvullend  kijken  wij  ook  naar  de  kosten  per deelnemer  indien  uitgegaan  wordt  van  alle deelnemers,  dus  ook  de  ‘slapers’.  Dit  omdat het aandeel ‘slapers’ ook invloed heeft op de kosten. '}
+            </ExplanationText>
+          ),
+        },
+
+      ],
     },
     {
       id: 'BarChart3',
@@ -614,6 +759,13 @@ const Bind = [
                 },
               ]}
             />
+          ),
+        },
+        {
+          component: () => (
+            <ExplanationText>
+              De service index geeft weer hoeveel  service aan  deelnemers  wordt  gegeven  o.a.  op  het gebied  van  tijdig  verwerken  van pensioenbetalingen,  openingsuren  helpdesk, website  mogelijkheden  en  afwerking  van klachten.  Het  gemiddelde  van  alle deelnemende pensioenfondsen is 100. Hogere service leidt in de regel tot hogere kosten.
+            </ExplanationText>
           ),
         },
       ],
@@ -643,6 +795,14 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'Geeft  de  complexiteit  van  de  regeling  die wordt uitgevoerd weer. De complexiteit is een gevolg  van  de  afspraken  die  met  de werkgever  en  sociale  partners  over  het pensioen  zijn  gemaakt.  Een  hoge complexiteit maakt het automatiseren van het proces  lastig  en  kostbaar.  Het  gemiddelde van  alle  deelnemende  pensioenfondsen  is 100. Een hogere complexiteit leidt tot in de regel tot hogere kosten. '}
+            </ExplanationText>
+          ),
+        },
+
       ],
     },
     {
@@ -668,6 +828,14 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'De  mate  waarin  de  verwerking    van transacties geautomatiseerd geschiedt.\n\nEen hogere automatiseringsgraad leidt in de regel tot lagere kosten.'}
+            </ExplanationText>
+          ),
+        },
+
       ],
     },
     {
@@ -698,6 +866,14 @@ const Bind = [
             <Box />
           ),
         },
+        {
+          component: () => (
+            <ExplanationText>
+              {'Geeft  weer  hoeveel  deelnemers  het pensioenfonds verlaten of erbij komen.\n\nOok  heeft  het  pensioenfonds  geen controle hierover, beïnvloed het de kosten alsnog. '}
+            </ExplanationText>
+          ),
+        },
+
       ],
     },
     {
@@ -706,28 +882,35 @@ const Bind = [
       keys: [KEYS.alle, KEYS.pension, KEYS.fonds],
       colors: [BRAND_COLORS_MAP.blue, BRAND_COLORS_MAP.lightBlue, BRAND_COLORS_MAP.orange],
       extraElements: [
-        // {
-        //   component: () => (
-        //     <TextBox
-        //       flexDirection="row"
-        //       data={[
-        //         {
-        //           text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
-        //           color: 'white',
-        //           backgroundColor: BRAND_COLORS_MAP.blue,
-        //         },
-        //         {
-        //           text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-        //           backgroundColor: BRAND_COLORS_MAP.lightBlue,
-        //         },
-        //         {
-        //           text: 'FONDS',
-        //           backgroundColor: BRAND_COLORS_MAP.orange,
-        //         },
-        //       ]}
-        //     />
-        //   ),
-        // },
+        {
+          component: () => (
+            <TextBox
+              flexDirection="row"
+              data={[
+                {
+                  text: 'ALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  color: 'white',
+                  backgroundColor: BRAND_COLORS_MAP.blue,
+                },
+                {
+                  text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
+                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                },
+                {
+                  text: 'FONDS',
+                  backgroundColor: BRAND_COLORS_MAP.orange,
+                },
+              ]}
+            />
+          ),
+        },
+        {
+          component: () => (
+            <ExplanationText>
+              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering.  Op  het  aantal  overdrachten  en  de  samenstelling  van  de  deelnemers  heeft  het  bestuur  geen invloed, hoewel deze de kosten alsnog beïnvloeden.\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien in hoeverre vergelijkbare fondsen en het Fund Name  hoger of lager scoren dan het gemiddelde. '}
+            </ExplanationText>
+          ),
+        },
       ],
     },
   ],
