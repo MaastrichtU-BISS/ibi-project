@@ -366,7 +366,7 @@
 
 #BarChart6Container {
   position: absolute;
-  left: var(--first-left);
+  left: 23.3px;
   top: 375px;
   transform-origin: 0 0;
   transform: scale(0.25);
@@ -784,6 +784,15 @@
   position: absolute;
   left: var(--second-left);
   top: 378px;
+  width: var(--title-box-width);
+  z-index: 10;
+  background-color: white;
+}
+
+#BarChart3ExtraContainer3 {
+  position: absolute;
+  left: var(--second-left);
+  top: 348px;
   width: var(--title-box-width);
   z-index: 10;
   background-color: white;

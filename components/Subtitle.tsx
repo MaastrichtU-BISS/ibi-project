@@ -13,7 +13,7 @@ export const Subtitle = (props: any) => {
   } = props
   return (
     <Text
-      fontSize={14}
+      fontSize={13}
       color={TITLE_COLOR}
       italic
       bold

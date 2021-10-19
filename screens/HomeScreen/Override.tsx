@@ -853,6 +853,13 @@ const Bind = [
             </TitleBox>
           ),
         },
+        {
+          component: () => (
+            <Subtitle>
+              WELKE KEUZES HEEFT PENSIOENFONDS GEMAAKT?
+            </Subtitle>
+          ),
+        },
       ],
     },
   ],
@@ -1008,8 +1015,7 @@ const Bind = [
         {
           component: () => (
             <Box>
-              <Subtitle
-              >
+              <Subtitle>
                 PENSIOENBEHEERKOSTEN IN CONTEXT
               </Subtitle>
             </Box>
