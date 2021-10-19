@@ -518,11 +518,12 @@
 #Speedometer5ExtraContainer1 {
   position: absolute;
   left: 590px;
-  top: 255px;
-  width: 170px;
+  top: 235px;
+  width: 150px;
   background-color: white;
   z-index: 10;
-  height: 150px;
+  /* height: 150px; */
+  padding: 22px;
 }
 
 #BarChart0ExtraContainer0 {

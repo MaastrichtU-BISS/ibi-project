@@ -60,6 +60,8 @@ export default (props) => {
       >
         <Text
           fontSize={FONT_SIZE}
+          fontWeight={500}
+          color="rgb(0,0,0)"
         >
           {min}
         </Text>
@@ -125,6 +127,9 @@ export default (props) => {
           },
           textStyle: {
             fontSize: chartTheme.fontSize,
+            fontFamily: 'ff2',
+            fontWeight: 500,
+            color: 'rgb(0,0,0)',
           },
           legend: value,
           legendOrientation: 'horizontal',
@@ -138,6 +143,8 @@ export default (props) => {
       >
         <Text
           fontSize={FONT_SIZE}
+          fontWeight={500}
+          color="rgb(0,0,0)"
         >
           {max}
         </Text>

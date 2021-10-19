@@ -294,7 +294,7 @@ function _renderCustomSegmentLabels({
 function _renderCurrentValueText({ config, svg }) {
   const translateX = (config.width + 2 * config.paddingHorizontal) / 2
   // move the current value text down depending on padding vertical
-  const translateY = (config.width + 4 * config.paddingVertical) / 2
+  const translateY = (config.width + 4 * config.paddingVertical) / 2 - 20
   svg
     .append('g')
     .attr('transform', `translate(${2 * config.paddingHorizontal}, ${translateY})`)
@@ -303,7 +303,7 @@ function _renderCurrentValueText({ config, svg }) {
     .attr('class', 'current-value')
     .attr('text-anchor', 'middle')
   // position the text 23pt below
-    .attr('y', 23)
+    .attr('y', 0)
   // add text
     .text(config.minLabel)
     .style('font-size', config.valueTextFontSize)
@@ -318,7 +318,7 @@ function _renderCurrentValueText({ config, svg }) {
     .attr('class', 'current-value')
     .attr('text-anchor', 'middle')
   // position the text 23pt below
-    .attr('y', 23)
+    .attr('y', 0)
   // add text
     .text(config.maxLabel)
     .style('font-size', config.valueTextFontSize)
