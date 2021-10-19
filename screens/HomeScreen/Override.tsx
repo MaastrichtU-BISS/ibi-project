@@ -1,6 +1,8 @@
 import * as ChartExamples from '@components/ChartExamples'
 import { TextBox } from '@components/TextBox'
 import { TitleBox } from '@components/TitleBox'
+import { Title } from '@components/Title'
+import { Subtitle } from '@components/Subtitle'
 import { BRAND_COLORS_MAP, TITLE_COLOR } from '@constants'
 import {
   colorModeManager, NATIVE_BASE_CONFIG,
@@ -394,6 +396,20 @@ const Bind = [
             </TitleBox>
           ),
         },
+        {
+          component: () => (
+            <Title>
+              VERMOGENSBEHEER
+            </Title>
+          ),
+        },
+        {
+          component: () => (
+            <Subtitle>
+              WAT IS HET RENDEMENT EN WAT ZIJN DE KOSTEN?
+            </Subtitle>
+          ),
+        },
       ],
     },
     {
@@ -589,15 +605,9 @@ const Bind = [
         },
         {
           component: () => (
-            <Text
-              fontSize={14}
-              color={TITLE_COLOR}
-              italic
-              bold
-              mb={1}
-            >
+            <Subtitle>
               WELKE KEUZES HEEFT PENSIOENFONDS GEMAAKT?
-            </Text>
+            </Subtitle>
           ),
         },
         {
@@ -726,15 +736,9 @@ const Bind = [
         },
         {
           component: () => (
-            <Text
-              fontSize={14}
-              color={TITLE_COLOR}
-              italic
-              bold
-              mb={1}
-            >
+            <Subtitle>
               VERMOGENSBEHEERKOSTEN IN CONTEXT
-            </Text>
+            </Subtitle>
           ),
         },
       ],
@@ -775,22 +779,14 @@ const Bind = [
         {
           component: () => (
             <>
-              <Text
-                fontSize={17}
-                color={TITLE_COLOR}
-                bold
-              >
+              <Title>
                 PENSIOENBEHEER
-              </Text>
-              <Text
-                fontSize={14}
-                color={TITLE_COLOR}
-                italic
-                bold
+              </Title>
+              <Subtitle
                 mb={1}
               >
                 WAT ZIJN DE KOSTEN PER DEELNEMER?
-              </Text>
+              </Subtitle>
               <ExplanationText fontSize="7.93">
                 Bij pensioenbeheer worden kosten ook veroorzaakt door niet beïnvloedbare factoren. Dit betreft de samenstelling van de deelnemers. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal  waarde-overdrachten  (deelnemers  die  met  reeds  opgebouwde  vermogen  toetreden  of  vertrekken  bij  het pensioenfonds) heeft invloed op het kostenniveau
               </ExplanationText>
@@ -850,7 +846,9 @@ const Bind = [
         },
         {
           component: () => (
-            <TitleBox>
+            <TitleBox
+              h="23px"
+            >
               {'WELK SERVICE NIVEAU IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?\n(service index) '}
             </TitleBox>
           ),
@@ -1005,6 +1003,16 @@ const Bind = [
             <ExplanationText>
               {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering.  Op  het  aantal  overdrachten  en  de  samenstelling  van  de  deelnemers  heeft  het  bestuur  geen invloed, hoewel deze de kosten alsnog beïnvloeden.\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien in hoeverre vergelijkbare fondsen en het Fund Name  hoger of lager scoren dan het gemiddelde. '}
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <Box>
+              <Subtitle
+              >
+                PENSIOENBEHEERKOSTEN IN CONTEXT
+              </Subtitle>
+            </Box>
           ),
         },
       ],
