@@ -15,11 +15,12 @@ export default (props) => {
     keys, data, colors, chartId,
   } = props
   const [chartTheme] = useChartTheme({
-    fontSize: 19,
+    fontSize: 24,
   })
-  const MARGIN = chartId === 'RadarChart1'
-    ? DEFAULT_MARGIN + 50
-    : DEFAULT_MARGIN
+  const MARGIN = DEFAULT_MARGIN
+  // chartId === 'RadarChart1'
+  //   ? DEFAULT_MARGIN + 50
+  //   : DEFAULT_MARGIN
   return (
     <View
       style={{
