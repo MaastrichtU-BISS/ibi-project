@@ -1,6 +1,7 @@
 import * as ChartExamples from '@components/ChartExamples'
 import { TextBox } from '@components/TextBox'
-import { BRAND_COLORS_MAP } from '@constants'
+import { TitleBox } from '@components/TitleBox'
+import { BRAND_COLORS_MAP, TITLE_COLOR } from '@constants'
 import {
   colorModeManager, NATIVE_BASE_CONFIG,
 } from '@root/config/native-base'
@@ -176,18 +177,6 @@ const SPEEDOMETER_SECOND_SEGMENTS = [
   //   color: BRAND_COLORS_MAP.grean,
   // },
 ]
-
-// const SPEEDOMETER_VALUES_BIND = [
-//   {
-//     color: BRAND_COLORS_MAP.grean,
-//   },
-//   {
-//     color: BRAND_COLORS_MAP.lightBlue,
-//   },
-//   {
-//     color: BRAND_COLORS_MAP.orange,
-//   },
-// ]
 
 const SEGMENTS = [
   {
@@ -395,6 +384,16 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <TitleBox
+              textAlign="center"
+              h="20px"
+            >
+              GEMIDDELD 10 JARIG RENDEMENT
+            </TitleBox>
+          ),
+        },
       ],
     },
     {
@@ -405,6 +404,19 @@ const Bind = [
         segments: SPEEDOMETER_SEGMENTS_BIND,
         secondSegments: SPEEDOMETER_SECOND_SEGMENTS,
       },
+      extraElements: [
+        {
+          component: () => (
+            <TitleBox
+              textAlign="center"
+              h="20px"
+            >
+              GEMIDDELD 10 JARIG RENDEMENT
+            </TitleBox>
+          ),
+        },
+
+      ],
     },
     {
       id: 'Speedometer3',
@@ -437,6 +449,13 @@ const Bind = [
             <ExplanationText>
               De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd  wordt. Bij een  vergelijking  van  het  rendement  met  andere pensioenfondsen over slechts één jaar komt het beleid dat het  bestuur  heeft  bepaald  niet  goed  tot  zijn  recht.  Een vergelijking over een periode van 5 en 10 jaar geeft een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              RENDEMENT AFGELOPEN VERSLAGJAAR
+            </TitleBox>
           ),
         },
       ],
@@ -486,6 +505,13 @@ const Bind = [
             </ExplanationText>
           ),
         },
+        {
+          component: () => (
+            <TitleBox>
+              VERMOGENSBEHEERKOSTEN
+            </TitleBox>
+          ),
+        },
 
       ],
     },
@@ -522,6 +548,13 @@ const Bind = [
             </ExplanationText>
           ),
         },
+        {
+          component: () => (
+            <TitleBox>
+              TRANSACTIEKOSTEN
+            </TitleBox>
+          ),
+        },
 
       ],
     },
@@ -554,11 +587,29 @@ const Bind = [
             </ExplanationText>
           ),
         },
+        {
+          component: () => (
+            <Text
+              fontSize={14}
+              color={TITLE_COLOR}
+              italic
+              bold
+              mb={1}
+            >
+              WELKE KEUZES HEEFT PENSIOENFONDS GEMAAKT?
+            </Text>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              {'WELK DEEL VAN HET VERMOGEN WORDT IN WELKE BELEGGINGSCATEGORIE BELEGD?\n(asset allocatie index)'}
+            </TitleBox>
+          ),
+        },
 
       ],
     },
-  ],
-  [
     {
       id: 'BarChart1',
       type: 'BarChart',
@@ -586,6 +637,13 @@ const Bind = [
             <ExplanationText>
               {'De alpha index geeft weer in welke mate actief wordt belegd waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\n\nActief beheer leidt tot hogere kosten maar ook tot potentieel een hoger rendement. '}
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              {'VERWACHT HET PENSIOENFONDS MEER DAN MARKTGEMIDDELD RENDEMENT TE BEHALEN?\n(alpha index)'}
+            </TitleBox>
           ),
         },
       ],
@@ -620,8 +678,17 @@ const Bind = [
             </ExplanationText>
           ),
         },
+        {
+          component: () => (
+            <TitleBox>
+              HOE WORDEN DE BELEGGINGEN GEDAAN? (implementatie index)
+            </TitleBox>
+          ),
+        },
       ],
     },
+  ],
+  [
     {
       id: 'RadarChart0',
       type: 'RadarChart',
@@ -655,6 +722,19 @@ const Bind = [
             <ExplanationText>
               {`De spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het  pensioenfonds  gemaakt  heeft  en die de uitkomsten bepalen.\n\nVoor  de  grafiek  zijn  de  cijfers geïndexeerd.  Dit  betekent  dat  het gemiddelde  van  alle  deelnemende fondsen een waarde van 100 heeft. De grafiek  laat  zien  in  hoeverre vergelijkbare fondsen en het ${props.variables.fundName} hoger  of  lager  scoren  dan  het gemiddelde.`}
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <Text
+              fontSize={14}
+              color={TITLE_COLOR}
+              italic
+              bold
+              mb={1}
+            >
+              VERMOGENSBEHEERKOSTEN IN CONTEXT
+            </Text>
           ),
         },
       ],
@@ -697,14 +777,14 @@ const Bind = [
             <>
               <Text
                 fontSize={17}
-                color="rgb(24, 55, 109)"
+                color={TITLE_COLOR}
                 bold
               >
                 PENSIOENBEHEER
               </Text>
               <Text
                 fontSize={14}
-                color="rgb(24, 55, 109)"
+                color={TITLE_COLOR}
                 italic
                 bold
                 mb={1}
@@ -766,6 +846,13 @@ const Bind = [
             <ExplanationText>
               De service index geeft weer hoeveel  service aan  deelnemers  wordt  gegeven  o.a.  op  het gebied  van  tijdig  verwerken  van pensioenbetalingen,  openingsuren  helpdesk, website  mogelijkheden  en  afwerking  van klachten.  Het  gemiddelde  van  alle deelnemende pensioenfondsen is 100. Hogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              {'WELK SERVICE NIVEAU IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?\n(service index) '}
+            </TitleBox>
           ),
         },
       ],
@@ -871,6 +958,15 @@ const Bind = [
             <ExplanationText>
               {'Geeft  weer  hoeveel  deelnemers  het pensioenfonds verlaten of erbij komen.\n\nOok  heeft  het  pensioenfonds  geen controle hierover, beïnvloed het de kosten alsnog. '}
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox
+              h="34px"
+            >
+              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?\n\n (overdrachten index) '}
+            </TitleBox>
           ),
         },
 
@@ -1163,8 +1259,6 @@ export const Pages = [
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
-  ],
-  [
     {
       id: 'BarChart1',
       type: 'BarChart',
@@ -1205,6 +1299,9 @@ export const Pages = [
       data: BARCHART_VALUES_BIND,
       keys: ['0', '1', '2'],
     },
+  ],
+  [
+
     {
       id: 'RadarChart0',
       type: 'RadarChart',

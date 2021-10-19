@@ -13,6 +13,8 @@ export const BRAND_COLORS_MAP = {
 
 export const BRAND_COLORS = Object.values(BRAND_COLORS_MAP).sort()
 
+export const TITLE_COLOR = 'rgb(24, 55, 109)'
+
 export const KEYS = ['FONDS', 'VERGELIJKBARE PENSIOENFONDSEN', 'ALLE DEELNEMENDE PENSIOENFONDSEN']
 
 export const DATA = {
