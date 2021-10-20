@@ -27,6 +27,7 @@ export const TitleBox = (props: any) => {
         color={TITLE_COLOR}
         textAlign={textAlign}
         bold
+        ml={2}
       >
         {children}
       </Text>

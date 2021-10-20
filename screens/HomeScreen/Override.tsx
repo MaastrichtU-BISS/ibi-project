@@ -356,6 +356,72 @@ const Bind = [
             />
           ),
         },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
+        {
+          component: () => (
+            <Box>
+              <Title
+                style={{
+                  marginLeft: 142,
+                  fontSize: 23,
+                  fontWeight: 300,
+                  color: 'rgb(108,108,108)',
+                }}
+              >
+                Institutioneel
+              </Title>
+              <Title
+                style={{
+                  marginLeft: 100,
+                  fontSize: 23,
+                  fontWeight: 300,
+                  color: 'rgb(133,104,72)',
+                }}
+              >
+                Benchmarking
+              </Title>
+              <Title
+                style={{
+                  marginLeft: 152,
+                  fontSize: 23,
+                  fontWeight: 300,
+                  color: BRAND_COLORS_MAP.blue,
+                }}
+              >
+                Instituut
+              </Title>
+              <Box
+                bg={BRAND_COLORS_MAP.cream}
+                mt="10px"
+              >
+                <Title
+                  fontSize={14}
+                >
+                  Kostenniveau is het gevolg van keuzes van het pensioenfonds
+                </Title>
+                <ExplanationText>
+                  {'\nSociale partners beslissen over de inhoud van de pensioenregeling en de wijze waarop de  regeling  wordt  uitgevoerd.  De  sociale  partners  stellen  dus  de  kaders  vast. Daarbinnen  heeft  het  bestuur  van  het  pensioenfonds  beslissingsbevoegdheid.  Het bestuur  beslist,  bijvoorbeeld,  over  de  inrichting  van  het  vermogensbeheer,  service-niveau en de complexiteit van de  pensioenregeling en hoe vaak met pensioendeel-nemers gecommuniceerd wordt.\n\nDe  keuzes  gemaakt  door  het  bestuur  leiden  tot  verschillende  kostenniveaus,  maar bepalen  ook  de  prestatie  van  het  pensioenfonds.  Tegenover  de vermogensbeheerkosten staat het rendement. Bij pensioenbeheer moeten de kosten afgezet  worden  tegen  het  serviceniveau,  de  complexiteit  van  de  uitvoering  van  de overeengekomen pensioenregeling en de mate van automatisering van de processen.\n'}
+                </ExplanationText>
+                <Title
+                  fontSize={14}
+                  mt={2}
+                  mb={2}
+                >
+                  Vergelijkbaarheid van uitvoeringskosten
+                </Title>
+                <ExplanationText
+                  mb={2}
+                >
+                  Gedegen benchmarking geeft een gevoel bij kosten en heeft meerwaarde voor deelnemers omdat ze de uitvoeringskosten van verschillende pensioenfondsen kunnen vergelijken en de relatieve prestatie van het eigen pensioenfonds kunnen beoordelen.
+                </ExplanationText>
+              </Box>
+            </Box>
+          ),
+        },
       ],
     },
   ],
