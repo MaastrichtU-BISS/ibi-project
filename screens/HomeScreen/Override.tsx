@@ -367,9 +367,10 @@ const Bind = [
               <Title
                 style={{
                   marginLeft: 142,
-                  fontSize: 23,
-                  fontWeight: 300,
+                  fontSize: 22,
+                  fontWeight: 340,
                   color: 'rgb(108,108,108)',
+                  letterSpacing: 0.5,
                 }}
               >
                 Institutioneel
@@ -377,19 +378,21 @@ const Bind = [
               <Title
                 style={{
                   marginLeft: 100,
-                  fontSize: 23,
-                  fontWeight: 300,
+                  fontSize: 22,
+                  fontWeight: 340,
                   color: 'rgb(133,104,72)',
+                  letterSpacing: 0.5,
                 }}
               >
                 Benchmarking
               </Title>
               <Title
                 style={{
-                  marginLeft: 152,
-                  fontSize: 23,
-                  fontWeight: 300,
+                  marginLeft: 156,
+                  fontSize: 22,
+                  fontWeight: 340,
                   color: BRAND_COLORS_MAP.blue,
+                  letterSpacing: 0.5,
                 }}
               >
                 Instituut
@@ -397,6 +400,8 @@ const Bind = [
               <Box
                 bg={BRAND_COLORS_MAP.cream}
                 mt="10px"
+                pl={1}
+                pt={1}
               >
                 <Title
                   fontSize={14}
@@ -420,6 +425,13 @@ const Bind = [
                 </ExplanationText>
               </Box>
             </Box>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              VEREISTE BUFFER VANWEGE HET GENOMEN RISICO
+            </TitleBox>
           ),
         },
       ],
@@ -960,6 +972,13 @@ const Bind = [
             </ExplanationText>
           ),
         },
+        {
+          component: () => (
+            <TitleBox>
+              {'HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING? (complexiteit index) '}
+            </TitleBox>
+          ),
+        },
 
       ],
     },
@@ -991,6 +1010,13 @@ const Bind = [
             <ExplanationText>
               {'De  mate  waarin  de  verwerking    van transacties geautomatiseerd geschiedt.\n\nEen hogere automatiseringsgraad leidt in de regel tot lagere kosten.'}
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD? (automatiserings index)
+            </TitleBox>
           ),
         },
 

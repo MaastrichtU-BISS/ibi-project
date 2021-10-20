@@ -1,13 +1,15 @@
 :root {
   --barchart-width: 980px;
   --barchart-container-width: 1468px;
-  --barchart-padding-left: 490px;
+  --barchart-padding-left: 510px;
   --block-width: 363px;
   --title-box-width: 363px;
   --background: #ffffff;
   --first-left: 25px;
+  --first-left-inner: 31px;
   --first-right: 213px;
   --second-left: 410px;
+  --second-left-inner: 417px;
   --second-right: 605px;
 }
 
@@ -355,6 +357,7 @@
   background-color: white;
   width: var(--barchart-container-width);
   height: 600px;
+  z-index: 5;
 }
 
 #BarChart5 {
@@ -413,7 +416,7 @@
 
 #PieChart0ExtraContainer1 {
   position: absolute;
-  left: 27px;
+  left: 25px;
   top: 272px;
   width: 359px;
   height: 50px;
@@ -470,7 +473,7 @@
 #Speedometer0ExtraContainer4 {
   position: absolute;
   left: 505px;
-  top: 368px;
+  top: 370px;
   width: 169px;
 }
 
@@ -487,6 +490,15 @@
   position: absolute;
   left: 407px;
   top: 15px;
+  width: 363px;
+  background-color: var( --background);
+  z-index: 10;
+}
+
+#Speedometer0ExtraContainer7 {
+  position: absolute;
+  left: 407px;
+  top: 403px;
   width: 363px;
   background-color: var( --background);
   z-index: 10;
@@ -636,7 +648,7 @@
 
 #BarChart0ExtraContainer1 {
   position: absolute;
-  left: var(--second-left);
+  left: var(--second-left-inner);
   top: 245px;
   width: 150px;
   z-index: 10;
@@ -670,7 +682,7 @@
 
 #BarChart1ExtraContainer1 {
   position: absolute;
-  left: var(--second-left);
+  left: var(--second-left-inner);
   top: 390px;
   width: 150px;
   z-index: 10;
@@ -698,7 +710,7 @@
 
 #BarChart2ExtraContainer1 {
   position: absolute;
-  left: var(--second-left);
+  left: var(--second-left-inner);
   top: 513px;
   width: 150px;
   height: 70px;
@@ -791,7 +803,7 @@
 
 #BarChart3ExtraContainer1 {
   position: absolute;
-  left: var(--second-left);
+  left: var(--second-left-inner);
   top: 412px;
   width: 150px;
   z-index: 10;
@@ -804,6 +816,7 @@
   top: 378px;
   width: var(--title-box-width);
   z-index: 10;
+  height: 30px;
   background-color: white;
 }
 
@@ -827,11 +840,21 @@
 
 #BarChart4ExtraContainer1 {
   position: absolute;
-  left: var(--first-left);
+  left: var(--first-left-inner);
   top: 60px;
   width: 150px;
   background-color: white;
   z-index: 10;
+}
+
+#BarChart4ExtraContainer2 {
+  position: absolute;
+    left: var(--first-left);
+    top: 36px;
+    width: var(--title-box-width);
+    background-color: white;
+    z-index: 10;
+    height: 30px;
 }
 
 #BarChart5ExtraContainer0 {
@@ -845,11 +868,21 @@
 
 #BarChart5ExtraContainer1 {
   position: absolute;
-  left: var(--first-left);
+  left: var(--first-left-inner);
   top: 240px;
   width: 150px;
   background-color: white;
   z-index: 10;
+}
+
+#BarChart5ExtraContainer2 {
+  position: absolute;
+  left: var(--first-left);
+  top: 212px;
+  width: var(--title-box-width);
+  background-color: white;
+  z-index: 4;
+  height: 100px;
 }
 
 #BarChart6ExtraContainer0 {
@@ -872,9 +905,9 @@
 
 #BarChart6ExtraContainer2 {
   position: absolute;
-  left: var(--first-left);
+  left: var(--first-left-inner);
   top: 374px;
-  width: 150px;
+  width: 147px;
   background-color: white;
   z-index: 10;
 }
@@ -883,7 +916,7 @@
   position: absolute;
   left: 22px;
   top: 328px;
-  width: 353px;
+  width: var(--title-box-width);
   background-color: white;
   z-index: 10;
 }
