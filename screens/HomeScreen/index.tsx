@@ -256,10 +256,10 @@ export const HomeScreen = (props: any) => {
           space="sm"
           alignItems="center"
         >
-          <IconSet
+          {/* <IconSet
             name="theme-light-dark"
             onPress={toggleColorMode}
-          />
+          /> */}
 
           {
           data
