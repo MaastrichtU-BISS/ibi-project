@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/ibi-project/static/js/app.a343b6b8.chunk.js",
-    "app.js.map": "/ibi-project/static/js/app.a343b6b8.chunk.js.map",
+    "app.js": "/ibi-project/static/js/app.a004ec0f.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.a004ec0f.chunk.js.map",
     "runtime~app.js": "/ibi-project/static/js/runtime~app.e1eff2a2.js",
     "runtime~app.js.map": "/ibi-project/static/js/runtime~app.e1eff2a2.js.map",
-    "static/js/2.4d87491e.chunk.js": "/ibi-project/static/js/2.4d87491e.chunk.js",
-    "static/js/2.4d87491e.chunk.js.map": "/ibi-project/static/js/2.4d87491e.chunk.js.map",
+    "static/js/2.b74fa8b1.chunk.js": "/ibi-project/static/js/2.b74fa8b1.chunk.js",
+    "static/js/2.b74fa8b1.chunk.js.map": "/ibi-project/static/js/2.b74fa8b1.chunk.js.map",
     "static/js/3.f893d4a5.chunk.js": "/ibi-project/static/js/3.f893d4a5.chunk.js",
     "static/js/3.f893d4a5.chunk.js.map": "/ibi-project/static/js/3.f893d4a5.chunk.js.map",
     "static/js/4.1633635d.chunk.js": "/ibi-project/static/js/4.1633635d.chunk.js",
@@ -21,14 +21,14 @@
     "reportOriginal copy.html": "/ibi-project/reportOriginal copy.html",
     "reportOriginal.html": "/ibi-project/reportOriginal.html",
     "serve.json": "/ibi-project/serve.json",
-    "static/js/2.4d87491e.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.4d87491e.chunk.js.LICENSE.txt",
+    "static/js/2.b74fa8b1.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.b74fa8b1.chunk.js.LICENSE.txt",
     "static/js/3.f893d4a5.chunk.js.LICENSE.txt": "/ibi-project/static/js/3.f893d4a5.chunk.js.LICENSE.txt",
     "static/js/4.1633635d.chunk.js.LICENSE.txt": "/ibi-project/static/js/4.1633635d.chunk.js.LICENSE.txt",
     "static/media/jsoneditor-icons.svg": "/ibi-project/static/media/jsoneditor-icons.15f2789d.svg"
   },
   "entrypoints": [
     "static/js/runtime~app.e1eff2a2.js",
-    "static/js/2.4d87491e.chunk.js",
-    "static/js/app.a343b6b8.chunk.js"
+    "static/js/2.b74fa8b1.chunk.js",
+    "static/js/app.a004ec0f.chunk.js"
   ]
 }
