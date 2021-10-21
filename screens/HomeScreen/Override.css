@@ -46,6 +46,12 @@
   z-index: -1;
 }
 
+.trademark {
+  position: absolute;
+  left: 230px;
+  top: 585px;
+}
+
 #PieChart0Container {
   position: absolute;
   left: var(--first-left);
@@ -65,7 +71,7 @@
 #PieChart1Container {
   position: absolute;
   left: 15px;
-  top: 500px;
+  top: 492px;
   transform-origin: 0 0;
   transform: scale(0.2);
   width: 880px;
@@ -81,7 +87,7 @@
 #PieChart2Container {
   position: absolute;
   left: 201px;
-  top: 500px;
+  top: 492px;
   transform-origin: 0 0;
   transform: scale(0.2);
   width: 880px;
@@ -210,7 +216,7 @@
   transform: scale(0.25);
   background-color: white;
   width: var(--barchart-container-width);
-  height: 600px;
+  height: 500px;
   z-index: 10;
 }
 
@@ -218,13 +224,13 @@
   width: var(--barchart-width);
   height: 400px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 #BarChart1Container {
   position: absolute;
   left: var(--second-left);
-  top: 380px;
+  top: 370px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -237,13 +243,13 @@
   width: var(--barchart-width);
   height: 500px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 130px;
+  padding-top: 100px;
 }
 
 #BarChart2Container {
   position: absolute;
   left: var(--second-left);
-  top: 498px;
+  top: 488px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -256,7 +262,7 @@
   width: var(--barchart-width);
   height: 500px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 140px;
+  padding-top: 110px;
 }
 
 #RadarChart0Container {
@@ -267,7 +273,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 1453px;
-  height: 1950px;
+  height: 1740px;
   z-index: 100;
 }
 
@@ -327,7 +333,7 @@
   width: var(--barchart-width);
   height: 1100px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 150px;
+  padding-top: 110px;
 }
 
 #BarChart4Container {
@@ -364,7 +370,7 @@
   width: var(--barchart-width);
   height: 300px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 80px;
+  padding-top: 90px;
 }
 
 #BarChart6Container {
@@ -375,7 +381,7 @@
   transform: scale(0.25);
   background-color: white;
   width: var(--barchart-container-width);
-  height: 700px;
+  height: 670px;
   z-index: 10;
 }
 
@@ -434,6 +440,14 @@
   z-index: 10;
 }
 
+#PieChart0ExtraContainer3 {
+  position: absolute;
+  left: 39px;
+  top: 16px;
+  width: 350px;
+  z-index: 10;
+}
+
 #Speedometer0ExtraContainer0 {
   position: absolute;
   left: 565px;
@@ -473,7 +487,7 @@
 #Speedometer0ExtraContainer4 {
   position: absolute;
   left: 505px;
-  top: 370px;
+  top: 368px;
   width: 169px;
 }
 
@@ -683,7 +697,7 @@
 #BarChart1ExtraContainer1 {
   position: absolute;
   left: var(--second-left-inner);
-  top: 390px;
+  top: 380px;
   width: 150px;
   z-index: 10;
   background-color: white;
@@ -692,7 +706,7 @@
 #BarChart1ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 360px;
+  top: 350px;
   width: var(--title-box-width);
   z-index: 100;
   background-color: white;
@@ -711,7 +725,7 @@
 #BarChart2ExtraContainer1 {
   position: absolute;
   left: var(--second-left-inner);
-  top: 513px;
+  top: 503px;
   width: 150px;
   height: 70px;
   z-index: 10;
@@ -721,7 +735,7 @@
 #BarChart2ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 490px;
+  top: 472px;
   width: var(--title-box-width);
   z-index: 100;
   background-color: white;
@@ -932,7 +946,7 @@
 
 #RadarChart1ExtraContainer1 {
   position: absolute;
-  left: var(--second-left);
+  left: 411px;
   top: 62px;
   width: var(--title-box-width);
   z-index: 20;

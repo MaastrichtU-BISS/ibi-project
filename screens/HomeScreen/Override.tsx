@@ -92,6 +92,18 @@ export const OverrideHTML = (props) => {
               chartExtraContainer,
             )
           })
+          const trademarkContainer = document.createElement('div')
+          trademarkContainer.className = 'trademark'
+          ReactDOM.render(
+            <NativeBaseProvider
+              config={NATIVE_BASE_CONFIG}
+              colorModeManager={colorModeManager}
+            >
+              <TrademarkText />
+            </NativeBaseProvider>,
+            trademarkContainer,
+          )
+          pageNode.appendChild(trademarkContainer)
           pageNode.insertBefore(chartContainer, image.nextElementSibling)
           if (chartData && chartContainer) {
             const Chart = ChartExamples[chartType]
@@ -219,6 +231,19 @@ const ExplanationText = (props) => (
   />
 )
 
+const TrademarkText = (props) => (
+  <Text
+    fontSize="8.3px"
+    fontFamily="ff2"
+    fontWeight={100}
+    color="rgb(131,140,146)"
+    class="trademarktext"
+    {...props}
+  >
+    © Institutional Benchmarking Institute BV
+  </Text>
+)
+
 const Bind = [
   [
     {
@@ -258,6 +283,35 @@ const Bind = [
             <ExplanationText>
               Kosten  van  vermogensbeheer  inclusief transactiekosten  bepalen  grotendeels  de uitvoeringskosten
             </ExplanationText>
+          ),
+        },
+        {
+          component: () => (
+            <Box>
+              <Title
+                style={{
+                  fontSize: 13,
+                  fontWeight: 500,
+                  color: 'rgb(128,104,60)',
+                  letterSpacing: 0.5,
+                }}
+              >
+                UNIFORM PENSIOENKOSTENOVERZICHT (UPKO    )
+              </Title>
+              <Title
+                style={{
+                  fontSize: 10,
+                  fontWeight: 500,
+                  color: 'rgb(128,104,60)',
+                  letterSpacing: 0.5,
+                  position: 'absolute',
+                  left: 318,
+                  top: -5,
+                }}
+              >
+                TM
+              </Title>
+            </Box>
           ),
         },
       ],
@@ -400,6 +454,7 @@ const Bind = [
               <Box
                 bg={BRAND_COLORS_MAP.cream}
                 mt="10px"
+                pr={1}
                 pl={1}
                 pt={1}
               >
@@ -677,7 +732,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De asset allocatie index geeft de spreiding van beleggingen weer waarbij 100 het gemiddelde is  van  alle  deelnemende  pensioenfondsen. Brede spreiding leidt tot hogere  kosten maar lager risico. \n\nDe asset allocatie heeft de grootste invloed op de vermogensbeheerkosten. '}
+              {'De asset allocatie index geeft de spreiding van beleggingen weer waarbij 100 het gemiddelde is  van  alle  deelnemende  pensioenfondsen. Brede spreiding leidt tot hogere  kosten maar lager risico. \nDe asset allocatie heeft de grootste invloed op de vermogensbeheerkosten. '}
             </ExplanationText>
           ),
         },
@@ -691,7 +746,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              {'WELK DEEL VAN HET VERMOGEN WORDT IN WELKE BELEGGINGSCATEGORIE BELEGD?\n(asset allocatie index)'}
+              {'WELK DEEL VAN HET VERMOGEN WORDT IN WELKE BELEGGINGSCATEGORIE BELEGD?\n→ ASSET ALLOCATIE INDEX'}
             </TitleBox>
           ),
         },
@@ -723,14 +778,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De alpha index geeft weer in welke mate actief wordt belegd waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\n\nActief beheer leidt tot hogere kosten maar ook tot potentieel een hoger rendement. '}
+              {'De alpha index geeft weer in welke mate actief wordt belegd waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\nActief beheer leidt tot hogere kosten maar ook tot potentieel een hoger rendement. '}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              {'VERWACHT HET PENSIOENFONDS MEER DAN MARKTGEMIDDELD RENDEMENT TE BEHALEN?\n(alpha index)'}
+              {'VERWACHT HET PENSIOENFONDS MEER DAN MARKTGEMIDDELD RENDEMENT TE BEHALEN?\n→ ALPHA INDEX'}
             </TitleBox>
           ),
         },
@@ -762,14 +817,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De  implementatie  index  geeft  de  keuze  weer tussen  direct  beleggen  of  beleggen  via beleggingsfondsen, waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\n\nHoe hoger deze index, hoe meer het fonds via beleggingsfondsen belegd. '}
+              {'De  implementatie  index  geeft  de  keuze  weer tussen  direct  beleggen  of  beleggen  via beleggingsfondsen, waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\nHoe hoger deze index, hoe meer het fonds via beleggingsfondsen belegd. '}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              HOE WORDEN DE BELEGGINGEN GEDAAN? (implementatie index)
+              HOE WORDEN DE BELEGGINGEN GEDAAN? → IMPLEMENTATIE INDEX
             </TitleBox>
           ),
         },
@@ -865,7 +920,10 @@ const Bind = [
               >
                 WAT ZIJN DE KOSTEN PER DEELNEMER?
               </Subtitle>
-              <ExplanationText fontSize="7.93">
+              <ExplanationText
+                ml="2px"
+                fontSize="7.93"
+              >
                 Bij pensioenbeheer worden kosten ook veroorzaakt door niet beïnvloedbare factoren. Dit betreft de samenstelling van de deelnemers. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal  waarde-overdrachten  (deelnemers  die  met  reeds  opgebouwde  vermogen  toetreden  of  vertrekken  bij  het pensioenfonds) heeft invloed op het kostenniveau
               </ExplanationText>
             </>
@@ -927,7 +985,7 @@ const Bind = [
             <TitleBox
               h="23px"
             >
-              {'WELK SERVICE NIVEAU IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?\n(service index) '}
+              {'WELK SERVICE NIVEAU IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?\n→ SERVICE INDEX'}
             </TitleBox>
           ),
         },
@@ -975,7 +1033,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              {'HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING? (complexiteit index) '}
+              HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING? → COMPLEXITEIT INDEX
             </TitleBox>
           ),
         },
@@ -1015,7 +1073,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD? (automatiserings index)
+              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD? → AUTOMATISERINGS INDEX
             </TitleBox>
           ),
         },
@@ -1062,7 +1120,7 @@ const Bind = [
             <TitleBox
               h="34px"
             >
-              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?\n\n (overdrachten index) '}
+              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?\n→ OVERDRACHTEN INDEX'}
             </TitleBox>
           ),
         },

@@ -62,6 +62,7 @@ export default (props) => {
           fontSize={FONT_SIZE}
           fontWeight={500}
           color="rgb(0,0,0)"
+          fontFamily="ff2"
         >
           {min}
         </Text>
@@ -145,6 +146,7 @@ export default (props) => {
           fontSize={FONT_SIZE}
           fontWeight={500}
           color="rgb(0,0,0)"
+          fontFamily="ff2"
         >
           {max}
         </Text>
