@@ -489,6 +489,11 @@ const Bind = [
             </TitleBox>
           ),
         },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
       ],
     },
   ],
@@ -874,6 +879,11 @@ const Bind = [
             </Subtitle>
           ),
         },
+        {
+          component: () => (
+            <Box />
+          ),
+        },
       ],
     },
     {
@@ -911,7 +921,9 @@ const Bind = [
         },
         {
           component: () => (
-            <>
+            <Box
+              pl="2px"
+            >
               <Title>
                 PENSIOENBEHEER
               </Title>
@@ -926,7 +938,14 @@ const Bind = [
               >
                 Bij pensioenbeheer worden kosten ook veroorzaakt door niet beïnvloedbare factoren. Dit betreft de samenstelling van de deelnemers. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal  waarde-overdrachten  (deelnemers  die  met  reeds  opgebouwde  vermogen  toetreden  of  vertrekken  bij  het pensioenfonds) heeft invloed op het kostenniveau
               </ExplanationText>
-            </>
+            </Box>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              PENSIOENBEHEERKOSTEN PER DEELNEMER
+            </TitleBox>
           ),
         },
       ],
@@ -1035,6 +1054,11 @@ const Bind = [
             <TitleBox>
               HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING? → COMPLEXITEIT INDEX
             </TitleBox>
+          ),
+        },
+        {
+          component: () => (
+            <Box />
           ),
         },
 
