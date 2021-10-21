@@ -347,7 +347,6 @@ function _renderCurrentValueText({ config, svg }) {
 function _renderNeedle({
   config, svg, r, centerTx,
 }) {
-  console.log('A', config.needleHeightRatio)
   const needleLength = calculateNeedleHeight({
     heightRatio: config.needleHeightRatio,
     radius: r,

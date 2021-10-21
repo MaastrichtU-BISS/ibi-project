@@ -132,7 +132,6 @@ const data = [
 
 const LabelComponent = (props) => {
   const { id, anchor, theme } = props
-  console.log('A', id, anchor)
   const width  = R.reduce(
     (acc, val) => acc || val.length > 9,
     false,

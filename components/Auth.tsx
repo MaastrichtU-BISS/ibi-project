@@ -71,7 +71,6 @@ export default function App() {
           if (result.type === 'cancel' || result.type === 'dismiss') {
             return { type: result.type }
           }
-          console.log('AA', result)
           return result
         }}
       />
