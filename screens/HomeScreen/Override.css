@@ -163,7 +163,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 1440px;
-  height: 620px;
+  height: 750px;
   z-index: 10;
 }
 
@@ -176,7 +176,7 @@
 #Speedometer4Container {
   position: absolute;
   left: var(--first-left);
-  top: 431px;
+  top: 443px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -576,7 +576,7 @@
   position: absolute;
   left: var(--first-right);
   top: 290px;
-  width: 180px;
+  width: 160px;
   height: 150px;
   background-color: white;
   z-index: 10;
@@ -611,7 +611,7 @@
 #Speedometer4ExtraContainer2 {
   position: absolute;
   left: var(--first-right);
-  top: 447px;
+  top: 460px;
   width: 160px;
   background-color: white;
   z-index: 10;
@@ -619,10 +619,10 @@
 
 #Speedometer4ExtraContainer3 {
   position: absolute;
-  left: var(--first-left);
-  top: 412px;
-  width: 345px;
-  z-index: 100;
+    left: var(--first-left);
+    top: 435px;
+    width: 345px;
+    z-index: 100;
 }
 
 #Speedometer5ExtraContainer0 {
