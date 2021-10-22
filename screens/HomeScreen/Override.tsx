@@ -161,13 +161,13 @@ const KEYS = {
 }
 
 const RADAR_CHART_KEYS = {
-  costs: 'Costs',
-  '1yaring': '1-jaring',
-  '5jaring': '5-jaring',
-  '10jaring': '10-jaring',
-  impleme: 'Impleme',
-  alpha: 'Alpha',
-  asset: 'Asset',
+  costs: 'Benchmarkkosten Index',
+  '1yaring': '1-jaring Rendement Index',
+  '5jaring': '5-jaring Rendement Index',
+  '10jaring': '10-jaring Rendement Index',
+  impleme: 'Implementatie Index',
+  alpha: 'Alpha Index',
+  asset: 'Asset Allocatie Index',
 }
 
 const SPEEDOMETER_SEGMENTS_BIND = [
@@ -1740,7 +1740,7 @@ export const Pages = [
 
         },
         {
-          type: 'SERVICE INDEX',
+          type: 'SERVICE - INDEX',
           [KEYS.alle]: 50,
           [KEYS.pension]: 60,
           [KEYS.fonds]: 70,

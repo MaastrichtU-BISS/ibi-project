@@ -69,8 +69,8 @@ export default (props) => {
         maxValue="auto"
         margin={{
           top: 40 + MARGIN,
-          right: 110 + MARGIN,
-          // bottom: 40 + MARGIN,
+          right: 153 + MARGIN,
+          bottom: 40 + MARGIN,
           left: 100 + MARGIN,
         }}
         isInteractive={false}
@@ -140,8 +140,8 @@ const LabelComponent = (props) => {
     false,
     id.split(' '),
   )
-    ? 200
-    : 150
+    ? 210
+    : 160
   const height = id.split(' ').length > 3
     ? 200
     : 150

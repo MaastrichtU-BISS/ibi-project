@@ -406,10 +406,9 @@
 }
 
 #RadarChart1 {
-  width: 1200px;
-  height: 1200px;
-  padding-left: 130px;
-  /* padding-top: 220px; */
+  width: 1400px;
+  height: 1300px;
+  padding-left: 50px;
 }
 
 #PieChart0ExtraContainer0 {
