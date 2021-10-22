@@ -5,6 +5,7 @@
   --block-width: 363px;
   --title-box-width: 363px;
   --background: #ffffff;
+  --blue: #18376D;
   --first-left: 25px;
   --first-left-inner: 31px;
   --first-right: 213px;
@@ -449,6 +450,15 @@
   z-index: 10;
 }
 
+#PieChart0ExtraContainer4 {
+  position: absolute;
+    left: 27px;
+    top: 58px;
+    width: 350px;
+    z-index: 10;
+  background-color: var(--blue);
+}
+
 #Speedometer0ExtraContainer0 {
   position: absolute;
   left: 565px;
@@ -810,7 +820,7 @@
 
 #Speedometer6ExtraContainer2 {
   position: absolute;
-  left: 408px;
+  left: 407px;
   top: 10px;
   width: var(--title-box-width);
   height: 116px;

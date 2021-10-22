@@ -171,16 +171,17 @@ export const HomeScreen = (props: any) => {
           doc.addImage(imageData, 'JPEG', 0, 0, 297, 210)// 297
           // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
           if (index === 0) {
-            const MARGIN = 10
+            const MARGIN_Y = 10
+            const MARGIN_X = 10.4
             doc.setTextColor('#FFFFFF')
-            doc.setFontSize(24)
-            doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
+            // doc.setFontSize(24)
+            // doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
             doc.setFontSize(12)
-            doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, MARGIN + 28)
+            doc.text('UITVOERINGSKOSTEN IN CONTEXT ', MARGIN_X, MARGIN_Y + 28)
             doc.setFontSize(9)
-            doc.text('IBI BENCHMARKING', 5, MARGIN + 42)
+            doc.text('IBI BENCHMARKING', MARGIN_X, MARGIN_Y + 42)
             doc.setFontSize(7)
-            doc.text('info@institutionalbenchmarking.org', 50, MARGIN + 42)
+            doc.text('info@institutionalbenchmarking.org', MARGIN_X + 45, MARGIN_Y + 42)
           }
         })
         doc.save('report.pdf')

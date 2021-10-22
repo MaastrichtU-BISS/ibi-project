@@ -314,6 +314,20 @@ const Bind = [
             </Box>
           ),
         },
+        {
+          component: (_, props) => (
+            <Title
+              style={{
+                fontSize: 29,
+                fontWeight: 600,
+                color: 'white',
+                letterSpacing: 0.5,
+              }}
+            >
+              {props.variables.pensionFundName}
+            </Title>
+          ),
+        },
       ],
     },
     {
@@ -924,7 +938,9 @@ const Bind = [
             <Box
               pl="2px"
             >
-              <Title>
+              <Title
+                ml="0.8px"
+              >
                 PENSIOENBEHEER
               </Title>
               <Subtitle
