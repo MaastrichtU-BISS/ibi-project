@@ -10,6 +10,7 @@ import {
 import deepmerge from 'deepmerge'
 import {
   Box, NativeBaseProvider, Text,
+  Stack,
 } from 'native-base'
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -1216,6 +1217,24 @@ const Bind = [
                 PENSIOENBEHEERKOSTEN IN CONTEXT
               </Subtitle>
             </Box>
+          ),
+        },
+        {
+          component: () => (
+            <Stack
+              backgroundColor={BRAND_COLORS_MAP.cream}
+              w="full"
+              h="full"
+              p="2px"
+              space={1}
+            >
+              <ExplanationText>
+                De kosten van dit uniforme pensioenkostenoverzicht (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
+              </ExplanationText>
+              <ExplanationText>
+                De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutioneel Benchmaking Institute BV.
+              </ExplanationText>
+            </Stack>
           ),
         },
       ],
