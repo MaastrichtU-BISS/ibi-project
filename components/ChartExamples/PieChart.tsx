@@ -102,13 +102,14 @@ export default (props) => {
         // innerRadius={0.6}
         innerRadius={0}
         arcLabelsRadiusOffset={0.85}
+        sortByValue
       />
       <Box
         position="absolute"
-        w="19%"
+        w="20%"
         h="38%"
         left="38%"
-        top="23%"
+        top="22%"
         backgroundColor="white"
         borderRadius="full"
       />

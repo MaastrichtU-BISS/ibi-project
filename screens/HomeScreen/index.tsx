@@ -134,14 +134,6 @@ export const HomeScreen = (props: any) => {
             height,
           })
           return canvas.toDataURL('image/jpeg')
-        // const imageData = canvas.toDataURL
-        // canvas.toBlob((blob) => {
-        //   window.open(URL.createObjectURL(blob), '__blank')
-        //   // download(blob, {
-        //   //   name: 'charts.jpeg',
-        //   //   // mimeType: '"application/pdf"',
-        //   // })
-        // })
         })(pages)
         const doc = new jsPDF({
           orientation: 'landscape',
@@ -152,23 +144,8 @@ export const HomeScreen = (props: any) => {
           if (index !== 0) {
             doc.addPage()
           }
-          //   doc.setFontSize(40)
-          //   doc.addImage(imageData, 'JPEG', 0, 30, 210, 217)// 297
-          //   // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
-          //   if (index === 0) {
-          //     doc.setTextColor('#FFFFFF')
-          //     doc.setFontSize(24)
-          //     doc.text('PENSIOENFONDS X ', 5, 60)
-          //     doc.setFontSize(12)
-          //     doc.text('UITVOERINGSKOSTEN IN CONTEXT ', 5, 68)
-          //     doc.setFontSize(9)
-          //     doc.text('IBI BENCHMARKING', 5, 82)
-          //     doc.setFontSize(7)
-          //     doc.text('info@institutionalbenchmarking.org', 50, 82)
-          //   }
-          // })
           doc.setFontSize(40)
-          doc.addImage(imageData, 'JPEG', 0, 0, 297, 210)// 297
+          doc.addImage(imageData, 'JPEG', 0, 0, 290, 210)// 297
           // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
           if (index === 0) {
             const MARGIN_Y = 10

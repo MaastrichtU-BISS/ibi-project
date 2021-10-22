@@ -62,11 +62,13 @@
   background-color: white;
   transform-origin: 0 0;
   transform: scale(0.25);
+  z-index: 1;
 }
 
 #PieChart0 {
   width: 1000px;
-  height: 500px;
+  height: 540px;
+  padding-left: 210px;
 }
 
 #PieChart1Container {
@@ -82,7 +84,7 @@
 
 #PieChart1 {
   width: 960px;
-  height: 480px;
+  height: 510px;
 }
 
 #PieChart2Container {
@@ -98,7 +100,7 @@
 
 #PieChart2 {
   width: 960px;
-  height: 480px;
+  height: 510px;
 }
 
 #Speedometer0Container {
@@ -425,7 +427,7 @@
   position: absolute;
   left: 25px;
   top: 272px;
-  width: 359px;
+  width: 365px;
   height: 50px;
   background-color: white;
   z-index: 10;
@@ -433,9 +435,9 @@
 
 #PieChart0ExtraContainer2 {
   position: absolute;
-  left: 259px;
+  left: 262px;
   top: 342px;
-  width: 120px;
+  width: 123px;
   height: 50px;
   background-color: white;
   z-index: 10;
