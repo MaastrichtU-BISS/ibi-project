@@ -495,14 +495,14 @@
   z-index: 10;
 }
 
-#Speedometer0ExtraContainer4 {
+/* #Speedometer0ExtraContainer4 {
   position: absolute;
   left: 505px;
   top: 368px;
   width: 169px;
-}
+} */
 
-#Speedometer0ExtraContainer5 {
+#Speedometer0ExtraContainer4 {
   position: absolute;
   left: 225px;
   top: 5px;
@@ -511,7 +511,7 @@
   background-color: var(--background);
 }
 
-#Speedometer0ExtraContainer6 {
+#Speedometer0ExtraContainer5 {
   position: absolute;
   left: var(--second-left);
   top: 15px;
@@ -520,7 +520,7 @@
   z-index: 10;
 }
 
-#Speedometer0ExtraContainer7 {
+#Speedometer0ExtraContainer6 {
   position: absolute;
   left: var(--second-left);
   top: 403px;
@@ -529,7 +529,7 @@
   z-index: 10;
 }
 
-#Speedometer0ExtraContainer8 {
+#Speedometer0ExtraContainer7 {
   position: absolute;
   left: 400px;
   top: 25px;

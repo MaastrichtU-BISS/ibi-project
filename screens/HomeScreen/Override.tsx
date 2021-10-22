@@ -296,9 +296,11 @@ const Bind = [
                   letterSpacing: 0.5,
                 }}
               >
-                UNIFORM PENSIOENKOSTENOVERZICHT (UPKO    )
+                UNIFORM PENSIOENKOSTENOVERZICHT (UPKO
+                <sup>TM</sup>
+                )
               </Title>
-              <Title
+              {/* <Title
                 style={{
                   fontSize: 10,
                   fontWeight: 500,
@@ -310,7 +312,7 @@ const Bind = [
                 }}
               >
                 TM
-              </Title>
+              </Title> */}
             </Box>
           ),
         },
@@ -405,27 +407,6 @@ const Bind = [
         },
         {
           component: () => (
-            <TextBox
-              flexDirection="row"
-              space={2}
-              fontSize={6}
-              width="72px"
-              data={[
-                {
-                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
-                  color: 'white',
-                  backgroundColor: BRAND_COLORS_MAP.blue,
-                },
-                {
-                  text: 'RANGE VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.cream,
-                },
-              ]}
-            />
-          ),
-        },
-        {
-          component: () => (
             <Box />
           ),
         },
@@ -467,7 +448,7 @@ const Bind = [
               </Title>
               <Box
                 bg={BRAND_COLORS_MAP.cream}
-                mt="10px"
+                mt="5px"
                 pr={1}
                 pl={1}
                 pt={1}
@@ -492,6 +473,29 @@ const Bind = [
                 >
                   Gedegen benchmarking geeft een gevoel bij kosten en heeft meerwaarde voor deelnemers omdat ze de uitvoeringskosten van verschillende pensioenfondsen kunnen vergelijken en de relatieve prestatie van het eigen pensioenfonds kunnen beoordelen.
                 </ExplanationText>
+              </Box>
+              <Box
+                alignItems="center"
+                w="full"
+                mt="5px"
+              >
+                <TextBox
+                  flexDirection="row"
+                  space={2}
+                  fontSize={6}
+                  width="72px"
+                  data={[
+                    {
+                      text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                      color: 'white',
+                      backgroundColor: BRAND_COLORS_MAP.blue,
+                    },
+                    {
+                      text: 'RANGE VERGELIJKBARE\nPENSIOENFONDSEN',
+                      backgroundColor: BRAND_COLORS_MAP.cream,
+                    },
+                  ]}
+                />
               </Box>
             </Box>
           ),
@@ -1237,7 +1241,9 @@ export const Pages = [
           value: 72.8,
         },
       ],
-      extraElementsData: [{ value: 'Uitvoeringskosten bestaan uit drie categorieën:  Vermogensbeheerkosten (€ 4.000.000; 0.4% van beheerd vermogen), transactiekosten (€ 1.000.000, 0.1% van beheerd vermogen) en pensioenbeheerkosten (€ 400.000, €170 per deelnemer).' }],
+      extraElementsData: [{
+        value: 'Uitvoeringskosten bestaan uit drie categorieën:\n - vermogensbeheerkosten (€ 4.000.000; 0.4% van beheerd vermogen)\n - transactiekosten (€ 1.000.000, 0.1% van beheerd vermogen)\n - en pensioenbeheerkosten (€ 400.000, €170 per deelnemer).',
+      }],
     },
     {
       id: 'PieChart1',
