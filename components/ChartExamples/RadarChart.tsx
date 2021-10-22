@@ -135,18 +135,19 @@ const LabelComponent = (props) => {
   const {
     id, anchor, theme, chartId,
   } = props
-  const width = R.reduce(
+  const isChart1 = chartId === 'RadarChart1'
+  const width = (R.reduce(
     (acc, val) => acc || val.length > 9,
     false,
     id.split(' '),
   )
-    ? 210
-    : 160
+    ? 223
+    : 173) - (isChart1 ? 0 : 13)
   const height = id.split(' ').length > 3
     ? 200
     : 150
-  const fontSize = chartId === 'RadarChart1'
-    ? 20
+  const fontSize = isChart1
+    ? 23
     : 26
   return (
     <g transform={`translate(${anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0}, -20)`}>
