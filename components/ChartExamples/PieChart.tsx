@@ -1,148 +1,117 @@
 import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
 import { BRAND_COLORS, KEYS, RESPONSIVE_CHARTS } from '@constants'
+import { Box } from 'native-base'
 import { useChartTheme } from './utils'
 
 export default (props) => {
   const { data } = props
   const [chartTheme] = useChartTheme()
   return (
-    <ResponsivePie
-      data={data}
-      theme={chartTheme}
-      colors={{ datum: 'data.color' }}
-      margin={{
-        top: 40, right: 80, bottom: 80, left: 80,
-      }}
-      innerRadius={0.5}
-      padAngle={0.7}
-      cornerRadius={3}
-      activeOuterRadiusOffset={8}
-      borderWidth={1}
-      borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
-      arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsThickness={2}
-      arcLinkLabelsColor={{ from: 'color' }}
-      arcLabelsSkipAngle={10}
-      isInteractive={false}
+    <>
+      <ResponsivePie
+        data={data}
+        theme={chartTheme}
+        colors={{ datum: 'data.color' }}
+        margin={{
+          top: 40, right: 80, bottom: 80, left: 80,
+        }}
+        padAngle={0.7}
+        cornerRadius={3}
+        activeOuterRadiusOffset={8}
+        borderWidth={1}
+        borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
+        arcLinkLabelsSkipAngle={10}
+        arcLinkLabelsThickness={2}
+        arcLinkLabelsColor={{ from: 'color' }}
+        arcLabelsSkipAngle={10}
+        isInteractive={false}
       // arcLabelsTextColor={{ theme: 'labels.text.fill' }}
-      arcLabelsTextColor="white"
+        arcLabelsTextColor="white"
       // arcLabelsTextColor={{ from: 'color', modifiers: [['darker', 2]] }}
-      defs={[
-        {
-          id: 'dots',
-          type: 'patternDots',
-          background: 'inherit',
-          color: 'rgba(255, 255, 255, 0.3)',
-          size: 4,
-          padding: 1,
-          stagger: true,
-        },
-        {
-          id: 'lines',
-          type: 'patternLines',
-          background: 'inherit',
-          color: 'rgba(255, 255, 255, 0.3)',
-          rotation: -45,
-          lineWidth: 6,
-          spacing: 10,
-        },
-      ]}
-      fill={[
-        {
-          match: {
-            id: 'ruby',
+        defs={[
+          {
+            id: 'dots',
+            type: 'patternDots',
+            background: 'inherit',
+            color: 'rgba(255, 255, 255, 0.3)',
+            size: 4,
+            padding: 1,
+            stagger: true,
           },
-          id: 'dots',
-        },
-        {
-          match: {
-            id: 'c',
+          {
+            id: 'lines',
+            type: 'patternLines',
+            background: 'inherit',
+            color: 'rgba(255, 255, 255, 0.3)',
+            rotation: -45,
+            lineWidth: 6,
+            spacing: 10,
           },
-          id: 'dots',
-        },
-        {
-          match: {
-            id: 'go',
+        ]}
+        fill={[
+          {
+            match: {
+              id: 'ruby',
+            },
+            id: 'dots',
           },
-          id: 'dots',
-        },
-        {
-          match: {
-            id: 'python',
+          {
+            match: {
+              id: 'c',
+            },
+            id: 'dots',
           },
-          id: 'dots',
-        },
-        {
-          match: {
-            id: 'scala',
+          {
+            match: {
+              id: 'go',
+            },
+            id: 'dots',
           },
-          id: 'lines',
-        },
-        {
-          match: {
-            id: 'lisp',
+          {
+            match: {
+              id: 'python',
+            },
+            id: 'dots',
           },
-          id: 'lines',
-        },
-        {
-          match: {
-            id: 'elixir',
+          {
+            match: {
+              id: 'scala',
+            },
+            id: 'lines',
           },
-          id: 'lines',
-        },
-        {
-          match: {
-            id: 'javascript',
+          {
+            match: {
+              id: 'lisp',
+            },
+            id: 'lines',
           },
-          id: 'lines',
-        },
-      ]}
-      // legends={[
-      //   {
-      //     anchor: 'top-left',
-      //     direction: 'column',
-      //     translateX: -50,
-      //     translateY: -40,
-      //     itemWidth: 80,
-      //     itemHeight: 20,
-      //     itemTextColor: '#999',
-      //     symbolSize: 12,
-      //     symbolShape: 'circle',
-      //     // effects: [
-      //     //   {
-      //     //     on: 'hover',
-      //     //     style: {
-      //     //       itemTextColor: '#000',
-      //     //     },
-      //     //   },
-      //     // ],
-      //   },
-      //   // {
-      //   //   anchor: 'top',
-      //   //   direction: 'column',
-      //   //   justify: false,
-      //   //   translateX: -250,
-      //   //   translateY: 0,
-      //   //   itemsSpacing: 0,
-      //   //   itemWidth: 100,
-      //   //   itemHeight: 18,
-      //   //   itemTextColor: '#999',
-      //   //   itemDirection: 'left-to-right',
-      //   //   itemOpacity: 1,
-      //   //   symbolSize: 18,
-      //   //   symbolShape: 'circle',
-      //   //   effects: [
-      //   //     {
-      //   //       on: 'hover',
-      //   //       style: {
-      //   //         itemTextColor: '#000',
-      //   //       },
-      //   //     },
-      //   //   ],
-      //   // },
-      // ]}
-    />
+          {
+            match: {
+              id: 'elixir',
+            },
+            id: 'lines',
+          },
+          {
+            match: {
+              id: 'javascript',
+            },
+            id: 'lines',
+          },
+        ]}
+        innerRadius={0.6}
+        // arcLabelsRadiusOffset={0.85}
+      />
+      {/* <Box
+        position="absolute"
+        w="20%"
+        h="38%"
+        left="38%"
+        top="23%"
+        backgroundColor="white"
+        borderRadius="full"
+      /> */}
+    </>
   )
 }
 

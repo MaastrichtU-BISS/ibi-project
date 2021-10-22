@@ -52,7 +52,7 @@ export default (props) => {
                 mr={2}
               />
               <Text
-                fontSize="xl"
+                fontSize={20}
                 justifyContent="center"
               >
                 {key}

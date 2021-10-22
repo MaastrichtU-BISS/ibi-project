@@ -374,7 +374,7 @@ const Bind = [
             <TextBox
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },
@@ -412,7 +412,7 @@ const Bind = [
               width="72px"
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },
@@ -526,7 +526,7 @@ const Bind = [
             <TextBox
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },
@@ -579,7 +579,7 @@ const Bind = [
               textAlign="center"
               h="20px"
             >
-              GEMIDDELD 10 JARIG RENDEMENT
+              GEMIDDELD 5 JARIG RENDEMENT
             </TitleBox>
           ),
         },
@@ -600,7 +600,7 @@ const Bind = [
             <TextBox
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },
@@ -649,7 +649,7 @@ const Bind = [
             <TextBox
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },
@@ -697,7 +697,7 @@ const Bind = [
             <TextBox
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },
@@ -914,7 +914,7 @@ const Bind = [
             <TextBox
               data={[
                 {
-                  text: 'RANGEALLE DEELNEMENDE\nPENSIOENFONDSEN',
+                  text: 'RANGE ALLE DEELNEMENDE\nPENSIOENFONDSEN',
                   color: 'white',
                   backgroundColor: BRAND_COLORS_MAP.blue,
                 },

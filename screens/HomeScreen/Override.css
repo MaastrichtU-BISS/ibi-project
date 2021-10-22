@@ -353,7 +353,7 @@
   width: var(--barchart-width);
   height: 500px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 155px;
+  padding-top: 115px;
 }
 
 #BarChart5Container {
