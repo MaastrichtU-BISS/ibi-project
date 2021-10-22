@@ -514,7 +514,7 @@
 #Speedometer0ExtraContainer5 {
   position: absolute;
   left: var(--second-left);
-  top: 15px;
+  top: 2px;
   width: 363px;
   background-color: var( --background);
   z-index: 10;

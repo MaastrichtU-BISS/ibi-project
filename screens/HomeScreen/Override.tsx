@@ -420,6 +420,7 @@ const Bind = [
                   fontWeight: 340,
                   color: 'rgb(108,108,108)',
                   letterSpacing: 0.5,
+                  lineHeight: '2.5vh',
                 }}
               >
                 Institutioneel
@@ -431,6 +432,7 @@ const Bind = [
                   fontWeight: 340,
                   color: 'rgb(133,104,72)',
                   letterSpacing: 0.5,
+                  lineHeight: '2.5vh',
                 }}
               >
                 Benchmarking
@@ -442,6 +444,7 @@ const Bind = [
                   fontWeight: 340,
                   color: BRAND_COLORS_MAP.blue,
                   letterSpacing: 0.5,
+                  lineHeight: '2.5vh',
                 }}
               >
                 Instituut
