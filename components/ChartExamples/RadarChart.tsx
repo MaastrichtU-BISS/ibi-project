@@ -69,7 +69,7 @@ export default (props) => {
         maxValue="auto"
         margin={{
           top: 40 + MARGIN,
-          right: 100 + MARGIN,
+          right: 110 + MARGIN,
           // bottom: 40 + MARGIN,
           left: 100 + MARGIN,
         }}
@@ -79,6 +79,7 @@ export default (props) => {
           <LabelComponent
             {...props}
             theme={chartTheme}
+            chartId={chartId}
           />
         )}
         borderWidth={2}
@@ -131,17 +132,22 @@ const data = [
 ]
 
 const LabelComponent = (props) => {
-  const { id, anchor, theme } = props
-  const width  = R.reduce(
+  const {
+    id, anchor, theme, chartId,
+  } = props
+  const width = R.reduce(
     (acc, val) => acc || val.length > 9,
     false,
     id.split(' '),
   )
     ? 200
     : 150
-  const height  = id.split(' ').length > 3
+  const height = id.split(' ').length > 3
     ? 200
     : 150
+  const fontSize = chartId === 'RadarChart1'
+    ? 20
+    : 26
   return (
     <g transform={`translate(${anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0}, -20)`}>
       <foreignObject
@@ -150,7 +156,7 @@ const LabelComponent = (props) => {
       >
         <p
           style={{
-            fontSize: theme.axis?.text?.fontSize ?? 20,
+            fontSize,
             // fontWeight: 'bold',
             fontFamily: 'ff2',
           }}
