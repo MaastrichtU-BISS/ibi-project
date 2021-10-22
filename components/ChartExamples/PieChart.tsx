@@ -99,18 +99,19 @@ export default (props) => {
             id: 'lines',
           },
         ]}
-        innerRadius={0.6}
-        // arcLabelsRadiusOffset={0.85}
+        // innerRadius={0.6}
+        innerRadius={0}
+        arcLabelsRadiusOffset={0.85}
       />
-      {/* <Box
+      <Box
         position="absolute"
-        w="20%"
+        w="19%"
         h="38%"
         left="38%"
         top="23%"
         backgroundColor="white"
         borderRadius="full"
-      /> */}
+      />
     </>
   )
 }
