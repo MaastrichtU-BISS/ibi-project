@@ -142,7 +142,7 @@ export const HomeScreen = (props: any) => {
           // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
           if (index === 0) {
             const MARGIN_Y = 10
-            const MARGIN_X = 10.4
+            const MARGIN_X = 22.5
             doc.setTextColor('#FFFFFF')
             // doc.setFontSize(24)
             // doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
