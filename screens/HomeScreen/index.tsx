@@ -15,8 +15,8 @@ import * as R from 'colay/ramda'
 import * as Clipboard from 'expo-clipboard'
 import * as DocumentPicker from 'expo-document-picker'
 // import { PDFDocument } from 'pdf-lib'
-import { jsPDF } from 'jspdf'
 import html2canvas from 'html2canvas'
+import { jsPDF } from 'jspdf'
 import {
   Box,
   Button, Center, Divider, Heading, HStack, Stack, useColorMode, useToast,
@@ -120,26 +120,18 @@ export const HomeScreen = (props: any) => {
         draft.isDownloading = true
       })
       setTimeout(async () => {
-        const width = 1180// source?.scrollWidth
-        const height = 900// source?.scrollHeight || 1000
         // return
         const pages = ['pf1', 'pf2', 'pf3', 'pf4'] // , 'pf2', 'pf3', 'pf4'
         const imageList = await R.mapAsync(async (pageId) => {
           const source = document.getElementById(pageId)
           // const source = document.getElementById('ChartContainer')
           const canvas = await html2canvas(source, {
-            windowWidth: width, // source?.scrollWidth,
-            windowHeight: height, // source?.scrollHeight,
-            width,
-            height,
             scale: 5
           })
           return canvas.toDataURL('image/jpeg')
         })(pages)
         const doc = new jsPDF(
-          "landscape", "mm", "a4"
-        // unit: 'px',
-        // hotfixes: ['px_scaling'],
+          "landscape"
         )
         imageList.map((imageData, index) => {
           if (index !== 0) {
