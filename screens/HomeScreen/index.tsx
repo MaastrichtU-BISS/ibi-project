@@ -15,8 +15,8 @@ import * as R from 'colay/ramda'
 import * as Clipboard from 'expo-clipboard'
 import * as DocumentPicker from 'expo-document-picker'
 // import { PDFDocument } from 'pdf-lib'
-import html2canvas from 'html2canvas'
 import { jsPDF } from 'jspdf'
+import html2canvas from 'html2canvas'
 import {
   Box,
   Button, Center, Divider, Heading, HStack, Stack, useColorMode, useToast,
@@ -132,6 +132,7 @@ export const HomeScreen = (props: any) => {
             windowHeight: height, // source?.scrollHeight,
             width,
             height,
+            scale: 5
           })
           return canvas.toDataURL('image/jpeg')
         })(pages)
