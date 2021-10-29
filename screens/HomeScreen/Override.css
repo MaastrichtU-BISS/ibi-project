@@ -20,6 +20,10 @@
   position: absolute;
   left: 100px;
   top: 0px;
+  width: 865px;
+}
+#pf1 .pc {
+  margin-left: 37px;
 }
 #pf2 {
   transform-origin: 0 0;
@@ -27,6 +31,10 @@
   position: absolute;
   left: 100px;
   top: 1000px;
+  width: 865px;
+}
+#pf2 .pc {
+  margin-left: 37px;
 }
 #pf3 {
   transform-origin: 0 0;
@@ -34,6 +42,10 @@
   position: absolute;
   left: 100px;
   top: 2000px;
+  width: 865px;
+}
+#pf3 .pc {
+  margin-left: 37px;
 }
 #pf4 {
   transform-origin: 0 0;
@@ -41,6 +53,10 @@
   position: absolute;
   left: 100px;
   top: 3000px;
+  width: 865px;
+}
+#pf4 .pc {
+  margin-left: 37px;
 }
 
 .x0 {
