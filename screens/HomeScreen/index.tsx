@@ -135,17 +135,17 @@ export const HomeScreen = (props: any) => {
           })
           return canvas.toDataURL('image/jpeg')
         })(pages)
-        const doc = new jsPDF({
-          orientation: 'landscape',
+        const doc = new jsPDF(
+          "landscape", "mm", "a4"
         // unit: 'px',
         // hotfixes: ['px_scaling'],
-        })
+        )
         imageList.map((imageData, index) => {
           if (index !== 0) {
             doc.addPage()
           }
           doc.setFontSize(40)
-          doc.addImage(imageData, 'JPEG', 0, 0, 290, 210)// 297
+          doc.addImage(imageData, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight())// 297
           // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
           if (index === 0) {
             const MARGIN_Y = 10
