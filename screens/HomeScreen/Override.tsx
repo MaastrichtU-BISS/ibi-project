@@ -481,7 +481,7 @@ const Bind = [
               <Box
                 alignItems="center"
                 w="full"
-                mt="5px"
+                mt="16px"
               >
                 <TextBox
                   flexDirection="row"
