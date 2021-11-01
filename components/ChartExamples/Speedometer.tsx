@@ -99,6 +99,7 @@ export default (props) => {
               <Text
                 fontSize="xl"
                 justifyContent="center"
+                fontFamily="ff2"
               >
                 {`${label}: `}
               </Text>
@@ -106,6 +107,7 @@ export default (props) => {
                 fontSize="xl"
                 bold
                 justifyContent="center"
+                fontFamily="ff2"
               >
                 {value}
               </Text>
