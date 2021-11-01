@@ -16,6 +16,7 @@ export default (props) => {
   } = props
   const [chartTheme] = useChartTheme({
     fontSize: 24,
+    textColor: '#52525b',
   })
   const MARGIN = DEFAULT_MARGIN
   // chartId === 'RadarChart1'
