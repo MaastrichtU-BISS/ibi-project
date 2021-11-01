@@ -22,7 +22,7 @@
                 ],
                 "extraElementsData": [
                     {
-                        "value": "Uitvoeringskosten bestaan uit drie categorieën:  Vermogensbeheerkosten (€ 4.000.000; 0.4% van beheerd vermogen), transactiekosten (€ 1.000.000, 0.1% van beheerd vermogen) en pensioenbeheerkosten (€ 400.000, €170 per deelnemer)."
+                        "value": "Uitvoeringskosten bestaan uit drie categorieën:\n - vermogensbeheerkosten (€ 4.000.000; 0.4% van beheerd vermogen)\n - transactiekosten (€ 1.000.000, 0.1% van beheerd vermogen)\n - en pensioenbeheerkosten (€ 400.000, €170 per deelnemer)."
                     }
                 ]
             },
@@ -345,9 +345,7 @@
                     "1",
                     "2"
                 ]
-            }
-        ],
-        [
+            },
             {
                 "id": "BarChart1",
                 "type": "BarChart",
@@ -413,49 +411,51 @@
                     "1",
                     "2"
                 ]
-            },
+            }
+        ],
+        [
             {
                 "id": "RadarChart0",
                 "type": "RadarChart",
                 "data": [
                     {
-                        "type": "Costs",
+                        "type": "Benchmarkkosten Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 70,
                         "VERGELIJKBARE PENSIOENFONDSEN": 20,
                         "FONDS": 130
                     },
                     {
-                        "type": "1-jaring",
+                        "type": "1-jaring Rendement Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 10,
                         "VERGELIJKBARE PENSIOENFONDSEN": 70,
                         "FONDS": 20
                     },
                     {
-                        "type": "5-jaring",
+                        "type": "5-jaring Rendement Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 50,
                         "VERGELIJKBARE PENSIOENFONDSEN": 60,
                         "FONDS": 70
                     },
                     {
-                        "type": "10-jaring",
+                        "type": "10-jaring Rendement Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 30,
                         "VERGELIJKBARE PENSIOENFONDSEN": 50,
                         "FONDS": 160
                     },
                     {
-                        "type": "Impleme",
+                        "type": "Implementatie Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 130,
                         "VERGELIJKBARE PENSIOENFONDSEN": 10,
                         "FONDS": 50
                     },
                     {
-                        "type": "Alpha",
+                        "type": "Alpha Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 20,
                         "VERGELIJKBARE PENSIOENFONDSEN": 130,
                         "FONDS": 40
                     },
                     {
-                        "type": "Asset",
+                        "type": "Asset Allocatie Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 10,
                         "VERGELIJKBARE PENSIOENFONDSEN": 20,
                         "FONDS": 130
@@ -695,7 +695,7 @@
                         "FONDS": 20
                     },
                     {
-                        "type": "SERVICE INDEX",
+                        "type": "SERVICE - INDEX",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 50,
                         "VERGELIJKBARE PENSIOENFONDSEN": 60,
                         "FONDS": 70
