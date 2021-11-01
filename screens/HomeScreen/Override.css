@@ -307,13 +307,13 @@
 #RadarChart0Container {
   position: absolute;
   left: 22px;
-  top: 125px;
+  top: 88px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
   width: 1453px;
-  height: 1845px;
-  z-index: 100;
+  height: 1994px;
+  z-index: 10;
 }
 
 #RadarChart0 {
@@ -825,7 +825,7 @@
 #RadarChart0ExtraContainer1 {
   position: absolute;
   left: 27px;
-  top: 55px;
+  top: 38px;
   width: var(--title-box-width);
   z-index: 10;
   background-color: white;
@@ -835,7 +835,7 @@
   position: absolute;
   left: var(--first-left);
   top: var(--top-margin);
-  height: 80px;
+  height: 107px;
   width: 365px;
   z-index: 10;
   background-color: white;

@@ -331,11 +331,11 @@ const Bind = [
             </Title>
           ),
         },
-        {
-          component: () => (
-            <Box />
-          ),
-        },
+        // {
+        //   component: () => (
+        //     <Box />
+        //   ),
+        // },
       ],
     },
     {
