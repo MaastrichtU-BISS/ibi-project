@@ -164,7 +164,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 790px;
-  height: 700px;
+  height: 600px;
   z-index: 10;
 }
 
@@ -172,7 +172,7 @@
   width: 600px;
   height: 500px;
   padding-left: 0px;
-  padding-top: 150px;
+  padding-top: 10px;
 }
 
 #Speedometer2Container {
@@ -183,7 +183,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 700px;
-  height: 700px;
+  height: 600px;
   z-index: 10;
 }
 
@@ -191,18 +191,18 @@
   width: 600px;
   height: 500px;
   padding-left: 0px;
-  padding-top: 150px;
+  padding-top: 10px;
 }
 
 #Speedometer3Container {
   position: absolute;
   left: var(--first-left);
-  top: 260px;
+  top: 225px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
   width: 1440px;
-  height: 750px;
+  height: 874px;
   z-index: 10;
 }
 
@@ -215,7 +215,7 @@
 #Speedometer4Container {
   position: absolute;
   left: var(--first-left);
-  top: 443px;
+  top: 420px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -588,7 +588,7 @@
 #Speedometer1ExtraContainer1 {
   position: absolute;
   left: var(--first-left);
-  top: 104px;
+  top: 72px;
   width: 150px;
   height: 50px;
   z-index: 100;
@@ -606,19 +606,20 @@
 #Speedometer1ExtraContainer3 {
   position: absolute;
   left: var(--first-left);
-  top: 56px;
+  top: 40px;
   width: var(--block-width);
   z-index: 100;
   background-color: var(--background);
+  height: 50px;
 }
 
 #Speedometer2ExtraContainer0 {
   position: absolute;
   left: var(--first-right);
-  top: 104px;
+  top: 72px;
   width: 150px;
   height: 50px;
-  z-index: 100;
+  z-index: 120;
 }
 
 #Speedometer3ExtraContainer0 {
@@ -633,7 +634,7 @@
 #Speedometer3ExtraContainer1 {
   position: absolute;
   left: var(--first-right);
-  top: 290px;
+  top: 255px;
   width: 160px;
   height: 150px;
   background-color: white;
@@ -643,7 +644,7 @@
 #Speedometer3ExtraContainer2 {
   position: absolute;
   left: var(--first-left);
-  top: 260px;
+  top: 224px;
   width: 345px;
   z-index: 100;
 }
@@ -669,7 +670,7 @@
 #Speedometer4ExtraContainer2 {
   position: absolute;
   left: var(--first-right);
-  top: 464px;
+  top: 441px;
   width: 160px;
   background-color: white;
   z-index: 10;
@@ -677,10 +678,10 @@
 
 #Speedometer4ExtraContainer3 {
   position: absolute;
-    left: var(--first-left);
-    top: 436.5px;
-    width: 345px;
-    z-index: 100;
+  left: var(--first-left);
+  top: 409px;
+  width: 345px;
+  z-index: 100;
 }
 
 #Speedometer5ExtraContainer0 {
