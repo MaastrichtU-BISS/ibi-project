@@ -12,6 +12,7 @@
   --second-left: 410px;
   --second-left-inner: 417px;
   --second-right: 605px;
+  --top-margin: 16px;
 }
 
 #pf1 {
@@ -139,7 +140,7 @@
 #Speedometer1Container {
   position: absolute;
   left: var(--first-left);
-  top: 115px;
+  top: 100px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -158,7 +159,7 @@
 #Speedometer2Container {
   position: absolute;
   left: var(--first-right);
-  top: 115px;
+  top: 100px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -212,7 +213,7 @@
 #Speedometer5Container {
   position: absolute;
   left: var(--second-left);
-  top: 55px;
+  top: 39px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -287,19 +288,19 @@
 #RadarChart0Container {
   position: absolute;
   left: 22px;
-  top: 152px;
+  top: 125px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
   width: 1453px;
-  height: 1740px;
+  height: 1845px;
   z-index: 100;
 }
 
 #RadarChart0 {
   width: 1440px;
   height: 1350px;
-  padding-top: 160px;
+  padding-top: 190px;
   background-color: white;
 }
 
@@ -358,7 +359,7 @@
 #BarChart4Container {
   position: absolute;
   left: var(--first-left);
-  top: 56px;
+  top: 53px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -415,7 +416,7 @@
 #RadarChart1Container {
   position: absolute;
   left: var(--second-left);
-  top: 180px;
+  top: 167px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -462,7 +463,7 @@
 #PieChart0ExtraContainer3 {
   position: absolute;
   left: 39px;
-  top: 16px;
+  top: var(--top-margin);
   width: 350px;
   z-index: 10;
 }
@@ -531,7 +532,7 @@
 #Speedometer0ExtraContainer5 {
   position: absolute;
   left: var(--second-left);
-  top: 3px;
+  top: var(--top-margin);
   width: 363px;
   background-color: var( --background);
   z-index: 10;
@@ -568,7 +569,7 @@
 #Speedometer1ExtraContainer1 {
   position: absolute;
   left: var(--first-left);
-  top: 120px;
+  top: 104px;
   width: 150px;
   height: 50px;
   z-index: 100;
@@ -577,7 +578,7 @@
 #Speedometer1ExtraContainer2 {
   position: absolute;
   left: var(--first-left);
-  top: 55px;
+  top: var(--top-margin);
   width: var(--block-width);
   z-index: 100;
   background-color: var(--background);
@@ -586,7 +587,7 @@
 #Speedometer1ExtraContainer3 {
   position: absolute;
   left: var(--first-left);
-  top: 90px;
+  top: 56px;
   width: var(--block-width);
   z-index: 100;
   background-color: var(--background);
@@ -595,7 +596,7 @@
 #Speedometer2ExtraContainer0 {
   position: absolute;
   left: var(--first-right);
-  top: 120px;
+  top: 104px;
   width: 150px;
   height: 50px;
   z-index: 100;
@@ -675,7 +676,7 @@
 #Speedometer5ExtraContainer1 {
   position: absolute;
   left: var(--second-right);
-  top: 64px;
+  top: 53px;
   width: 150px;
   background-color: white;
   z-index: 10;
@@ -684,7 +685,7 @@
 #Speedometer5ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 39px;
+  top: var(--top-margin);
   width: var(--title-box-width);
   z-index: 10;
 }
@@ -710,7 +711,7 @@
 #BarChart0ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 195px;
+  top: 185px;
   width: 450px;
   z-index: 100;
 }
@@ -791,7 +792,7 @@
 #RadarChart0ExtraContainer1 {
   position: absolute;
   left: 27px;
-  top: 80px;
+  top: 55px;
   width: var(--title-box-width);
   z-index: 10;
   background-color: white;
@@ -800,7 +801,7 @@
 #RadarChart0ExtraContainer2 {
   position: absolute;
   left: var(--first-left);
-  top: 25px;
+  top: var(--top-margin);
   height: 80px;
   width: 365px;
   z-index: 10;
@@ -838,7 +839,7 @@
 #Speedometer6ExtraContainer2 {
   position: absolute;
   left: 407px;
-  top: 8px;
+  top: var(--top-margin);
   width: var(--title-box-width);
   height: 116px;
   background-color: white;
@@ -848,7 +849,7 @@
 #Speedometer6ExtraContainer3 {
   position: absolute;
   left: var(--second-left);
-  top: 106px;
+  top: 111px;
   width: var(--title-box-width);
   /* height: 96px; */
   background-color: white;
@@ -913,30 +914,31 @@
 #BarChart4ExtraContainer1 {
   position: absolute;
   left: var(--first-left-inner);
-  top: 60px;
+  top: 46px;
   width: 150px;
+  height: 150px;
   background-color: white;
   z-index: 10;
 }
 
 #BarChart4ExtraContainer2 {
   position: absolute;
-    left: var(--first-left);
-    top: 36px;
-    width: var(--title-box-width);
-    background-color: white;
-    z-index: 10;
-    height: 30px;
+  left: var(--first-left);
+  top: var(--top-margin);
+  width: var(--title-box-width);
+  background-color: white;
+  z-index: 10;
+  height: 40px;
 }
 
 #BarChart4ExtraContainer3 {
   position: absolute;
-    left: 10px;
-    top: 26px;
-    width: var(--title-box-width);
-    background-color: white;
-    z-index: 2;
-    height: 530px;
+  left: 10px;
+  top: 26px;
+  width: var(--title-box-width);
+  background-color: white;
+  z-index: 2;
+  height: 530px;
 }
 
 #BarChart5ExtraContainer0 {
@@ -1015,17 +1017,19 @@
 #RadarChart1ExtraContainer1 {
   position: absolute;
   left: 411px;
-  top: 62px;
+  top: 45px;
   width: var(--title-box-width);
   z-index: 20;
   background-color: white;
+  height: 123px;
 }
 
 #RadarChart1ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 25px;
+  top: var(--top-margin);
   width: 350px;
+  height: 40px;
   z-index: 20;
   background-color: white;
 }
