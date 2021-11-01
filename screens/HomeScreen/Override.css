@@ -435,12 +435,13 @@
 #RadarChart1Container {
   position: absolute;
   left: var(--second-left);
-  top: 167px;
+  top: 145px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
   width: 1540px;
-  height: 1550px;
+  height: 1675px;
+  z-index: 10;
 }
 
 #RadarChart1 {
@@ -1049,11 +1050,11 @@
 #RadarChart1ExtraContainer1 {
   position: absolute;
   left: 411px;
-  top: 45px;
+  top: 38px;
   width: var(--title-box-width);
   z-index: 20;
   background-color: white;
-  height: 123px;
+  height: 108px;
 }
 
 #RadarChart1ExtraContainer2 {
@@ -1069,7 +1070,7 @@
 #RadarChart1ExtraContainer3 {
   position: absolute;
     left: var(--second-left);
-    top: 515px;
+    top: 488px;
     width: var(--title-box-width);
     z-index: 20;
     background-color: white;
