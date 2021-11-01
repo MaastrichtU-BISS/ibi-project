@@ -120,36 +120,29 @@ export const HomeScreen = (props: any) => {
         draft.isDownloading = true
       })
       setTimeout(async () => {
-        const width = 1180// source?.scrollWidth
-        const height = 900// source?.scrollHeight || 1000
         // return
         const pages = ['pf1', 'pf2', 'pf3', 'pf4'] // , 'pf2', 'pf3', 'pf4'
         const imageList = await R.mapAsync(async (pageId) => {
           const source = document.getElementById(pageId)
           // const source = document.getElementById('ChartContainer')
           const canvas = await html2canvas(source, {
-            windowWidth: width, // source?.scrollWidth,
-            windowHeight: height, // source?.scrollHeight,
-            width,
-            height,
+            scale: 5
           })
           return canvas.toDataURL('image/jpeg')
         })(pages)
-        const doc = new jsPDF({
-          orientation: 'landscape',
-        // unit: 'px',
-        // hotfixes: ['px_scaling'],
-        })
+        const doc = new jsPDF(
+          "landscape"
+        )
         imageList.map((imageData, index) => {
           if (index !== 0) {
             doc.addPage()
           }
           doc.setFontSize(40)
-          doc.addImage(imageData, 'JPEG', 0, 0, 290, 210)// 297
+          doc.addImage(imageData, 'JPEG', 0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight())// 297
           // doc.addImage(imageData, 'JPEG', 0, 80, 795, 850)// 3508
           if (index === 0) {
             const MARGIN_Y = 10
-            const MARGIN_X = 10.4
+            const MARGIN_X = 22.5
             doc.setTextColor('#FFFFFF')
             // doc.setFontSize(24)
             // doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
