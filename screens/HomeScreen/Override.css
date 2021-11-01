@@ -342,7 +342,7 @@
 
 #Speedometer7Container {
   position: absolute;
-  left: 595px;
+  left: 586px;
   top: 130px;
   transform-origin: 0 0;
   transform: scale(0.25);
@@ -853,7 +853,7 @@
   position: absolute;
   left: 420px;
   top: 260px;
-  width: 180px;
+  width: 150px;
   background-color: white;
   z-index: 10;
 }
@@ -882,7 +882,7 @@
   position: absolute;
   left: var(--second-right);
   top: 260px;
-  width: 160px;
+  width: 150px;
   background-color: white;
   z-index: 10;
 }
