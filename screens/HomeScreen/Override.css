@@ -335,7 +335,7 @@
 #Speedometer6Container {
   position: absolute;
   left: var(--second-left);
-  top: 130px;
+  top: 135px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -352,7 +352,7 @@
 #Speedometer7Container {
   position: absolute;
   left: 586px;
-  top: 130px;
+  top: 135px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -892,9 +892,9 @@
 #Speedometer6ExtraContainer3 {
   position: absolute;
   left: var(--second-left);
-  top: 111px;
+  top: 114px;
   width: var(--title-box-width);
-  /* height: 96px; */
+  height: 25px;
   background-color: white;
   z-index: 110;
 }
@@ -939,7 +939,7 @@
 #BarChart3ExtraContainer3 {
   position: absolute;
   left: var(--second-left);
-  top: 348px;
+  top: 352px;
   width: var(--title-box-width);
   z-index: 10;
   background-color: white;
