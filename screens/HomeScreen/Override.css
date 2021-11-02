@@ -1069,7 +1069,7 @@
 #RadarChart1ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 13px;
+  top: 12.5px;
   width: 350px;
   height: 40px;
   z-index: 20;
