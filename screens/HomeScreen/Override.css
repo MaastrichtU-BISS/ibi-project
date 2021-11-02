@@ -939,7 +939,7 @@
 #BarChart3ExtraContainer3 {
   position: absolute;
   left: var(--second-left);
-  top: 352px;
+  top: 351px;
   width: var(--title-box-width);
   z-index: 10;
   background-color: white;
