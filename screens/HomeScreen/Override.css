@@ -692,6 +692,7 @@
   left: var(--first-right);
   top: 441px;
   width: 160px;
+  height: 140px;
   background-color: white;
   z-index: 10;
 }
