@@ -4,8 +4,8 @@
     "app.js.map": "/ibi-project/static/js/app.c92c18e5.chunk.js.map",
     "runtime~app.js": "/ibi-project/static/js/runtime~app.8ff94e85.js",
     "runtime~app.js.map": "/ibi-project/static/js/runtime~app.8ff94e85.js.map",
-    "static/js/2.44b2d51c.chunk.js": "/ibi-project/static/js/2.44b2d51c.chunk.js",
-    "static/js/2.44b2d51c.chunk.js.map": "/ibi-project/static/js/2.44b2d51c.chunk.js.map",
+    "static/js/2.a7b758bc.chunk.js": "/ibi-project/static/js/2.a7b758bc.chunk.js",
+    "static/js/2.a7b758bc.chunk.js.map": "/ibi-project/static/js/2.a7b758bc.chunk.js.map",
     "static/js/3.af88b17b.chunk.js": "/ibi-project/static/js/3.af88b17b.chunk.js",
     "static/js/3.af88b17b.chunk.js.map": "/ibi-project/static/js/3.af88b17b.chunk.js.map",
     "static/js/4.758df5d1.chunk.js": "/ibi-project/static/js/4.758df5d1.chunk.js",
@@ -23,7 +23,7 @@
     "reportOriginal copy.html": "/ibi-project/reportOriginal copy.html",
     "reportOriginal.html": "/ibi-project/reportOriginal.html",
     "serve.json": "/ibi-project/serve.json",
-    "static/js/2.44b2d51c.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.44b2d51c.chunk.js.LICENSE.txt",
+    "static/js/2.a7b758bc.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.a7b758bc.chunk.js.LICENSE.txt",
     "static/js/3.af88b17b.chunk.js.LICENSE.txt": "/ibi-project/static/js/3.af88b17b.chunk.js.LICENSE.txt",
     "static/js/4.758df5d1.chunk.js.LICENSE.txt": "/ibi-project/static/js/4.758df5d1.chunk.js.LICENSE.txt",
     "static/js/5.5bf66918.chunk.js.LICENSE.txt": "/ibi-project/static/js/5.5bf66918.chunk.js.LICENSE.txt",
@@ -31,7 +31,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.8ff94e85.js",
-    "static/js/2.44b2d51c.chunk.js",
+    "static/js/2.a7b758bc.chunk.js",
     "static/js/app.c92c18e5.chunk.js"
   ]
 }
