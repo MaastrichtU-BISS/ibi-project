@@ -10,7 +10,7 @@ import {
 import deepmerge from 'deepmerge'
 import {
   Box, NativeBaseProvider, Text,
-  Stack,
+  Stack, Divider,
 } from 'native-base'
 import React from 'react'
 import ReactDOM from 'react-dom'
@@ -93,6 +93,7 @@ export const OverrideHTML = (props) => {
               chartExtraContainer,
             )
           })
+          // Trademark
           const trademarkContainer = document.createElement('div')
           trademarkContainer.className = 'trademark'
           ReactDOM.render(
@@ -105,6 +106,26 @@ export const OverrideHTML = (props) => {
             trademarkContainer,
           )
           pageNode.appendChild(trademarkContainer)
+          // Divider
+          const dividerContainer = document.createElement('div')
+          dividerContainer.className = 'divider'
+          ReactDOM.render(
+            <NativeBaseProvider
+              config={NATIVE_BASE_CONFIG}
+              colorModeManager={colorModeManager}
+            >
+              <Box
+                borderColor="blue"
+                borderLeftWidth="0.1px"
+                borderStyle="dotted"
+                w={0}
+                h="579px"
+              />
+            </NativeBaseProvider>,
+            dividerContainer,
+          )
+          pageNode.appendChild(dividerContainer)
+
           pageNode.insertBefore(chartContainer, image.nextElementSibling)
           if (chartData && chartContainer) {
             const Chart = ChartExamples[chartType]

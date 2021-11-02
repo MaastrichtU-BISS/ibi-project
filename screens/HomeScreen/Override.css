@@ -89,6 +89,15 @@
   top: 585px;
 }
 
+.divider {
+  position: absolute;
+  left: 394px;
+  top: var(--top-margin);
+  height: 676px;
+  width: 3px;
+  background: white;
+}
+
 #PieChart0Container {
   position: absolute;
   left: var(--first-left);
@@ -435,7 +444,7 @@
 #RadarChart1Container {
   position: absolute;
   left: var(--second-left);
-  top: 145px;
+  top: 140px;
   transform-origin: 0 0;
   transform: scale(0.25);
   background-color: white;
@@ -608,7 +617,7 @@
 #Speedometer1ExtraContainer2 {
   position: absolute;
   left: var(--first-left);
-  top: var(--top-margin);
+  top: 12px;
   width: var(--block-width);
   z-index: 100;
   background-color: var(--background);
@@ -1050,7 +1059,7 @@
 #RadarChart1ExtraContainer1 {
   position: absolute;
   left: 411px;
-  top: 38px;
+  top: 33px;
   width: var(--title-box-width);
   z-index: 20;
   background-color: white;
@@ -1060,7 +1069,7 @@
 #RadarChart1ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: var(--top-margin);
+  top: 13px;
   width: 350px;
   height: 40px;
   z-index: 20;
@@ -1070,7 +1079,7 @@
 #RadarChart1ExtraContainer3 {
   position: absolute;
     left: var(--second-left);
-    top: 488px;
+    top: 483px;
     width: var(--title-box-width);
     z-index: 20;
     background-color: white;
