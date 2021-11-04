@@ -508,12 +508,12 @@
 
 #PieChart0ExtraContainer5 {
   position: absolute;
-  left: -5px;
-  top: 50px;
-  width: 26px;
+  left: 107px;
+  top: 197px;
+  width: 277px;
   z-index: 10;
   background-color: var(--background);
-  height: 119px;
+  height: 53px;
 }
 
 #Speedometer0ExtraContainer0 {

@@ -285,14 +285,9 @@ const Bind = [
       extraElements: [
         {
           component: (props) => (
-            <Text
-              fontSize="8.7px"
-              fontFamily="ff2"
-              fontWeight={500}
-              color="rgb(0,0,0)"
-            >
+            <ExplanationText>
               {props.value}
-            </Text>
+            </ExplanationText>
           ),
         },
         {
@@ -303,7 +298,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Kosten  van  vermogensbeheer  inclusief transactiekosten  bepalen  grotendeels  de uitvoeringskosten
+              Kosten van vermogensbeheer inclusief transactiekosten bepalen grotendeels de uitvoeringskosten.
             </ExplanationText>
           ),
         },
@@ -352,11 +347,13 @@ const Bind = [
             </Title>
           ),
         },
-        // {
-        //   component: () => (
-        //     <Box />
-        //   ),
-        // },
+        {
+          component: (_, props) => (
+            <ExplanationText>
+              {`Het Institutioneel Benchmark Instituut benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet-en regeling. Deze bijsluiter geeft belangrijke informatie over de uitvoeringskosten van ${props.variables.pensionFundName}.` }
+            </ExplanationText>
+          ),
+        },
       ],
     },
     {
