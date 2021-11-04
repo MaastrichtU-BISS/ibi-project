@@ -71,7 +71,7 @@ export default (props) => {
       // width: '100%',
         height={250}
         margin={{
-          top: 60, right: 0, bottom: 60, left: 0,
+          top: 60, right: 10, bottom: 60, left: 10,
         }}
         data={data}
         theme={chartTheme}
@@ -120,7 +120,7 @@ export default (props) => {
       // ]}
         markers={values.map(({ value, color }) => ({
           axis: 'x',
-          value,
+          value: value - min,
           lineStyle: {
             stroke: color, // BRAND_COLORS_MAP.orange,
             strokeWidth: 4,

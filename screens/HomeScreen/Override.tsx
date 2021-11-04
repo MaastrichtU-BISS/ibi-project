@@ -1500,16 +1500,16 @@ export const Pages = [
     {
       id: 'BarChart0',
       type: 'BarChart',
-      min: 25,
+      min: 49,
       max: 250,
       values: [
         {
-          value: 90,
+          value: 50,
           color: BRAND_COLORS_MAP.orange,
           label: 'LABEL1',
         },
         {
-          value: 50,
+          value: 70,
           color: BRAND_COLORS_MAP.green,
           label: 'LABEL2',
         },
