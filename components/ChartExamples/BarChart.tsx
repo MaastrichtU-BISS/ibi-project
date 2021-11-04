@@ -71,7 +71,7 @@ export default (props) => {
       // width: '100%',
         height={250}
         margin={{
-          top: 85, right: 10, bottom: 60, left: 10,
+          top: 90, right: 10, bottom: 60, left: 10,
         }}
         data={data}
         theme={chartTheme}
