@@ -48,7 +48,7 @@ export default (props) => {
                 fontFamily="ff2"
                 justifyContent="center"
               >
-                {`${label}`}
+                {`${label}: `}
               </Text>
               <Text
                 fontSize="xl"
