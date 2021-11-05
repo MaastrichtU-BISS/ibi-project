@@ -40,7 +40,7 @@ export default (props) => {
   const arcsLength = React.useMemo(() => segments.map((item) => item.value / segmentsTotalValue), [segments])
   const segmentColors = React.useMemo(() => segments.map((item) => item.color), [segments])
   const customSegmentStops = React.useMemo(
-    () => [0, ...segments.map((item) => item.value)],
+    () => [...segments.map((item) => item.value)],
     [segments],
   )
 
@@ -50,13 +50,7 @@ export default (props) => {
     [secondSegments],
   )
   const secondCustomSegmentStops = React.useMemo(
-    () => {
-      let total = 0
-      return [0, ...secondSegments.map((item) => {
-        total += item.value
-        return item.value
-      })]
-    },
+    () => [...secondSegments.map((item) => item.value)],
     [secondSegments],
   )
   const {
@@ -134,7 +128,7 @@ export default (props) => {
               segmentColors={segmentColors}
               arcsLength={arcsLength}
               customSegmentStops={customSegmentStops}
-              minValue={0}
+              minValue={min ?? 0}
               maxValue={max ?? maxValue}
               minLabel={min ?? 0}
               maxLabel={max ?? maxValue}
@@ -166,7 +160,7 @@ export default (props) => {
                     segments={secondSegments.length}
                     segmentColors={secondSegmentColors}
                     arcsLength={secondArcsLength}
-                    minValue={0}
+                    minValue={min ?? 0}
                     maxValue={max ?? maxValue}
                     minLabel={min ?? 0}
                     maxLabel={max ?? maxValue}

@@ -1495,7 +1495,7 @@ export const Pages = [
           },
         ],
         segments: [{ value: 7 }, { value: 21 }],
-        secondSegments: [{ value: 1 }, { value: 20 }],
+        secondSegments: [{ value: 7 }, { value: 20 }],
       },
     },
   ],
