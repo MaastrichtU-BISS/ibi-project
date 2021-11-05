@@ -975,7 +975,7 @@ const Bind = [
                 PENSIOENBEHEER
               </Title>
               <Subtitle
-                mb={1}
+                mb={"1px"}
               >
                 WAT ZIJN DE KOSTEN PER DEELNEMER?
               </Subtitle>
