@@ -1094,14 +1094,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Geeft  de  complexiteit  van  de  regeling  die wordt uitgevoerd weer. De complexiteit is een gevolg  van  de  afspraken  die  met  de werkgever  en  sociale  partners  over  het pensioen  zijn  gemaakt.  Een  hoge complexiteit maakt het automatiseren van het proces  lastig  en  kostbaar.  Het  gemiddelde van  alle  deelnemende  pensioenfondsen  is 100. Een hogere complexiteit leidt tot in de regel tot hogere kosten. '}
+              {'De complexiteit van een uit te voeren pensioenregeling is een gevolg van de afspraken die met de werkgever en sociale partners over het pensioen zijn gemaakt. De gemiddelde complexiteit is 100.\n\nHet uitvoeren van een complexe pensioenregeling maakt het automatiseren van het proces lastig en is daardoor kostbaar.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING? → COMPLEXITEIT INDEX
+              HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING?
             </TitleBox>
           ),
         },
@@ -1139,14 +1139,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De  mate  waarin  de  verwerking    van transacties geautomatiseerd geschiedt.\n\nEen hogere automatiseringsgraad leidt in de regel tot lagere kosten.'}
+              {'Indien processen zijn geautomatiseerd, dan zijn de kosten van verwerking lager dan indien een groot gedeelte van de werkzaamheden handmatig moet worden uitgevoerd. Het gemiddelde is 100.\n\nEen hogere automatiseringsgraad leidt in de regel tot lagere kosten.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD? → AUTOMATISERINGS INDEX
+              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD?
             </TitleBox>
           ),
         },
@@ -1184,7 +1184,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Geeft  weer  hoeveel  deelnemers  het pensioenfonds verlaten of erbij komen.\n\nOok  heeft  het  pensioenfonds  geen controle hierover, beïnvloed het de kosten alsnog. '}
+              {'Bij het veranderen van werkgever is het mogelijk het opgebouwd pensioen mee te nemen naar het pensioenfonds van de nieuwe werkgever. Het gemiddelde aantal overdrachten is 100.\n\nVeel binnen- en uitgaande overdrachten leidt tot hogere kosten.'}
             </ExplanationText>
           ),
         },
@@ -1193,7 +1193,7 @@ const Bind = [
             <TitleBox
               h="34px"
             >
-              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?\n→ OVERDRACHTEN INDEX'}
+              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?'}
             </TitleBox>
           ),
         },
@@ -1231,7 +1231,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering.  Op  het  aantal  overdrachten  en  de  samenstelling  van  de  deelnemers  heeft  het  bestuur  geen invloed, hoewel deze de kosten alsnog beïnvloeden.\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien in hoeverre vergelijkbare fondsen en het Fund Name  hoger of lager scoren dan het gemiddelde. '}
+              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\n\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering. Op het aantal overdrachten en de samenstelling van de deelnemers heeft het bestuur geen invloed, hoewel deze de kosten alsnog beïnvloeden.\n\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien hoe het pensioenfonds scoort vergleken met andere, en vooral vergelijkbare pensioenfondsen.'}
             </ExplanationText>
           ),
         },
@@ -1254,10 +1254,10 @@ const Bind = [
               space={1}
             >
               <ExplanationText>
-                De kosten van dit uniforme pensioenkostenoverzicht (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
+              De kosten van UPKO (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
               </ExplanationText>
               <ExplanationText>
-                De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutioneel Benchmaking Institute BV.
+              De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutional Benchmarking Institute BV.
               </ExplanationText>
             </Stack>
           ),

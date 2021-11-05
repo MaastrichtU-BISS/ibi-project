@@ -397,7 +397,7 @@
   transform: scale(0.25);
   background-color: white;
   width: var(--barchart-container-width);
-  height: 600px;
+  height: 500px;
   z-index: 10;
 }
 
@@ -964,7 +964,7 @@
   left: var(--first-left-inner);
   top: 46px;
   width: 150px;
-  height: 150px;
+  height: 130px;
   background-color: white;
   z-index: 10;
 }
@@ -1001,7 +1001,7 @@
 #BarChart5ExtraContainer1 {
   position: absolute;
   left: var(--first-left-inner);
-  top: 240px;
+  top: 215px;
   width: 150px;
   background-color: white;
   z-index: 10;
@@ -1010,7 +1010,7 @@
 #BarChart5ExtraContainer2 {
   position: absolute;
   left: var(--first-left);
-  top: 212px;
+  top: 185px;
   width: var(--title-box-width);
   background-color: white;
   z-index: 4;
@@ -1053,6 +1053,10 @@
   z-index: 10;
 }
 
+#RadarChart1 {
+  padding-top: 75px;
+}
+
 #RadarChart1ExtraContainer0 {
   position: absolute;
   left: 425px;
@@ -1085,7 +1089,7 @@
 #RadarChart1ExtraContainer3 {
   position: absolute;
     left: var(--second-left);
-    top: 483px;
+    top: 520px;
     width: var(--title-box-width);
     z-index: 20;
     background-color: white;
