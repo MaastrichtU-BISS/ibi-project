@@ -1,5 +1,6 @@
 :root {
   --barchart-width: 980px;
+  --barchart-width-smaller: 940px;
   --barchart-container-width: 1468px;
   --barchart-padding-left: 560px;
   --block-width: 363px;
@@ -401,7 +402,7 @@
 }
 
 #BarChart4 {
-  width: var(--barchart-width);
+  width: var(--barchart-width-smaller);
   height: 500px;
   padding-left: var(--barchart-padding-left);
   padding-top: 41px;
@@ -420,7 +421,7 @@
 }
 
 #BarChart5 {
-  width: var(--barchart-width);
+  width: var(--barchart-width-smaller);
   height: 300px;
   padding-left: var(--barchart-padding-left);
   padding-top: 86px;
@@ -439,7 +440,7 @@
 }
 
 #BarChart6 {
-  width: var(--barchart-width);
+  width: var(--barchart-width-smaller);
   height: 500px;
   padding-left: var(--barchart-padding-left);
   padding-top: 40px;
