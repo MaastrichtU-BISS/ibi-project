@@ -27,6 +27,7 @@ import 'react-native-gesture-handler'
 import { download } from 'colay-ui/utils'
 // import { DATA as SAMPLE_DATA } from '../../constants'
 import { OverrideHTML, Pages } from './Override'
+import { DATA } from './data'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
 
@@ -47,11 +48,12 @@ export const HomeScreen = (props: any) => {
     isDownloadingData,
   }, update] = useImmer({
     data: initialData
-     ?? {
-       pages: Pages,
-       pensionFundName: 'PENSIONFUND NAME',
-       fundName: 'Fund Name',
-     },
+     ?? DATA,
+    //  {
+    //    pages: Pages,
+    //    pensionFundName: 'PENSIONFUND NAME',
+    //    fundName: 'Fund Name',
+    //  },
     status: 'idle',
     formVisible: false,
     isDownloading: false,
@@ -126,12 +128,12 @@ export const HomeScreen = (props: any) => {
           const source = document.getElementById(pageId)
           // const source = document.getElementById('ChartContainer')
           const canvas = await html2canvas(source, {
-            scale: 5
+            scale: 5,
           })
           return canvas.toDataURL('image/jpeg')
         })(pages)
         const doc = new jsPDF(
-          "landscape"
+          'landscape',
         )
         imageList.map((imageData, index) => {
           if (index !== 0) {

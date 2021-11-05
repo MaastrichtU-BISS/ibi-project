@@ -292,7 +292,7 @@ const Bind = [
             <Box>
               <Title
                 style={{
-                  fontSize: 13,
+                  fontSize: '13px',
                   fontWeight: FONT_WEIGHT,
                   color: '#18376D',
                   letterSpacing: 0.5,
@@ -324,10 +324,10 @@ const Bind = [
             <Box>
               <Title
                 style={{
-                  fontSize: 13,
+                  fontSize: '12px',
                   fontWeight: 500,
                   color: 'rgb(128,104,60)',
-                  letterSpacing: 0.5,
+                  // letterSpacing: 0.5,
                 }}
               >
                 {props.variables.pensionFundName}
@@ -344,7 +344,7 @@ const Bind = [
               >
                 <Title
                   style={{
-                    fontSize: 13,
+                    fontSize: '13px',
                     fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
@@ -357,7 +357,7 @@ const Bind = [
                 </Title>
                 <Title
                   style={{
-                    fontSize: 11,
+                    fontSize: '11px',
                     fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
@@ -368,7 +368,7 @@ const Bind = [
                 </Title>
                 <Title
                   style={{
-                    fontSize: 11,
+                    fontSize: '11px',
                     fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
@@ -379,7 +379,7 @@ const Bind = [
                 </Title>
                 <Title
                   style={{
-                    fontSize: 9,
+                    fontSize: '9px',
                     fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
@@ -403,7 +403,7 @@ const Bind = [
             <Box>
               <Title
                 style={{
-                  fontSize: 13,
+                  fontSize: '13px',
                   fontWeight: FONT_WEIGHT,
                   color: '#18376D',
                   letterSpacing: 0.5,
@@ -454,6 +454,11 @@ const Bind = [
             <TitleBox>
               VERDELING KOSTEN VAN HET PENSOENFONDS
             </TitleBox>
+          ),
+        },
+        {
+          component: () => (
+            <Box />
           ),
         },
       ],
@@ -601,7 +606,7 @@ const Bind = [
                 pt={1}
               >
                 <Title
-                  fontSize={14}
+                  fontSize="14px"
                 >
                   Achtergrondinformatie: Kostenniveau is het gevolg van keuzes van het pensioenfonds
                 </Title>
@@ -609,7 +614,7 @@ const Bind = [
                   {'\nSociale partners beslissen over de inhoud van de pensioenregeling en de wijze waarop de regeling wordt uitgevoerd. Binnen deze afspraken beslist het bestuur van het pensioenfonds, bijvoorbeeld, in welke beleggingen wordt geïnvesteerd en hoe dat gebeurt, of welke service en informatie wordt gegeven aan de deelnemers van het pensioenfonds\n\nDe keuzes gemaakt door het bestuur leiden tot verschillen in kosten, maar bepalen ook de prestatie van het pensioenfonds. Tegenover de kosten van beleggen staat wat de beleggingen opleveren (rendement). Bij de pensioenbeheerkosten (o.a. bijhouden van de administratie per deelnemer, het betalen van pensioenen en incasseren van de pensioenpremies bij de werkgever) moeten de kosten afgezet worden tegen het serviceniveau en de complexiteit van de pensioenregeling die moet worden uitgevoerd.\n'}
                 </ExplanationText>
                 <Title
-                  fontSize={14}
+                  fontSize="14px"
                   mt={2}
                   mb={2}
                 >
@@ -633,7 +638,7 @@ const Bind = [
                 <TextBox
                   flexDirection="row"
                   space={2}
-                  fontSize={6}
+                  fontSize="6px"
                   width="72px"
                   data={[
                     {
@@ -1085,7 +1090,7 @@ const Bind = [
           component: () => (
             <ExplanationText
               ml="2px"
-              fontSize="7.93"
+              fontSize="7.93px"
             >
               Kosten per deelnemer indien uitgegaan wordt van het
               {' '}
@@ -1116,7 +1121,7 @@ const Bind = [
               </Subtitle>
               <ExplanationText
                 ml="2px"
-                fontSize="7.93"
+                fontSize="7.93px"
               >
                 Bij pensioenbeheerkosten kan het bestuur niet alles beslissen. Op het aantal deelnemers en de samenstelling van de deelnemers heeft het bestuur geen invloed. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal waardeoverdrachten (deelnemers die met reeds opgebouwde vermogen toetreden of vertrekken bij het pensioenfonds) heeft invloed op het kostenniveau.
               </ExplanationText>
@@ -1145,7 +1150,7 @@ const Bind = [
           component: () => (
             <ExplanationText
               ml="2px"
-              fontSize="7.93"
+              fontSize="7.93px"
             >
               Aanvullend kijken wij ook naar de kosten per deelnemer indien uitgegaan wordt van
               {' '}

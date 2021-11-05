@@ -80,7 +80,7 @@ export default (props) => {
       // width: '100%',
         height={250}
         margin={{
-          top: 90, right: 10, bottom: 60, left: 10,
+          top: 90, right: 20, bottom: 60, left: 10,
         }}
         data={data}
         theme={chartTheme}
@@ -147,7 +147,7 @@ export default (props) => {
         }))}
       />
       <Box
-        mr={10}
+        mr={20}
         mt={MARGIN_TOP}
         h={HEIGHT}
       >

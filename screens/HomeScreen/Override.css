@@ -107,7 +107,7 @@
 #PieChart0Container {
   position: absolute;
   left: var(--first-left);
-  top: 340px;
+  top: 347px;
   width: 1200px;
   height: 500px;
   background-color: white;
@@ -471,7 +471,7 @@
 #PieChart0ExtraContainer0 {
   position: absolute;
   left: 40px;
-  top: 242px;
+  top: 252px;
   width: 349px;
   height: 76px;
   background-color: white;
@@ -491,7 +491,7 @@
 #PieChart0ExtraContainer2 {
   position: absolute;
   left: 262px;
-  top: 340px;
+  top: 347px;
   width: 123px;
   height: 50px;
   background-color: white;
@@ -559,10 +559,20 @@
 #PieChart0ExtraContainer9 {
   position: absolute;
   left: var(--first-left);
-  top: 320px;
+  top: 325px;
   width: var(--title-box-width);
   height: 22px;
   z-index: 100;
+}
+
+#PieChart0ExtraContainer10 {
+  position: absolute;
+  left: var(--first-left);
+  top: 319px;
+  width: var(--title-box-width);
+  height: 31px;
+  z-index: 100;
+  background-color: var(--background);
 }
 
 #Speedometer0ExtraContainer0 {
