@@ -1,7 +1,7 @@
 :root {
   --barchart-width: 980px;
   --barchart-container-width: 1468px;
-  --barchart-padding-left: 510px;
+  --barchart-padding-left: 560px;
   --block-width: 363px;
   --title-box-width: 363px;
   --background: #ffffff;
@@ -81,6 +81,10 @@
 
 .x0 {
   z-index: -1;
+}
+
+.pf {
+  text-align: justify;
 }
 
 .trademark {
@@ -836,7 +840,7 @@
   position: absolute;
   left: 27px;
   top: 38px;
-  width: var(--title-box-width);
+  width: 350px;
   z-index: 10;
   background-color: white;
 }
@@ -874,7 +878,7 @@
   position: absolute;
   left: 420px;
   top: 260px;
-  width: 150px;
+  width: 165px;
   background-color: white;
   z-index: 10;
 }
