@@ -920,7 +920,7 @@ const Bind = [
         {
           component: () => (
             <Subtitle>
-              VERMOGENSBEHEERKOSTEN IN CONTEXT
+              KOSTEN VAN BELEGGEN IN CONTEXT
             </Subtitle>
           ),
         },
@@ -959,8 +959,9 @@ const Bind = [
         },
         {
           component: () => (
-            <ExplanationText>
-              {'Kosten per deelnemer indien uitgegaan wordt van het  aantal  premiebetalende  deelnemers  en gepensioneerden aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van  de  kosten  per  deelnemer  die  ook  wettelijk gepubliceerd moet worden. '}
+            <ExplanationText ml="2px"
+            fontSize="7.93">
+              Kosten per deelnemer indien uitgegaan wordt van het <i>aantal premiebetalende</i> deelnemers en <i>gepensioneerden</i> aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van de kosten per deelnemer die ook wettelijk gepubliceerd moet worden.
             </ExplanationText>
           ),
         },
@@ -983,7 +984,7 @@ const Bind = [
                 ml="2px"
                 fontSize="7.93"
               >
-                Bij pensioenbeheer worden kosten ook veroorzaakt door niet beïnvloedbare factoren. Dit betreft de samenstelling van de deelnemers. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal  waarde-overdrachten  (deelnemers  die  met  reeds  opgebouwde  vermogen  toetreden  of  vertrekken  bij  het pensioenfonds) heeft invloed op het kostenniveau
+                Bij pensioenbeheerkosten kan het bestuur niet alles beslissen. Op het aantal deelnemers en de samenstelling van de deelnemers heeft het bestuur geen invloed. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal waardeoverdrachten (deelnemers die met reeds opgebouwde vermogen toetreden of vertrekken bij het pensioenfonds) heeft invloed op het kostenniveau.
               </ExplanationText>
             </Box>
           ),
@@ -1008,8 +1009,9 @@ const Bind = [
       extraElements: [
         {
           component: () => (
-            <ExplanationText>
-              {'Aanvullend  kijken  wij  ook  naar  de  kosten  per deelnemer  indien  uitgegaan  wordt  van  alle deelnemers,  dus  ook  de  ‘slapers’.  Dit  omdat het aandeel ‘slapers’ ook invloed heeft op de kosten. '}
+            <ExplanationText ml="2px"
+            fontSize="7.93">
+              Aanvullend kijken wij ook naar de kosten per deelnemer indien uitgegaan wordt van <i>alle</i> deelnemers, dus ook de ‘slapers’. Hoewel het bestuur geen invloed heeft op het aantal slapers, hebben deze alsnog invloed op de kosten.
             </ExplanationText>
           ),
         },
