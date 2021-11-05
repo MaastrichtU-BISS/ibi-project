@@ -45,9 +45,18 @@ export default (props) => {
               />
               <Text
                 fontSize="xl"
+                fontFamily="ff2"
                 justifyContent="center"
               >
                 {`${label}`}
+              </Text>
+              <Text
+                fontSize="xl"
+                bold
+                justifyContent="center"
+                fontFamily="ff2"
+              >
+                {value}
               </Text>
             </Box>
           ))
