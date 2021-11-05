@@ -41,6 +41,8 @@ const merge = (val: any, val2: any) => deepmerge(
   { arrayMerge: combineMerge },
 )
 
+const FONT_WEIGHT = 600
+
 export const OverrideHTML = (props) => {
   const {
     data,
@@ -249,7 +251,7 @@ const ExplanationText = (props) => (
   <Text
     fontSize="8.3px"
     fontFamily="ff2"
-    fontWeight={500}
+    fontWeight={400}
     color="rgb(0,0,0)"
     {...props}
   />
@@ -291,7 +293,7 @@ const Bind = [
               <Title
                 style={{
                   fontSize: 13,
-                  fontWeight: 600,
+                  fontWeight: FONT_WEIGHT,
                   color: '#18376D',
                   letterSpacing: 0.5,
                 }}
@@ -343,7 +345,7 @@ const Bind = [
                 <Title
                   style={{
                     fontSize: 13,
-                    fontWeight: 600,
+                    fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
                   }}
@@ -356,7 +358,7 @@ const Bind = [
                 <Title
                   style={{
                     fontSize: 11,
-                    fontWeight: 600,
+                    fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
                   }}
@@ -367,7 +369,7 @@ const Bind = [
                 <Title
                   style={{
                     fontSize: 11,
-                    fontWeight: 600,
+                    fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
                   }}
@@ -378,7 +380,7 @@ const Bind = [
                 <Title
                   style={{
                     fontSize: 9,
-                    fontWeight: 600,
+                    fontWeight: FONT_WEIGHT,
                     color: 'white',
                     letterSpacing: 0.5,
                   }}
@@ -402,7 +404,7 @@ const Bind = [
               <Title
                 style={{
                   fontSize: 13,
-                  fontWeight: 600,
+                  fontWeight: FONT_WEIGHT,
                   color: '#18376D',
                   letterSpacing: 0.5,
                 }}
@@ -918,7 +920,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              {'HOE GESPREID WORDT HET VERMOGEN BELEGD?'}
+              HOE GESPREID WORDT HET VERMOGEN BELEGD?
             </TitleBox>
           ),
         },
@@ -957,7 +959,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              {'IN WELKE MATE WORDT ACTIEF EEN HOGER RENDEMENT NAGESTREEFD?'}
+              IN WELKE MATE WORDT ACTIEF EEN HOGER RENDEMENT NAGESTREEFD?
             </TitleBox>
           ),
         },
@@ -989,7 +991,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Beleggingen kunnen alleen voor het pensioenfonds worden gedaan. Dit biedt veel vrijheid. Ook kunnen de beleggingen via een beleggingsfonds worden gedaan hetgeen in de regel leidt tot lagere kosten. Het gemiddelde is 100. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.'}
+              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan. Dit biedt veel vrijheid. Ook kunnen de beleggingen via een beleggingsfonds worden gedaan hetgeen in de regel leidt tot lagere kosten. Het gemiddelde is 100. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
             </ExplanationText>
           ),
         },
@@ -1081,9 +1083,19 @@ const Bind = [
         },
         {
           component: () => (
-            <ExplanationText ml="2px"
-            fontSize="7.93">
-              Kosten per deelnemer indien uitgegaan wordt van het <i>aantal premiebetalende</i> deelnemers en <i>gepensioneerden</i> aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van de kosten per deelnemer die ook wettelijk gepubliceerd moet worden.
+            <ExplanationText
+              ml="2px"
+              fontSize="7.93"
+            >
+              Kosten per deelnemer indien uitgegaan wordt van het
+              {' '}
+              <i>aantal premiebetalende</i>
+              {' '}
+              deelnemers en
+              {' '}
+              <i>gepensioneerden</i>
+              {' '}
+              aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van de kosten per deelnemer die ook wettelijk gepubliceerd moet worden.
             </ExplanationText>
           ),
         },
@@ -1131,9 +1143,15 @@ const Bind = [
       extraElements: [
         {
           component: () => (
-            <ExplanationText ml="2px"
-            fontSize="7.93">
-              Aanvullend kijken wij ook naar de kosten per deelnemer indien uitgegaan wordt van <i>alle</i> deelnemers, dus ook de ‘slapers’. Hoewel het bestuur geen invloed heeft op het aantal slapers, hebben deze alsnog invloed op de kosten.
+            <ExplanationText
+              ml="2px"
+              fontSize="7.93"
+            >
+              Aanvullend kijken wij ook naar de kosten per deelnemer indien uitgegaan wordt van
+              {' '}
+              <i>alle</i>
+              {' '}
+              deelnemers, dus ook de ‘slapers’. Hoewel het bestuur geen invloed heeft op het aantal slapers, hebben deze alsnog invloed op de kosten.
             </ExplanationText>
           ),
         },
@@ -1315,7 +1333,7 @@ const Bind = [
             <TitleBox
               h="34px"
             >
-              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?'}
+              HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?
             </TitleBox>
           ),
         },
@@ -1376,10 +1394,10 @@ const Bind = [
               space={1}
             >
               <ExplanationText>
-              De kosten van UPKO (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
+                De kosten van UPKO (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
               </ExplanationText>
               <ExplanationText>
-              De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutional Benchmarking Institute BV.
+                De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutional Benchmarking Institute BV.
               </ExplanationText>
             </Stack>
           ),
@@ -1457,32 +1475,27 @@ export const Pages = [
     {
       id: 'Speedometer0',
       data: {
-        min: 25,
-        max: 250,
+        min: 7,
+        max: 21,
         values: [
           {
-            value: 200,
-            label: KEYS.alle,
+            value: 18,
+            label: 'ALLE DEELNEMENDE PENSIOENFONDSEN',
             color: BRAND_COLORS_MAP.green,
           },
           {
-            value: 110,
-            label: KEYS.pension,
+            value: 15,
+            label: 'VERGELIJKBARE PENSIOENFONDSEN',
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
-            value: 120,
-            label: KEYS.fonds,
+            value: 14,
+            label: 'FONDS',
             color: BRAND_COLORS_MAP.orange,
           },
-          {
-            value: 150,
-            label: 'EXAMPLE 4 VALUE',
-            color: BRAND_COLORS_MAP.cream,
-          },
         ],
-        segments: SEGMENTS,
-        secondSegments: SECOND_SEGMENTS,
+        segments: [{ value: 7 }, { value: 21 }],
+        secondSegments: [{ value: 1 }, { value: 20 }],
       },
     },
   ],
