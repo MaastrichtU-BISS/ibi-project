@@ -86,6 +86,7 @@
 
 .pf {
   text-align: justify;
+  font-weight: 400;
 }
 
 .trademark {
@@ -424,7 +425,6 @@
   width: var(--barchart-width-smaller);
   height: 300px;
   padding-left: var(--barchart-padding-left);
-  padding-top: 86px;
 }
 
 #BarChart6Container {

@@ -1166,7 +1166,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De service index geeft weer hoeveel  service aan  deelnemers  wordt  gegeven  o.a.  op  het gebied  van  tijdig  verwerken  van pensioenbetalingen,  openingsuren  helpdesk, website  mogelijkheden  en  afwerking  van klachten.  Het  gemiddelde  van  alle deelnemende pensioenfondsen is 100. Hogere service leidt in de regel tot hogere kosten.
+              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.    Hogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
           ),
         },
