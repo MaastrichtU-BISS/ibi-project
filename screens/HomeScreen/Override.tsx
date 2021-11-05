@@ -646,7 +646,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd  wordt. Bij een  vergelijking  van  het  rendement  met  andere pensioenfondsen over slechts één jaar komt het beleid dat het  bestuur  heeft  bepaald  niet  goed  tot  zijn  recht.  Een vergelijking over een periode van 5 en 10 jaar geeft een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
+              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd wordt. Bij een vergelijking van het rendement met andere pensioenfondsen geeft een periode van 5 en 10 jaar een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
             </ExplanationText>
           ),
         },
@@ -700,7 +700,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Benchmarkkosten  is  een  door  het Institutioneel  Benchmarking  Instituut onafhankelijk  berekende  kostennorm  die past  bij  de  door  het  pensioenfonds gekozen  inrichting  van  de  vermogens-beheerportefeuille.  Indien  de  kosten  van het  pensioenfonds  hoger  zijn  dan  de berekende  benchmarkkosten  dan  zijn  de kosten van het pensioenfonds hoger dan je mag verwachten.
+              Benchmarkkosten is een door het Institutional Benchmarking Institute onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, zijn de kosten van het pensioenfonds hoger dan je mag verwachten.
             </ExplanationText>
           ),
         },
@@ -743,7 +743,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De  hoogte  van  de  transactiekosten  is  afhankelijk  van  een aantal  factoren  zoals  bijvoorbeeld  de  beleggingscategorie waarin  belegd  wordt  alsmede  de  beleggingsstijl.  Ook  het gedurende  het  verslagjaar  inrichten  /  wijzigen  van  de beleggingsstrategie  gaat  gepaard  met  hogere  aan-  en verkoopkosten.
+              De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald waarin belegd wordt. Ook indien gedurende het verslagjaar wijzigingen in de beleggingen worden doorgevoerd heeft invloed op de kosten.
             </ExplanationText>
           ),
         },
@@ -782,7 +782,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De asset allocatie index geeft de spreiding van beleggingen weer waarbij 100 het gemiddelde is  van  alle  deelnemende  pensioenfondsen. Brede spreiding leidt tot hogere  kosten maar lager risico. \nDe asset allocatie heeft de grootste invloed op de vermogensbeheerkosten. '}
+              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. De gemiddelde spreiding is 100.\nDe spreiding heeft de grootste invloed op de kosten van beleggen.'}
             </ExplanationText>
           ),
         },
@@ -796,7 +796,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              {'WELK DEEL VAN HET VERMOGEN WORDT IN WELKE BELEGGINGSCATEGORIE BELEGD?\n→ ASSET ALLOCATIE INDEX'}
+              {'HOE GESPREID WORDT HET VERMOGEN BELEGD?'}
             </TitleBox>
           ),
         },
@@ -828,14 +828,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De alpha index geeft weer in welke mate actief wordt belegd waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\nActief beheer leidt tot hogere kosten maar ook tot potentieel een hoger rendement. '}
+              {'Bij actief beleggen verwachten pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt. De gemiddelde mate waarin actief belegt wordt is 100.\nActief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              {'VERWACHT HET PENSIOENFONDS MEER DAN MARKTGEMIDDELD RENDEMENT TE BEHALEN?\n→ ALPHA INDEX'}
+              {'IN WELKE MATE WORDT ACTIEF EEN HOGER RENDEMENT NAGESTREEFD?'}
             </TitleBox>
           ),
         },
@@ -867,14 +867,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De  implementatie  index  geeft  de  keuze  weer tussen  direct  beleggen  of  beleggen  via beleggingsfondsen, waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\nHoe hoger deze index, hoe meer het fonds via beleggingsfondsen belegd. '}
+              {'Beleggingen kunnen alleen voor het pensioenfonds worden gedaan. Dit biedt veel vrijheid. Ook kunnen de beleggingen via een beleggingsfonds worden gedaan hetgeen in de regel leidt tot lagere kosten. Het gemiddelde is 100. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              HOE WORDEN DE BELEGGINGEN GEDAAN? → IMPLEMENTATIE INDEX
+              HOE WORDEN DE BELEGGINGEN GEDAAN?
             </TitleBox>
           ),
         },
@@ -920,7 +920,7 @@ const Bind = [
         {
           component: () => (
             <Subtitle>
-              VERMOGENSBEHEERKOSTEN IN CONTEXT
+              KOSTEN VAN BELEGGEN IN CONTEXT
             </Subtitle>
           ),
         },
@@ -959,8 +959,9 @@ const Bind = [
         },
         {
           component: () => (
-            <ExplanationText>
-              {'Kosten per deelnemer indien uitgegaan wordt van het  aantal  premiebetalende  deelnemers  en gepensioneerden aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van  de  kosten  per  deelnemer  die  ook  wettelijk gepubliceerd moet worden. '}
+            <ExplanationText ml="2px"
+            fontSize="7.93">
+              Kosten per deelnemer indien uitgegaan wordt van het <i>aantal premiebetalende</i> deelnemers en <i>gepensioneerden</i> aan het eind van het verslagjaar. Dit is de afgesproken manier voor het berekenen van de kosten per deelnemer die ook wettelijk gepubliceerd moet worden.
             </ExplanationText>
           ),
         },
@@ -983,7 +984,7 @@ const Bind = [
                 ml="2px"
                 fontSize="7.93"
               >
-                Bij pensioenbeheer worden kosten ook veroorzaakt door niet beïnvloedbare factoren. Dit betreft de samenstelling van de deelnemers. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal  waarde-overdrachten  (deelnemers  die  met  reeds  opgebouwde  vermogen  toetreden  of  vertrekken  bij  het pensioenfonds) heeft invloed op het kostenniveau
+                Bij pensioenbeheerkosten kan het bestuur niet alles beslissen. Op het aantal deelnemers en de samenstelling van de deelnemers heeft het bestuur geen invloed. Met name de niet actieve deelnemers (slapers) hebben grote invloed op de kosten per deelnemer. Ook het aantal waardeoverdrachten (deelnemers die met reeds opgebouwde vermogen toetreden of vertrekken bij het pensioenfonds) heeft invloed op het kostenniveau.
               </ExplanationText>
             </Box>
           ),
@@ -1008,8 +1009,9 @@ const Bind = [
       extraElements: [
         {
           component: () => (
-            <ExplanationText>
-              {'Aanvullend  kijken  wij  ook  naar  de  kosten  per deelnemer  indien  uitgegaan  wordt  van  alle deelnemers,  dus  ook  de  ‘slapers’.  Dit  omdat het aandeel ‘slapers’ ook invloed heeft op de kosten. '}
+            <ExplanationText ml="2px"
+            fontSize="7.93">
+              Aanvullend kijken wij ook naar de kosten per deelnemer indien uitgegaan wordt van <i>alle</i> deelnemers, dus ook de ‘slapers’. Hoewel het bestuur geen invloed heeft op het aantal slapers, hebben deze alsnog invloed op de kosten.
             </ExplanationText>
           ),
         },
@@ -1042,7 +1044,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De service index geeft weer hoeveel  service aan  deelnemers  wordt  gegeven  o.a.  op  het gebied  van  tijdig  verwerken  van pensioenbetalingen,  openingsuren  helpdesk, website  mogelijkheden  en  afwerking  van klachten.  Het  gemiddelde  van  alle deelnemende pensioenfondsen is 100. Hogere service leidt in de regel tot hogere kosten.
+              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.    Hogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
           ),
         },
@@ -1092,14 +1094,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Geeft  de  complexiteit  van  de  regeling  die wordt uitgevoerd weer. De complexiteit is een gevolg  van  de  afspraken  die  met  de werkgever  en  sociale  partners  over  het pensioen  zijn  gemaakt.  Een  hoge complexiteit maakt het automatiseren van het proces  lastig  en  kostbaar.  Het  gemiddelde van  alle  deelnemende  pensioenfondsen  is 100. Een hogere complexiteit leidt tot in de regel tot hogere kosten. '}
+              {'De complexiteit van een uit te voeren pensioenregeling is een gevolg van de afspraken die met de werkgever en sociale partners over het pensioen zijn gemaakt. De gemiddelde complexiteit is 100.\n\nHet uitvoeren van een complexe pensioenregeling maakt het automatiseren van het proces lastig en is daardoor kostbaar.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING? → COMPLEXITEIT INDEX
+              HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING?
             </TitleBox>
           ),
         },
@@ -1137,14 +1139,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De  mate  waarin  de  verwerking    van transacties geautomatiseerd geschiedt.\n\nEen hogere automatiseringsgraad leidt in de regel tot lagere kosten.'}
+              {'Indien processen zijn geautomatiseerd, dan zijn de kosten van verwerking lager dan indien een groot gedeelte van de werkzaamheden handmatig moet worden uitgevoerd. Het gemiddelde is 100.\n\nEen hogere automatiseringsgraad leidt in de regel tot lagere kosten.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD? → AUTOMATISERINGS INDEX
+              IN HOEVERRE ZIJN DE PROCESSEN GEAUTOMATISEERD?
             </TitleBox>
           ),
         },
@@ -1182,7 +1184,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Geeft  weer  hoeveel  deelnemers  het pensioenfonds verlaten of erbij komen.\n\nOok  heeft  het  pensioenfonds  geen controle hierover, beïnvloed het de kosten alsnog. '}
+              {'Bij het veranderen van werkgever is het mogelijk het opgebouwd pensioen mee te nemen naar het pensioenfonds van de nieuwe werkgever. Het gemiddelde aantal overdrachten is 100.\n\nVeel binnen- en uitgaande overdrachten leidt tot hogere kosten.'}
             </ExplanationText>
           ),
         },
@@ -1191,7 +1193,7 @@ const Bind = [
             <TitleBox
               h="34px"
             >
-              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?\n→ OVERDRACHTEN INDEX'}
+              {'HOEVEEL DEELNEMERS ZIJN BIJ HET PENSIOENFONDS GEKOMEN EN/OF HEBBEN HET PENSIOENFONDS INCLUSIEF OPGEBOUWD VERMOGEN VERLATEN?'}
             </TitleBox>
           ),
         },
@@ -1229,7 +1231,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering.  Op  het  aantal  overdrachten  en  de  samenstelling  van  de  deelnemers  heeft  het  bestuur  geen invloed, hoewel deze de kosten alsnog beïnvloeden.\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien in hoeverre vergelijkbare fondsen en het Fund Name  hoger of lager scoren dan het gemiddelde. '}
+              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\n\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering. Op het aantal overdrachten en de samenstelling van de deelnemers heeft het bestuur geen invloed, hoewel deze de kosten alsnog beïnvloeden.\n\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien hoe het pensioenfonds scoort vergleken met andere, en vooral vergelijkbare pensioenfondsen.'}
             </ExplanationText>
           ),
         },
@@ -1252,10 +1254,10 @@ const Bind = [
               space={1}
             >
               <ExplanationText>
-                De kosten van dit uniforme pensioenkostenoverzicht (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
+              De kosten van UPKO (inclusief het benchmarkrapport op basis waarvan die overzicht is opgesteld) bedraagt voor dit fonds € 0,10 per deelnemer.
               </ExplanationText>
               <ExplanationText>
-                De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutioneel Benchmaking Institute BV.
+              De informatie in deze rapportage is met de grootst mogelijke zorgvuldigheid vergaard en samengesteld. Aan de inhoud van deze rapportage kunnen geen rechten worden ontleend of aanspraken worden gemaakt. Alle rechten voorbehouden Institutional Benchmarking Institute BV.
               </ExplanationText>
             </Stack>
           ),
