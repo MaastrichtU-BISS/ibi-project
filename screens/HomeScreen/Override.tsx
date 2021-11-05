@@ -646,7 +646,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd  wordt. Bij een  vergelijking  van  het  rendement  met  andere pensioenfondsen over slechts één jaar komt het beleid dat het  bestuur  heeft  bepaald  niet  goed  tot  zijn  recht.  Een vergelijking over een periode van 5 en 10 jaar geeft een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
+              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd wordt. Bij een vergelijking van het rendement met andere pensioenfondsen geeft een periode van 5 en 10 jaar een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
             </ExplanationText>
           ),
         },
@@ -700,7 +700,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Benchmarkkosten  is  een  door  het Institutioneel  Benchmarking  Instituut onafhankelijk  berekende  kostennorm  die past  bij  de  door  het  pensioenfonds gekozen  inrichting  van  de  vermogens-beheerportefeuille.  Indien  de  kosten  van het  pensioenfonds  hoger  zijn  dan  de berekende  benchmarkkosten  dan  zijn  de kosten van het pensioenfonds hoger dan je mag verwachten.
+              Benchmarkkosten is een door het Institutional Benchmarking Institute onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, zijn de kosten van het pensioenfonds hoger dan je mag verwachten.
             </ExplanationText>
           ),
         },
@@ -743,7 +743,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De  hoogte  van  de  transactiekosten  is  afhankelijk  van  een aantal  factoren  zoals  bijvoorbeeld  de  beleggingscategorie waarin  belegd  wordt  alsmede  de  beleggingsstijl.  Ook  het gedurende  het  verslagjaar  inrichten  /  wijzigen  van  de beleggingsstrategie  gaat  gepaard  met  hogere  aan-  en verkoopkosten.
+              De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald waarin belegd wordt. Ook indien gedurende het verslagjaar wijzigingen in de beleggingen worden doorgevoerd heeft invloed op de kosten.
             </ExplanationText>
           ),
         },
@@ -782,7 +782,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De asset allocatie index geeft de spreiding van beleggingen weer waarbij 100 het gemiddelde is  van  alle  deelnemende  pensioenfondsen. Brede spreiding leidt tot hogere  kosten maar lager risico. \nDe asset allocatie heeft de grootste invloed op de vermogensbeheerkosten. '}
+              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. De gemiddelde spreiding is 100.\nDe spreiding heeft de grootste invloed op de kosten van beleggen.'}
             </ExplanationText>
           ),
         },
@@ -796,7 +796,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              {'WELK DEEL VAN HET VERMOGEN WORDT IN WELKE BELEGGINGSCATEGORIE BELEGD?\n→ ASSET ALLOCATIE INDEX'}
+              {'HOE GESPREID WORDT HET VERMOGEN BELEGD?'}
             </TitleBox>
           ),
         },
@@ -828,14 +828,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De alpha index geeft weer in welke mate actief wordt belegd waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\nActief beheer leidt tot hogere kosten maar ook tot potentieel een hoger rendement. '}
+              {'Bij actief beleggen verwachten pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt. De gemiddelde mate waarin actief belegt wordt is 100.\nActief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              {'VERWACHT HET PENSIOENFONDS MEER DAN MARKTGEMIDDELD RENDEMENT TE BEHALEN?\n→ ALPHA INDEX'}
+              {'IN WELKE MATE WORDT ACTIEF EEN HOGER RENDEMENT NAGESTREEFD?'}
             </TitleBox>
           ),
         },
@@ -867,14 +867,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De  implementatie  index  geeft  de  keuze  weer tussen  direct  beleggen  of  beleggen  via beleggingsfondsen, waarbij 100 het gemiddelde is van alle deelnemende pensioenfondsen.\nHoe hoger deze index, hoe meer het fonds via beleggingsfondsen belegd. '}
+              {'Beleggingen kunnen alleen voor het pensioenfonds worden gedaan. Dit biedt veel vrijheid. Ook kunnen de beleggingen via een beleggingsfonds worden gedaan hetgeen in de regel leidt tot lagere kosten. Het gemiddelde is 100. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              HOE WORDEN DE BELEGGINGEN GEDAAN? → IMPLEMENTATIE INDEX
+              HOE WORDEN DE BELEGGINGEN GEDAAN?
             </TitleBox>
           ),
         },

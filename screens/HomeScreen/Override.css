@@ -750,7 +750,7 @@
 #BarChart0ExtraContainer1 {
   position: absolute;
   left: var(--second-left-inner);
-  top: 245px;
+  top: 242px;
   width: 150px;
   z-index: 10;
   background-color: white;
@@ -784,7 +784,7 @@
 #BarChart1ExtraContainer1 {
   position: absolute;
   left: var(--second-left-inner);
-  top: 380px;
+  top: 372px;
   width: 150px;
   z-index: 10;
   background-color: white;
@@ -822,7 +822,7 @@
 #BarChart2ExtraContainer2 {
   position: absolute;
   left: var(--second-left);
-  top: 472px;
+  top: 482px;
   width: var(--title-box-width);
   z-index: 100;
   background-color: white;
