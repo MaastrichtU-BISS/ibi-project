@@ -144,14 +144,14 @@ export const HomeScreen = (props: any) => {
             const MARGIN_Y = 10
             const MARGIN_X = 22.5
             doc.setTextColor('#FFFFFF')
-            // doc.setFontSize(24)
-            // doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
-            doc.setFontSize(12)
-            doc.text('UITVOERINGSKOSTEN IN CONTEXT ', MARGIN_X, MARGIN_Y + 28)
-            doc.setFontSize(9)
-            doc.text('IBI BENCHMARKING', MARGIN_X, MARGIN_Y + 42)
-            doc.setFontSize(7)
-            doc.text('info@institutionalbenchmarking.org', MARGIN_X + 45, MARGIN_Y + 42)
+            // // doc.setFontSize(24)
+            // // doc.text(`${data.pensionFundName} `, 5, MARGIN + 20)
+            // doc.setFontSize(12)
+            // doc.text('UITVOERINGSKOSTEN IN CONTEXT ', MARGIN_X, MARGIN_Y + 28)
+            // doc.setFontSize(9)
+            // doc.text('IBI BENCHMARKING', MARGIN_X, MARGIN_Y + 42)
+            // doc.setFontSize(7)
+            // doc.text('info@institutionalbenchmarking.org', MARGIN_X + 45, MARGIN_Y + 42)
           }
         })
         doc.save('report.pdf')

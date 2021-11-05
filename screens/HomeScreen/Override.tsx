@@ -10,12 +10,14 @@ import {
 import deepmerge from 'deepmerge'
 import {
   Box, NativeBaseProvider, Text,
-  Stack, Divider,
+  Stack, Image,
 } from 'native-base'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { View } from 'react-native'
 import './Override.css'
+import { IBILogo } from '@assets/images/ibi-logo'
+import { GoalSVG } from '@assets/images/goal'
 import { html } from './html'
 
 const combineMerge = (target, source, options) => {
@@ -285,9 +287,22 @@ const Bind = [
       extraElements: [
         {
           component: (props) => (
-            <ExplanationText>
-              {props.value}
-            </ExplanationText>
+            <Box>
+              <Title
+                style={{
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: '#18376D',
+                  letterSpacing: 0.5,
+                }}
+                mb={1}
+              >
+                De kosten van uw pensioen
+              </Title>
+              <ExplanationText>
+                {props.value}
+              </ExplanationText>
+            </Box>
           ),
         },
         {
@@ -298,12 +313,12 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Kosten van vermogensbeheer inclusief transactiekosten bepalen grotendeels de uitvoeringskosten.
+              Kosten van vermogensbeheer en transactiekosten bepalen voor een groot deel de kosten.
             </ExplanationText>
           ),
         },
         {
-          component: () => (
+          component: (_, props) => (
             <Box>
               <Title
                 style={{
@@ -313,45 +328,130 @@ const Bind = [
                   letterSpacing: 0.5,
                 }}
               >
-                UNIFORM PENSIOENKOSTENOVERZICHT (UPKO
-                <sup>TM</sup>
-                )
+                {props.variables.pensionFundName}
               </Title>
-              {/* <Title
-                style={{
-                  fontSize: 10,
-                  fontWeight: 500,
-                  color: 'rgb(128,104,60)',
-                  letterSpacing: 0.5,
-                  position: 'absolute',
-                  left: 318,
-                  top: -5,
-                }}
-              >
-                TM
-              </Title> */}
             </Box>
           ),
         },
         {
           component: (_, props) => (
-            <Title
-              style={{
-                fontSize: 29,
-                fontWeight: 600,
-                color: 'white',
-                letterSpacing: 0.5,
-              }}
-            >
-              {props.variables.pensionFundName}
-            </Title>
+            <Box alignItems="center">
+              <Box
+                p={2}
+                mb={1}
+              >
+                <Title
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 600,
+                    color: 'white',
+                    letterSpacing: 0.5,
+                  }}
+                  mb={1}
+                >
+                  UNIFORM PENSIOENKOSTENOVERZICHT (UPKO
+                  <sup>TM</sup>
+                  )
+                </Title>
+                <Title
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 600,
+                    color: 'white',
+                    letterSpacing: 0.5,
+                  }}
+                  mb={1}
+                >
+                  WAT ZIJN DE KOSTEN DIE UW PENSIOENFONDS MAAKT?
+                </Title>
+                <Title
+                  style={{
+                    fontSize: 11,
+                    fontWeight: 600,
+                    color: 'white',
+                    letterSpacing: 0.5,
+                  }}
+                  mb="15px"
+                >
+                  EN WAT KRIJGT U ER VOOR TERUG?
+                </Title>
+                <Title
+                  style={{
+                    fontSize: 9,
+                    fontWeight: 600,
+                    color: 'white',
+                    letterSpacing: 0.5,
+                  }}
+                >
+                  IBI BENCHMARKING (INFO@INSTITUTIONALBENCHMARKING.ORG)
+                </Title>
+              </Box>
+              <Box
+                style={{
+                  backgroundColor: '#fff',
+                }}
+                h="21px"
+                w="100%"
+              />
+            </Box>
           ),
         },
         {
           component: (_, props) => (
-            <ExplanationText>
-              {`Het Institutioneel Benchmark Instituut benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet-en regeling. Deze bijsluiter geeft belangrijke informatie over de uitvoeringskosten van ${props.variables.pensionFundName}.` }
-            </ExplanationText>
+            <Box>
+              <Title
+                style={{
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: '#18376D',
+                  letterSpacing: 0.5,
+                }}
+                mb={1}
+              >
+                Doel
+              </Title>
+              <ExplanationText>
+                {`Het Institutional Benchmarking Institute benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet- en regelgeving. Dit Uniform PensioenKOstenoverzicht (UPKO™) geeft belangrijke informatie over de kosten in relatie tot de prestatie van het ${props.variables.pensionFundName}.` }
+              </ExplanationText>
+            </Box>
+
+          ),
+        },
+        {
+          component: () => (
+            <Box>
+              {/* <Image
+                w="51px"
+                h="51px"
+                source={require('@assets/images/goal.png')}
+              /> */}
+              <GoalSVG
+                fill="#F09743"
+                width={51}
+                height={51}
+              />
+            </Box>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              VERGELIJKBARE PENSIOENFONDSEN
+            </TitleBox>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              ALLE DEELNEMENDE PENSIOENFONDSEN
+            </TitleBox>
+          ),
+        },
+        {
+          component: () => (
+            <TitleBox>
+              VERDELING KOSTEN VAN HET PENSOENFONDS
+            </TitleBox>
           ),
         },
       ],
@@ -425,7 +525,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Uitgangspunt  voor de inrichting van vermogensbeheer is  het risico dat het pensioenfonds bereid is nemen waarbij rekening dient te worden gehouden met de huidige financiële positie. Bij een hoger risico dient een hoge buffer te worden aangehouden.\n\nEen  hoger  genomen  risico  geeft  een  hoger rendementspotentieel van het fonds. Van belang is dat gekeken wordt naar het meerjarig rendement van het pensioenfonds.  '}
+              {'Een pensioenfonds dat meer risico neemt bij het beleggen moet een hogere reserve aanhouden om eventuele tegenvallers op te kunnen vangen. Ook heeft de huidige financiële situatie van het fonds invloed op hoeveel risico het fonds kan en mag nemen. Een hoger risico levert in de regel een hoger rendement. '}
             </ExplanationText>
           ),
         },
@@ -437,7 +537,7 @@ const Bind = [
         {
           component: () => (
             <Box>
-              <Title
+              {/* <Title
                 style={{
                   marginLeft: 142,
                   fontSize: 22,
@@ -472,7 +572,25 @@ const Bind = [
                 }}
               >
                 Instituut
-              </Title>
+              </Title> */}
+              <Box
+                alignItems="center"
+              >
+                {/* <Image
+                  w="141px"
+                  h="45px"
+                  source={require('@assets/images/ibi-logo.png')}
+                /> */}
+                <Box
+                  w="141px"
+                  h="45px"
+                >
+                  <IBILogo
+                    width={141}
+                    height={45}
+                  />
+                </Box>
+              </Box>
               <Box
                 bg={BRAND_COLORS_MAP.cream}
                 mt="5px"
@@ -483,22 +601,26 @@ const Bind = [
                 <Title
                   fontSize={14}
                 >
-                  Kostenniveau is het gevolg van keuzes van het pensioenfonds
+                  Achtergrondinformatie: Kostenniveau is het gevolg van keuzes van het pensioenfonds
                 </Title>
                 <ExplanationText>
-                  {'\nSociale partners beslissen over de inhoud van de pensioenregeling en de wijze waarop de  regeling  wordt  uitgevoerd.  De  sociale  partners  stellen  dus  de  kaders  vast. Daarbinnen  heeft  het  bestuur  van  het  pensioenfonds  beslissingsbevoegdheid.  Het bestuur  beslist,  bijvoorbeeld,  over  de  inrichting  van  het  vermogensbeheer,  service-niveau en de complexiteit van de  pensioenregeling en hoe vaak met pensioendeel-nemers gecommuniceerd wordt.\n\nDe  keuzes  gemaakt  door  het  bestuur  leiden  tot  verschillende  kostenniveaus,  maar bepalen  ook  de  prestatie  van  het  pensioenfonds.  Tegenover  de vermogensbeheerkosten staat het rendement. Bij pensioenbeheer moeten de kosten afgezet  worden  tegen  het  serviceniveau,  de  complexiteit  van  de  uitvoering  van  de overeengekomen pensioenregeling en de mate van automatisering van de processen.\n'}
+                  {'\nSociale partners beslissen over de inhoud van de pensioenregeling en de wijze waarop de regeling wordt uitgevoerd. Binnen deze afspraken beslist het bestuur van het pensioenfonds, bijvoorbeeld, in welke beleggingen wordt geïnvesteerd en hoe dat gebeurt, of welke service en informatie wordt gegeven aan de deelnemers van het pensioenfonds\n\nDe keuzes gemaakt door het bestuur leiden tot verschillen in kosten, maar bepalen ook de prestatie van het pensioenfonds. Tegenover de kosten van beleggen staat wat de beleggingen opleveren (rendement). Bij de pensioenbeheerkosten (o.a. bijhouden van de administratie per deelnemer, het betalen van pensioenen en incasseren van de pensioenpremies bij de werkgever) moeten de kosten afgezet worden tegen het serviceniveau en de complexiteit van de pensioenregeling die moet worden uitgevoerd.\n'}
                 </ExplanationText>
                 <Title
                   fontSize={14}
                   mt={2}
                   mb={2}
                 >
-                  Vergelijkbaarheid van uitvoeringskosten
+                  Vergelijkbaarheid van kosten en prestatie
                 </Title>
                 <ExplanationText
                   mb={2}
                 >
-                  Gedegen benchmarking geeft een gevoel bij kosten en heeft meerwaarde voor deelnemers omdat ze de uitvoeringskosten van verschillende pensioenfondsen kunnen vergelijken en de relatieve prestatie van het eigen pensioenfonds kunnen beoordelen.
+                  UPKO geeft niet alleen een overzicht van alle kosten, maar laat ook zien hoe de kosten
+                  zich verhouden tot de prestatie van het fonds. Verder worden kosten en prestatie
+                  afgezet tegen andere pensioenfondsen met vergelijkbaar aantal deelnemers en beheerd
+                  vermogen. Hierdoor kan de prestatie van het eigen pensioenfonds beter beoordeeld
+                  worden.
                 </ExplanationText>
               </Box>
               <Box
@@ -530,7 +652,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              VEREISTE BUFFER VANWEGE HET GENOMEN RISICO
+              GENOMEN RISICO BEPAALT OMVANG VAN DE AAN TE HOUDEN RESERVE
             </TitleBox>
           ),
         },
@@ -976,7 +1098,7 @@ const Bind = [
                 PENSIOENBEHEER
               </Title>
               <Subtitle
-                mb={"1px"}
+                mb="1px"
               >
                 WAT ZIJN DE KOSTEN PER DEELNEMER?
               </Subtitle>
