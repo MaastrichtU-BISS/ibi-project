@@ -93,7 +93,7 @@ export default (props) => {
               <Text
                 fontSize="xl"
                 justifyContent="center"
-                fontFamily="ff2"
+                fontFamily="sans-serif"
               >
                 {`${label}: `}
               </Text>
@@ -101,7 +101,7 @@ export default (props) => {
                 fontSize="xl"
                 bold
                 justifyContent="center"
-                fontFamily="ff2"
+                fontFamily="sans-serif"
               >
                 {value}
               </Text>
@@ -113,7 +113,7 @@ export default (props) => {
         initialized && (
           <View
             style={{
-              marginTop: values.length > 3 ? 35 : 0,
+              marginTop: values.length > 3 ? 50 : 15,
             }}
           >
             <GaugeChart
@@ -136,7 +136,7 @@ export default (props) => {
               labelFormat={() => ''}
               currentValue={0}
               valueTextFontSize={25}
-              valueTextFontFamily="ff2"
+              valueTextFontFamily="sans-serif"
               needleHeightRatio={1}
             />
             <View

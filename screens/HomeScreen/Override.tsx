@@ -250,7 +250,7 @@ const BARCHART_VALUES_BIND = [
 const ExplanationText = (props) => (
   <Text
     fontSize="8.3px"
-    fontFamily="ff2"
+    fontFamily="sans-serif"
     fontWeight={400}
     color="rgb(0,0,0)"
     {...props}
@@ -260,7 +260,7 @@ const ExplanationText = (props) => (
 const TrademarkText = (props) => (
   <Text
     fontSize="8.3px"
-    fontFamily="ff2"
+    fontFamily="sans-serif"
     fontWeight={100}
     color="rgb(131,140,146)"
     class="trademarktext"

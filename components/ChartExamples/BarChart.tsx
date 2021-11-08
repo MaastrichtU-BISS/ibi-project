@@ -45,7 +45,7 @@ export default (props) => {
               />
               <Text
                 fontSize="xl"
-                // fontFamily="ff2"
+                fontFamily="sans-serif"
                 justifyContent="center"
               >
                 {`${label}: `}
@@ -54,7 +54,7 @@ export default (props) => {
                 fontSize="xl"
                 bold
                 justifyContent="center"
-                // fontFamily="ff2"
+                fontFamily="sans-serif"
               >
                 {value}
               </Text>
@@ -71,7 +71,7 @@ export default (props) => {
           fontSize={FONT_SIZE}
           fontWeight={500}
           color="rgb(0,0,0)"
-          fontFamily="ff2"
+          fontFamily="sans-serif"
         >
           {min}
         </Text>
@@ -137,11 +137,11 @@ export default (props) => {
           },
           textStyle: {
             fontSize: chartTheme.fontSize,
-            fontFamily: 'ff2',
+            fontFamily: 'sans-serif',
             fontWeight: 500,
             color: 'rgb(0,0,0)',
           },
-          legend: value,
+          legend: '',
           legendOrientation: 'horizontal',
           legendPosition: 'top',
         }))}
@@ -155,7 +155,7 @@ export default (props) => {
           fontSize={FONT_SIZE}
           fontWeight={500}
           color="rgb(0,0,0)"
-          fontFamily="ff2"
+          fontFamily="sans-serif"
         >
           {max}
         </Text>

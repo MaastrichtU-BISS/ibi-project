@@ -62,51 +62,60 @@ export default (props) => {
           ))
         }
       </View>
-      <ResponsiveRadar
-        data={data}
-        theme={chartTheme}
-        keys={keys}
-        indexBy="type"
-        maxValue="auto"
-        margin={{
-          top: 40 + MARGIN,
-          right: 153 + MARGIN,
-          bottom: 40 + MARGIN,
-          left: 100 + MARGIN,
+      <View
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          marginTop: 15,
         }}
-        isInteractive={false}
-        curve="linearClosed"
-        gridLabel={(props) => (
-          <LabelComponent
-            {...props}
-            theme={chartTheme}
-            chartId={chartId}
-          />
-        )}
-        borderWidth={2}
-        borderColor={{ from: 'color' }}
-        gridLevels={5}
-        gridShape="circular"
-        gridLabelOffset={30}
-        enableDots
-        dotSize={5}
-        dotColor={{ theme: 'background' }}
-        dotBorderWidth={2}
-        dotBorderColor={{ from: 'color' }}
-        enableDotLabel
-        dotLabel="value"
-        dotLabelYOffset={-12}
-        colors={(params) => {
-          const {
-            index,
-          } = params
-          return colors[index]
-        }}
-        fillOpacity={0.5}
+      >
+        <ResponsiveRadar
+          data={data}
+          theme={chartTheme}
+          keys={keys}
+          indexBy="type"
+          maxValue="auto"
+          margin={{
+            top: 40 + MARGIN,
+            right: 153 + MARGIN,
+            bottom: 40 + MARGIN,
+            left: 100 + MARGIN,
+          }}
+          isInteractive={false}
+          curve="linearClosed"
+          gridLabel={(props) => (
+            <LabelComponent
+              {...props}
+              theme={chartTheme}
+              chartId={chartId}
+            />
+          )}
+          borderWidth={2}
+          borderColor={{ from: 'color' }}
+          gridLevels={5}
+          gridShape="circular"
+          gridLabelOffset={30}
+          enableDots
+          dotSize={5}
+          dotColor={{ theme: 'background' }}
+          dotBorderWidth={2}
+          dotBorderColor={{ from: 'color' }}
+          enableDotLabel
+          dotLabel="value"
+          dotLabelYOffset={-12}
+          colors={(params) => {
+            const {
+              index,
+            } = params
+            return colors[index]
+          }}
+          fillOpacity={0.5}
       // blendMode="multiply"
-        animate
-        motionConfig="wobbly"
-      />
+          animate
+          motionConfig="wobbly"
+        />
+      </View>
     </View>
   )
 }
@@ -160,7 +169,8 @@ const LabelComponent = (props) => {
           style={{
             fontSize,
             // fontWeight: 'bold',
-            fontFamily: 'ff2',
+            fontFamily: 'sans-serif',
+            textAlign: 'center',
           }}
           xmlns="http://www.w3.org/1999/xhtml"
         >
@@ -171,7 +181,7 @@ const LabelComponent = (props) => {
         style={{
           fontSize: theme.axis?.text?.fontSize ?? 20,
           // fontWeight: 'bold',
-          fontFamily: 'ff2',
+          fontFamily: 'sans-serif',
           width: 10,
         }}
       >

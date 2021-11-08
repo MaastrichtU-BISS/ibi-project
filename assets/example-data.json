@@ -5,24 +5,24 @@
                 "id": "PieChart0",
                 "data": [
                     {
-                        "id": "Pensioenbeheerkosten",
-                        "label": "Pensioenbeheerkosten",
-                        "value": 13.9
+                        "id": "Pensioenbeheer",
+                        "label": "Pensioenbeheer",
+                        "value": 15
                     },
                     {
-                        "id": " Transactiekosten",
-                        "label": " Transactiekosten",
-                        "value": 26.3
+                        "id": " Transacties",
+                        "label": " Transacties",
+                        "value": 10
                     },
                     {
-                        "id": "Vermogensbeheerkosten",
-                        "label": "Vermogensbeheerkosten",
-                        "value": 59.9
+                        "id": "Vermogensbeheer",
+                        "label": "Vermogensbeheer",
+                        "value": 75
                     }
                 ],
                 "extraElementsData": [
                     {
-                        "value": "Uitvoeringskosten bestaan uit drie categorieën:\n - vermogensbeheerkosten (€ 91 miljoen; 0.27% beheerd vermogen),\n - transactiekosten (€ 40 miljoen, 0.12% van beheerd vermogen)\n - pensioenbeheerkosten (€ 21 miljoen, € 75 per deelnemer)."
+                        "value": "De kosten (exclusief betaalde pensioenpremies) bestaan uit drie categorieën:\n• Vermogensbeheer, kosten van beleggen: € 35 miljoen; 0.35% beheerd vermogen (35 bps)\n• Transacties, aan- en verkoopkosten: € 5 miljoen, 0.05% van beheerd vermogen (5 bps)\n• Pensioenbeheer, kosten voor administratie: € 7.5 miljoen, € 200 per deelnemer"
                     }
                 ]
             },
@@ -30,19 +30,19 @@
                 "id": "PieChart1",
                 "data": [
                     {
-                        "id": "Pensioenbeheerkosten",
-                        "label": "Pensioenbeheerkosten",
-                        "value": 29.1
+                        "id": "Pensioenbeheer",
+                        "label": "Pensioenbeheer",
+                        "value": 12.8
                     },
                     {
-                        "id": " Transactiekosten",
-                        "label": " Transactiekosten",
-                        "value": 18.6
+                        "id": " Transacties",
+                        "label": " Transacties",
+                        "value": 23
                     },
                     {
-                        "id": "Vermogensbeheerkosten",
-                        "label": "Vermogensbeheerkosten",
-                        "value": 52.3
+                        "id": "Vermogensbeheer",
+                        "label": "Vermogensbeheer",
+                        "value": 64.1
                     }
                 ]
             },
@@ -50,19 +50,19 @@
                 "id": "PieChart2",
                 "data": [
                     {
-                        "id": "Pensioenbeheerkosten",
-                        "label": "Pensioenbeheerkosten",
-                        "value": 21.9
+                        "id": "Pensioenbeheer",
+                        "label": "Pensioenbeheer",
+                        "value": 22.1
                     },
                     {
-                        "id": " Transactiekosten",
-                        "label": " Transactiekosten",
-                        "value": 18.9
+                        "id": " Transacties",
+                        "label": " Transacties",
+                        "value": 18.7
                     },
                     {
-                        "id": "Vermogensbeheerkosten",
-                        "label": "Vermogensbeheerkosten",
-                        "value": 59.1
+                        "id": "Vermogensbeheer",
+                        "label": "Vermogensbeheer",
+                        "value": 59.3
                     }
                 ]
             },
@@ -70,39 +70,39 @@
                 "id": "Speedometer0",
                 "type": "Speedometer",
                 "data": {
-                    "min": 7.6,
-                    "max": 22.5,
+                    "min": 7,
+                    "max": 21,
                     "values": [
                         {
-                            "value": 18.1,
+                            "value": 18,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 18.8,
+                            "value": 15,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 16.7,
+                            "value": 14,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
                     ],
                     "segments": [
                         {
-                            "value": 7.6
+                            "value": 7
                         },
                         {
-                            "value": 22.5
+                            "value": 21
                         }
                     ],
                     "secondSegments": [
                         {
-                            "value": 15.4
+                            "value": 9
                         },
                         {
-                            "value": 22.5
+                            "value": 20
                         }
                     ]
                 }
@@ -113,28 +113,28 @@
                 "id": "Speedometer1",
                 "type": "Speedometer",
                 "data": {
-                    "min": 3.9,
+                    "min": 4,
                     "max": 12,
                     "values": [
                         {
-                            "value": 8.4,
+                            "value": 8.3,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 9,
+                            "value": 8,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 10.1,
+                            "value": 8.5,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
                     ],
                     "segments": [
                         {
-                            "value": 3.9
+                            "value": 4
                         },
                         {
                             "value": 12
@@ -142,10 +142,10 @@
                     ],
                     "secondSegments": [
                         {
-                            "value": 7.4
+                            "value": 5.5
                         },
                         {
-                            "value": 12
+                            "value": 10.6
                         }
                     ]
                 }
@@ -154,39 +154,39 @@
                 "id": "Speedometer2",
                 "type": "Speedometer",
                 "data": {
-                    "min": 5.4,
-                    "max": 11.3,
+                    "min": 5,
+                    "max": 11,
                     "values": [
                         {
-                            "value": 8.3,
+                            "value": 8.2,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 8.8,
+                            "value": 7.6,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 10.6,
+                            "value": 7,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
                     ],
                     "segments": [
                         {
-                            "value": 5.4
+                            "value": 5
                         },
                         {
-                            "value": 11.3
+                            "value": 11
                         }
                     ],
                     "secondSegments": [
                         {
-                            "value": 7.1
+                            "value": 6
                         },
                         {
-                            "value": 11.3
+                            "value": 10
                         }
                     ]
                 }
@@ -195,21 +195,21 @@
                 "id": "Speedometer3",
                 "type": "Speedometer",
                 "data": {
-                    "min": 4.9,
+                    "min": 5,
                     "max": 16.5,
                     "values": [
                         {
-                            "value": 9.7,
+                            "value": 9.6,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 11,
+                            "value": 8.4,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 14.3,
+                            "value": 11.5,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
@@ -224,10 +224,10 @@
                     ],
                     "secondSegments": [
                         {
-                            "value": 6.3
+                            "value": 4.9
                         },
                         {
-                            "value": 16.5
+                            "value": 15.5
                         }
                     ]
                 }
@@ -240,23 +240,23 @@
                     "max": 63,
                     "values": [
                         {
-                            "value": 35,
+                            "value": 38,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 31,
+                            "value": 34,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 27,
+                            "value": 37,
                             "label": "FONDS",
                             "color": "#F57F17"
                         },
                         {
-                            "value": 24,
-                            "label": "FONDS BENCHMARKKOSTEN",
+                            "value": 35,
+                            "label": "BENCHMARKKOSTEN",
                             "color": "#800040"
                         }
                     ],
@@ -270,10 +270,10 @@
                     ],
                     "secondSegments": [
                         {
-                            "value": 11
+                            "value": 24
                         },
                         {
-                            "value": 48
+                            "value": 53
                         }
                     ]
                 }
@@ -282,7 +282,7 @@
                 "id": "Speedometer5",
                 "type": "Speedometer",
                 "data": {
-                    "min": 4.8,
+                    "min": 5,
                     "max": 24,
                     "values": [
                         {
@@ -291,12 +291,12 @@
                             "color": "#32a866"
                         },
                         {
-                            "value": 11,
+                            "value": 14,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 12,
+                            "value": 9,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
@@ -311,7 +311,7 @@
                     ],
                     "secondSegments": [
                         {
-                            "value": 5
+                            "value": 7
                         },
                         {
                             "value": 18
@@ -322,7 +322,7 @@
             {
                 "id": "BarChart0",
                 "type": "BarChart",
-                "min": 69,
+                "min": 61,
                 "max": 172,
                 "values": [
                     {
@@ -331,21 +331,21 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 103,
+                        "value": 92,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 71,
+                        "value": 80,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
                 ],
                 "data": [
                     {
-                        "0": 2.5,
-                        "1": 101,
-                        "2": 0,
+                        "0": 12,
+                        "1": 78,
+                        "2": 21,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -361,7 +361,7 @@
                 "id": "BarChart1",
                 "type": "BarChart",
                 "min": 0,
-                "max": 180,
+                "max": 193,
                 "values": [
                     {
                         "value": 100,
@@ -369,21 +369,21 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 90,
+                        "value": 83,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 119,
+                        "value": 114,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
                 ],
                 "data": [
                     {
-                        "0": 0,
-                        "1": 171,
-                        "2": 9.3,
+                        "0": 100,
+                        "1": 173,
+                        "2": 10,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -399,7 +399,7 @@
                 "id": "BarChart2",
                 "type": "BarChart",
                 "min": 0,
-                "max": 300,
+                "max": 265,
                 "values": [
                     {
                         "value": 100,
@@ -407,21 +407,21 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 71,
+                        "value": 142,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 23,
+                        "value": 116,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
                 ],
                 "data": [
                     {
-                        "0": 16,
-                        "1": 161,
-                        "2": 122,
+                        "0": 19,
+                        "1": 206,
+                        "2": 40,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -441,45 +441,45 @@
                 "data": [
                     {
                         "type": "Benchmarkkosten",
-                        "ALLE DEELNEMENDE PENSIOENFONDSEN": 102,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 104,
-                        "FONDS": 111
+                        "ALLE DEELNEMENDE PENSIOENFONDSEN": 103,
+                        "VERGELIJKBARE PENSIOENFONDSEN": 103,
+                        "FONDS": 110
                     },
                     {
                         "type": "1-jarig Rendement Index",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 111,
-                        "FONDS": 140
+                        "VERGELIJKBARE PENSIOENFONDSEN": 89,
+                        "FONDS": 71
                     },
                     {
                         "type": "5-jarig Rendement",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 111,
-                        "FONDS": 150
+                        "VERGELIJKBARE PENSIOENFONDSEN": 88,
+                        "FONDS": 77
                     },
                     {
                         "type": "10-jarig Rendement",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 110,
-                        "FONDS": 131
+                        "VERGELIJKBARE PENSIOENFONDSEN": 90,
+                        "FONDS": 98
                     },
                     {
-                        "type": "Beleggingen via/n beleggingsfonds ",
+                        "type": "Beleggingen via beleggingsfonds ",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 71,
-                        "FONDS": 23
+                        "VERGELIJKBARE PENSIOENFONDSEN": 142,
+                        "FONDS": 116
                     },
                     {
                         "type": "Mate van actief beheer",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 90,
-                        "FONDS": 119
+                        "VERGELIJKBARE PENSIOENFONDSEN": 83,
+                        "FONDS": 114
                     },
                     {
-                        "type": "Spreiding van/nde belegggingen",
+                        "type": "Spreiding van de belegggingen",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 103,
-                        "FONDS": 71
+                        "VERGELIJKBARE PENSIOENFONDSEN": 98,
+                        "FONDS": 80
                     }
                 ]
             },
@@ -487,39 +487,39 @@
                 "id": "Speedometer6",
                 "type": "Speedometer",
                 "data": {
-                    "min": 51,
-                    "max": 475,
+                    "min": 50,
+                    "max": 600,
                     "values": [
                         {
-                            "value": 216,
+                            "value": 300,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 135,
+                            "value": 250,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 75,
+                            "value": 200,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
                     ],
                     "segments": [
                         {
-                            "value": 51
+                            "value": 50
                         },
                         {
-                            "value": 475
+                            "value": 600
                         }
                     ],
                     "secondSegments": [
                         {
-                            "value": 51
+                            "value": 100
                         },
                         {
-                            "value": 191
+                            "value": 550
                         }
                     ]
                 }
@@ -528,39 +528,39 @@
                 "id": "Speedometer7",
                 "type": "Speedometer",
                 "data": {
-                    "min": 14,
-                    "max": 431,
+                    "min": 20,
+                    "max": 400,
                     "values": [
                         {
-                            "value": 140,
+                            "value": 200,
                             "label": "ALLE DEELNEMENDE PENSIOENFONDSEN",
                             "color": "#32a866"
                         },
                         {
-                            "value": 81,
+                            "value": 175,
                             "label": "VERGELIJKBARE PENSIOENFONDSEN",
                             "color": "#B8CCE4"
                         },
                         {
-                            "value": 32,
+                            "value": 150,
                             "label": "FONDS",
                             "color": "#F57F17"
                         }
                     ],
                     "segments": [
                         {
-                            "value": 14
+                            "value": 20
                         },
                         {
-                            "value": 431
+                            "value": 400
                         }
                     ],
                     "secondSegments": [
                         {
-                            "value": 14
+                            "value": 80
                         },
                         {
-                            "value": 142
+                            "value": 350
                         }
                     ]
                 }
@@ -568,8 +568,8 @@
             {
                 "id": "BarChart3",
                 "type": "BarChart",
-                "min": 75,
-                "max": 122,
+                "min": 76,
+                "max": 123,
                 "values": [
                     {
                         "value": 100,
@@ -577,21 +577,21 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 101,
+                        "value": 111,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 100,
+                        "value": 102,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
                 ],
                 "data": [
                     {
-                        "0": 0,
-                        "1": 40,
-                        "2": 6.7,
+                        "0": 26,
+                        "1": 21,
+                        "2": 0,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -608,8 +608,8 @@
             {
                 "id": "BarChart4",
                 "type": "BarChart",
-                "min": 53,
-                "max": 166,
+                "min": 65,
+                "max": 165,
                 "values": [
                     {
                         "value": 100,
@@ -617,21 +617,21 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 125,
+                        "value": 110,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 152,
+                        "value": 90,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
                 ],
                 "data": [
                     {
-                        "0": 35,
-                        "1": 78,
-                        "2": 0,
+                        "0": 27,
+                        "1": 66,
+                        "2": 23,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -655,21 +655,21 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 111,
+                        "value": 127,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 115,
+                        "value": 132,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
                 ],
                 "data": [
                     {
-                        "0": 67,
-                        "1": 50,
-                        "2": 5.8,
+                        "0": 84,
+                        "1": 39,
+                        "2": 0,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -684,7 +684,7 @@
             {
                 "id": "BarChart6",
                 "type": "BarChart",
-                "min": 78,
+                "min": 77,
                 "max": 200,
                 "values": [
                     {
@@ -693,12 +693,12 @@
                         "color": "#32a866"
                     },
                     {
-                        "value": 109,
+                        "value": 89,
                         "label": "VERGELIJKBARE PENSIOENFONDSEN",
                         "color": "#B8CCE4"
                     },
                     {
-                        "value": 200,
+                        "value": 102,
                         "label": "FONDS",
                         "color": "#F57F17"
                     }
@@ -706,8 +706,8 @@
                 "data": [
                     {
                         "0": 0,
-                        "1": 122,
-                        "2": 0,
+                        "1": 30,
+                        "2": 92,
                         "0Color": "#18376D",
                         "1Color": "#B8CCE4",
                         "2Color": "#18376D"
@@ -724,51 +724,51 @@
                 "type": "RadarChart",
                 "data": [
                     {
-                        "type": "KOSTEN PENSIOENBEHEER DEELNEMER(DEF,PF)",
+                        "type": "Kosten per deelnemer volgens Pensioenfederatie",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
                         "VERGELIJKBARE PENSIOENFONDSEN": 100,
-                        "FONDS": 56
+                        "FONDS": 79
                     },
                     {
-                        "type": "KOSTEN PENSIOENBEHEER DEELNEMER(ALLE)",
+                        "type": "Kosten per deelnemer",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
                         "VERGELIJKBARE PENSIOENFONDSEN": 100,
-                        "FONDS": 39
+                        "FONDS": 90
                     },
                     {
-                        "type": "SERVICE INDEX",
-                        "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 101,
-                        "FONDS": 100
-                    },
-                    {
-                        "type": "COMPLEXITEITS INDEX",
-                        "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 125,
-                        "FONDS": 152
-                    },
-                    {
-                        "type": "AUTOMATISERINGS INDEX",
+                        "type": "Mate van service aan deelnemer",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
                         "VERGELIJKBARE PENSIOENFONDSEN": 111,
-                        "FONDS": 115
+                        "FONDS": 102
                     },
                     {
-                        "type": "OVERDRACHTEN INDEX",
+                        "type": "Mate van complexiteit van het pensioenfonds",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 109,
-                        "FONDS": 200
+                        "VERGELIJKBARE PENSIOENFONDSEN": 107,
+                        "FONDS": 81
                     },
                     {
-                        "type": "SLAPERS INDEX",
+                        "type": "Mate van automatisering",
                         "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
-                        "VERGELIJKBARE PENSIOENFONDSEN": 116,
-                        "FONDS": 145
+                        "VERGELIJKBARE PENSIOENFONDSEN": 127,
+                        "FONDS": 132
+                    },
+                    {
+                        "type": "Aantal overdrachten",
+                        "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
+                        "VERGELIJKBARE PENSIOENFONDSEN": 89,
+                        "FONDS": 102
+                    },
+                    {
+                        "type": "Aantal slapers",
+                        "ALLE DEELNEMENDE PENSIOENFONDSEN": 100,
+                        "VERGELIJKBARE PENSIOENFONDSEN": 62,
+                        "FONDS": 33
                     }
                 ]
             }
         ]
     ],
-    "pensionFundName": "Stichting Bedrijfstakpensioenfonds voor het Beroepsvervoer over de Weg",
-    "fundName": "Stichting Bedrijfstakpensioenfonds voor het Beroepsvervoer over de Weg"
+    "pensionFundName": "Pensioenfonds XYZ",
+    "fundName": "Pensioenfonds XYZ"
 }
