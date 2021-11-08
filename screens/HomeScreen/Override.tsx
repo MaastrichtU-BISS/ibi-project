@@ -364,7 +364,7 @@ const Bind = [
                   }}
                   mb={1}
                 >
-                  WAT ZIJN DE KOSTEN DIE UW PENSIOENFONDS MAAKT?
+                  Wat zijn de kosten die uw pensioenfonds maakt?
                 </Title>
                 <Title
                   style={{
@@ -375,7 +375,7 @@ const Bind = [
                   }}
                   mb="15px"
                 >
-                  EN WAT KRIJGT U ER VOOR TERUG?
+                  En wat krijgt u er voor terug?
                 </Title>
                 <Title
                   style={{
@@ -452,7 +452,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              VERDELING KOSTEN VAN HET PENSOENFONDS
+              VERDELING KOSTEN VAN HET PENSOENFONDS (% VAN HET TOTAAL)
             </TitleBox>
           ),
         },
@@ -608,7 +608,7 @@ const Bind = [
                 <Title
                   fontSize="14px"
                 >
-                  Achtergrondinformatie: Kostenniveau is het gevolg van keuzes van het pensioenfonds
+                  Achtergrondinformatie: kostenniveau is het gevolg van keuzes van het pensioenfonds
                 </Title>
                 <ExplanationText>
                   {'\nSociale partners beslissen over de inhoud van de pensioenregeling en de wijze waarop de regeling wordt uitgevoerd. Binnen deze afspraken beslist het bestuur van het pensioenfonds, bijvoorbeeld, in welke beleggingen wordt geïnvesteerd en hoe dat gebeurt, of welke service en informatie wordt gegeven aan de deelnemers van het pensioenfonds\n\nDe keuzes gemaakt door het bestuur leiden tot verschillen in kosten, maar bepalen ook de prestatie van het pensioenfonds. Tegenover de kosten van beleggen staat wat de beleggingen opleveren (rendement). Bij de pensioenbeheerkosten (o.a. bijhouden van de administratie per deelnemer, het betalen van pensioenen en incasseren van de pensioenpremies bij de werkgever) moeten de kosten afgezet worden tegen het serviceniveau en de complexiteit van de pensioenregeling die moet worden uitgevoerd.\n'}
@@ -618,15 +618,15 @@ const Bind = [
                   mt={2}
                   mb={2}
                 >
-                  Vergelijkbaarheid van kosten en prestatie
+                  Vergelijkbaarheid van kosten en prestaties
                 </Title>
                 <ExplanationText
                   mb={2}
                 >
                   UPKO geeft niet alleen een overzicht van alle kosten, maar laat ook zien hoe de kosten
-                  zich verhouden tot de prestatie van het fonds. Verder worden kosten en prestatie
+                  zich verhouden tot de prestaties van het fonds. Verder worden kosten en prestaties
                   afgezet tegen andere pensioenfondsen met vergelijkbaar aantal deelnemers en beheerd
-                  vermogen. Hierdoor kan de prestatie van het eigen pensioenfonds beter beoordeeld
+                  vermogen. Hierdoor kunnen de prestaties van het eigen pensioenfonds beter beoordeeld
                   worden.
                 </ExplanationText>
               </Box>
@@ -704,7 +704,7 @@ const Bind = [
               textAlign="center"
               h="20px"
             >
-              GEMIDDELD 10 JARIG RENDEMENT
+              GEMIDDELD 10-JARIG RENDEMENT (%)
             </TitleBox>
           ),
         },
@@ -739,7 +739,7 @@ const Bind = [
               textAlign="center"
               h="20px"
             >
-              GEMIDDELD 5 JARIG RENDEMENT
+              GEMIDDELD 5-JARIG RENDEMENT (%)
             </TitleBox>
           ),
         },
@@ -775,14 +775,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd wordt. Bij een vergelijking van het rendement met andere pensioenfondsen geeft een periode van 5 en 10 jaar een beter beeld van het rendement in relatie tot het door het bestuur bepaalde beleggingsbeleid.
+              De hoogte van het rendement wordt voornamelijk bepaald door de beleggingscategorieën waarin belegd wordt. Bij een vergelijking van het rendement met andere pensioenfondsen geeft een periode van 5 en 10 jaar een beter beeld van het behaalde rendement in relatie tot het beleggingsbeleid waarvoor het bestuur gekozen heeft.
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              RENDEMENT AFGELOPEN VERSLAGJAAR
+              RENDEMENT AFGELOPEN VERSLAGJAAR (%)
             </TitleBox>
           ),
         },
@@ -829,14 +829,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Benchmarkkosten is een door het Institutional Benchmarking Institute onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, zijn de kosten van het pensioenfonds hoger dan je mag verwachten.
+              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën. /n/n* 100 basispunten is 1%
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              VERMOGENSBEHEERKOSTEN
+              VERMOGENSBEHEERKOSTEN (IN BASISPUNTEN<sup>*</sup>)
             </TitleBox>
           ),
         },
@@ -872,14 +872,15 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald waarin belegd wordt. Ook indien gedurende het verslagjaar wijzigingen in de beleggingen worden doorgevoerd heeft invloed op de kosten.
+              De ontvangen pensioenpremie wordt belegd hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties.\nDe hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
+
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              TRANSACTIEKOSTEN
+              TRANSACTIEKOSTEN (IN BASISPUNTEN)
             </TitleBox>
           ),
         },
@@ -902,7 +903,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -911,7 +912,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. De gemiddelde spreiding is 100.\nDe spreiding heeft de grootste invloed op de kosten van beleggen.'}
+              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100.\nDe spreiding heeft de grootste invloed op de kosten van beleggen.'}
             </ExplanationText>
           ),
         },
@@ -948,7 +949,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -957,7 +958,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Bij actief beleggen verwachten pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt. De gemiddelde mate waarin actief belegt wordt is 100.\nActief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
+              {'Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt.\nActief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
             </ExplanationText>
           ),
         },
@@ -987,7 +988,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -996,7 +997,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan. Dit biedt veel vrijheid. Ook kunnen de beleggingen via een beleggingsfonds worden gedaan hetgeen in de regel leidt tot lagere kosten. Het gemiddelde is 100. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
+              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid.\nHoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
             </ExplanationText>
           ),
         },
@@ -1042,7 +1043,7 @@ const Bind = [
         {
           component: (_, props) => (
             <ExplanationText>
-              {`De spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het  pensioenfonds  gemaakt  heeft  en die de uitkomsten bepalen.\n\nVoor  de  grafiek  zijn  de  cijfers geïndexeerd.  Dit  betekent  dat  het gemiddelde  van  alle  deelnemende fondsen een waarde van 100 heeft. De grafiek  laat  zien  in  hoeverre vergelijkbare fondsen en het ${props.variables.fundName} hoger  of  lager  scoren  dan  het gemiddelde.`}
+              {`Onderstaande spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het pensioenfonds gemaakt heeft en die de uitkomsten bepalen.\n\nVoor de grafiek zijn de cijfers geïndexeerd. Dit betekent dat het gemiddelde van alle deelnemende fondsen een waarde van 100 heeft. De grafiek laat zien hoe het pensioenfonds scoort vergeleken met andere, en vooral vergelijkbare pensioenfondsen. Benchmarkkosten hoger dan 100 betekent dat kosten hoger zijn dan verwacht.`}
             </ExplanationText>
           ),
         },
@@ -1180,7 +1181,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -1189,7 +1190,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.    Hogere service leidt in de regel tot hogere kosten.
+              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100./n/nHogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
           ),
         },
@@ -1198,7 +1199,7 @@ const Bind = [
             <TitleBox
               h="23px"
             >
-              {'WELK SERVICE NIVEAU IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?\n→ SERVICE INDEX'}
+              {'WELKE SERVICE IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?'}
             </TitleBox>
           ),
         },
@@ -1230,7 +1231,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -1239,14 +1240,14 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De complexiteit van een uit te voeren pensioenregeling is een gevolg van de afspraken die met de werkgever en sociale partners over het pensioen zijn gemaakt. De gemiddelde complexiteit is 100.\n\nHet uitvoeren van een complexe pensioenregeling maakt het automatiseren van het proces lastig en is daardoor kostbaar.'}
+              {'De complexiteit van een uit te voeren pensioenregeling is een gevolg van de afspraken die met de werkgever en sociale partners over het pensioen zijn gemaakt. Ook het type pensioenfonds beïnvloedt de complexiteit. De gemiddelde complexiteit is 100.\n\nEen complexere pensioenadministratie is kostbaarder.'}
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              HOE COMPLEX IS DE AFGESPROKEN PENSIOENREGELING?
+              HOE COMPLEX IS DE PENSIOENADMINISTRATIE?
             </TitleBox>
           ),
         },
@@ -1275,7 +1276,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -1315,7 +1316,7 @@ const Bind = [
                 },
                 {
                   text: 'VERGELIJKBARE\nPENSIOENFONDSEN',
-                  backgroundColor: BRAND_COLORS_MAP.lightBlue,
+                  backgroundColor: BRAND_COLORS_MAP.cream,
                 },
               ]}
             />
@@ -1376,7 +1377,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\n\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering. Op het aantal overdrachten en de samenstelling van de deelnemers heeft het bestuur geen invloed, hoewel deze de kosten alsnog beïnvloeden.\n\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien hoe het pensioenfonds scoort vergleken met andere, en vooral vergelijkbare pensioenfondsen.'}
+              {'De spingrafiek geeft een overzicht van de pensioenbeheerkosten per deelnemer.\n\nDeze geïndexeerde kosten per deelnemer worden in relatie gezet tot keuzes van het bestuur die van invloed zijn op de kosten van pensioenbeheer, zoals het serviceniveau, de complexiteit voor het uitvoeren van de pensioenregeling en de mate van automatisering. Op het aantal overdrachten en de samenstelling van de deelnemers heeft het bestuur geen invloed, hoewel deze de kosten alsnog beïnvloeden.\n\nHet gemiddelde van alle deelnemende fondsen heeft een waarde van 100. De grafiek laat zien hoe het pensioenfonds scoort vergeleken met andere, en vooral vergelijkbare pensioenfondsen.'}
             </ExplanationText>
           ),
         },
