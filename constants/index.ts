@@ -11,10 +11,18 @@ export const BRAND_COLORS_MAP = {
 //   lightBlue: '#99a2bd',
 // }
 
+export const FONT_WEIGHT = 400
+
+export const TOP_MARGIN = '20px'
+
 export const BRAND_COLORS = Object.values(BRAND_COLORS_MAP).sort()
 
 export const TITLE_COLOR = 'rgb(24, 55, 109)'
 
+export const SIZE = {
+  width: 865,
+  height: 1010,
+}
 export const KEYS = ['FONDS', 'VERGELIJKBARE PENSIOENFONDSEN', 'ALLE DEELNEMENDE PENSIOENFONDSEN']
 
 export const DATA = {

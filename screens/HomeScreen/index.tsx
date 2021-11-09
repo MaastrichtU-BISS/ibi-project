@@ -1,16 +1,16 @@
 import * as ChartExamples from '@components/ChartExamples'
-import { IconSet } from '@components/IconSet'
 // import Form from 'colay-form'
 import { JSONEditor } from '@components/JSONEditor'
 import { Lottie } from '@components/Lottie'
 import { Paper } from '@components/Paper'
 import { ScreenContainer } from '@components/ScreenContainer'
 import {
-  readTextFile,
+  readTextFile
 } from '@utils'
 import {
-  useImmer,
+  useImmer
 } from 'colay-ui/hooks/useImmer'
+import { download } from 'colay-ui/utils'
 import * as R from 'colay/ramda'
 import * as Clipboard from 'expo-clipboard'
 import * as DocumentPicker from 'expo-document-picker'
@@ -19,15 +19,15 @@ import html2canvas from 'html2canvas'
 import { jsPDF } from 'jspdf'
 import {
   Box,
-  Button, Center, Divider, Heading, HStack, Stack, useColorMode, useToast,
+  Button, Center, Divider, Heading, HStack, Stack, useColorMode, useToast
 } from 'native-base'
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
 import 'react-native-gesture-handler'
-import { download } from 'colay-ui/utils'
-// import { DATA as SAMPLE_DATA } from '../../constants'
-import { OverrideHTML, Pages } from './Override'
 import { DATA } from './data'
+// import { DATA as SAMPLE_DATA } from '../../constants'
+import { OverrideHTML } from './newOverride'
+// import { OverrideHTML } from './Override'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
 

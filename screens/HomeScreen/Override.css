@@ -93,9 +93,9 @@
 }
 
 #PieChart0Container {
-  position: absolute;
+  /* position: absolute;
   left: var(--first-left);
-  top: 347px;
+  top: 347px; */
   width: 1200px;
   height: 500px;
   background-color: white;

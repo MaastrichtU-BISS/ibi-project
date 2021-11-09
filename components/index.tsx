@@ -1,0 +1,7 @@
+export * from './Title'
+export * from './TrademarkText'
+export * from './ExplanationText'
+export * from './TitleBox'
+export * from './Column'
+export * from './Page'
+export * from './Section'
