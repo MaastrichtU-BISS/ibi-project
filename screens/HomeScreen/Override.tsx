@@ -241,7 +241,7 @@ const BARCHART_VALUES_BIND = [
     0: 48,
     '0Color': BRAND_COLORS_MAP.blue,
     1: 67,
-    '1Color': BRAND_COLORS_MAP.lightBlue,
+    '1Color': BRAND_COLORS_MAP.cream,
     2: 85,
     '2Color': BRAND_COLORS_MAP.blue,
   },
@@ -829,7 +829,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën. /n/n* 100 basispunten is 1%
+              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën.\n\n* 100 basispunten is 1% van het beheerd vermogen.
             </ExplanationText>
           ),
         },
@@ -872,7 +872,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De ontvangen pensioenpremie wordt belegd hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties.\nDe hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
+              De ontvangen pensioenpremie wordt belegd, hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties. De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
 
             </ExplanationText>
           ),
@@ -997,7 +997,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid.\nHoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
+              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
             </ExplanationText>
           ),
         },
@@ -1043,7 +1043,7 @@ const Bind = [
         {
           component: (_, props) => (
             <ExplanationText>
-              {`Onderstaande spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het pensioenfonds gemaakt heeft en die de uitkomsten bepalen.\n\nVoor de grafiek zijn de cijfers geïndexeerd. Dit betekent dat het gemiddelde van alle deelnemende fondsen een waarde van 100 heeft. De grafiek laat zien hoe het pensioenfonds scoort vergeleken met andere, en vooral vergelijkbare pensioenfondsen. Benchmarkkosten hoger dan 100 betekent dat kosten hoger zijn dan verwacht.`}
+              {`Onderstaande spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het pensioenfonds gemaakt heeft en die de uitkomsten bepalen.\n\nVoor de grafiek zijn de cijfers geïndexeerd. Dit betekent dat het gemiddelde van alle deelnemende fondsen een waarde van 100 heeft. De grafiek laat zien hoe het pensioenfonds scoort vergeleken met andere, en vooral vergelijkbare pensioenfondsen. Benchmarkkosten hoger dan 100 betekent dat de kosten hoger zijn dan verwacht.`}
             </ExplanationText>
           ),
         },
@@ -1190,7 +1190,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100./n/nHogere service leidt in de regel tot hogere kosten.
+              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.\n\nHogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
           ),
         },
@@ -1330,7 +1330,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Bij het veranderen van werkgever is het mogelijk het opgebouwd pensioen mee te nemen naar het pensioenfonds van de nieuwe werkgever. Het gemiddelde aantal overdrachten is 100.\n\nVeel binnen- en uitgaande overdrachten leidt tot hogere kosten.'}
+              {'Bij het veranderen van werkgever is het mogelijk het opgebouwd pensioen mee te nemen naar het pensioenfonds van de nieuwe werkgever. Het gemiddelde aantal overdrachten is 100.\n\nEen groot aantal inkomende en uitgaande overdrachten leidt tot hogere kosten.'}
             </ExplanationText>
           ),
         },
