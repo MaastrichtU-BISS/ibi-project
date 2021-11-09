@@ -5,10 +5,10 @@ import { Lottie } from '@components/Lottie'
 import { Paper } from '@components/Paper'
 import { ScreenContainer } from '@components/ScreenContainer'
 import {
-  readTextFile
+  readTextFile,
 } from '@utils'
 import {
-  useImmer
+  useImmer,
 } from 'colay-ui/hooks/useImmer'
 import { download } from 'colay-ui/utils'
 import * as R from 'colay/ramda'
@@ -19,7 +19,8 @@ import html2canvas from 'html2canvas'
 import { jsPDF } from 'jspdf'
 import {
   Box,
-  Button, Center, Divider, Heading, HStack, Stack, useColorMode, useToast
+  Button, Center, Divider, Heading, HStack,
+  Stack, useColorMode, useToast,
 } from 'native-base'
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
@@ -31,11 +32,11 @@ import { OverrideHTML } from './newOverride'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
 
-export default (props: any) => {
-  const { } = props
+export default function HomeScreen(props: any) {
+  // const { } = props
   const toast = useToast()
 
-  const windowDimensions = useWindowDimensions()
+  // const windowDimensions = useWindowDimensions()
   const initialData = React.useMemo(() => {
     const urlSearchParams = new URLSearchParams(window.location.search)
     const params = Object.fromEntries(urlSearchParams.entries())
