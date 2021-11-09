@@ -1,17 +1,17 @@
 {
   "files": {
-    "app.js": "/ibi-project/static/js/app.e0c5d1e4.chunk.js",
-    "app.js.map": "/ibi-project/static/js/app.e0c5d1e4.chunk.js.map",
-    "runtime~app.js": "/ibi-project/static/js/runtime~app.8ff94e85.js",
-    "runtime~app.js.map": "/ibi-project/static/js/runtime~app.8ff94e85.js.map",
-    "static/js/2.a7b758bc.chunk.js": "/ibi-project/static/js/2.a7b758bc.chunk.js",
-    "static/js/2.a7b758bc.chunk.js.map": "/ibi-project/static/js/2.a7b758bc.chunk.js.map",
-    "static/js/3.af88b17b.chunk.js": "/ibi-project/static/js/3.af88b17b.chunk.js",
-    "static/js/3.af88b17b.chunk.js.map": "/ibi-project/static/js/3.af88b17b.chunk.js.map",
-    "static/js/4.758df5d1.chunk.js": "/ibi-project/static/js/4.758df5d1.chunk.js",
-    "static/js/4.758df5d1.chunk.js.map": "/ibi-project/static/js/4.758df5d1.chunk.js.map",
-    "static/js/5.5bf66918.chunk.js": "/ibi-project/static/js/5.5bf66918.chunk.js",
-    "static/js/5.5bf66918.chunk.js.map": "/ibi-project/static/js/5.5bf66918.chunk.js.map",
+    "app.js": "/ibi-project/static/js/app.3abf1511.chunk.js",
+    "app.js.map": "/ibi-project/static/js/app.3abf1511.chunk.js.map",
+    "runtime~app.js": "/ibi-project/static/js/runtime~app.c97b73d0.js",
+    "runtime~app.js.map": "/ibi-project/static/js/runtime~app.c97b73d0.js.map",
+    "static/js/2.6be8d529.chunk.js": "/ibi-project/static/js/2.6be8d529.chunk.js",
+    "static/js/2.6be8d529.chunk.js.map": "/ibi-project/static/js/2.6be8d529.chunk.js.map",
+    "static/js/3.c9a93ff6.chunk.js": "/ibi-project/static/js/3.c9a93ff6.chunk.js",
+    "static/js/3.c9a93ff6.chunk.js.map": "/ibi-project/static/js/3.c9a93ff6.chunk.js.map",
+    "static/js/4.b9e4d5d1.chunk.js": "/ibi-project/static/js/4.b9e4d5d1.chunk.js",
+    "static/js/4.b9e4d5d1.chunk.js.map": "/ibi-project/static/js/4.b9e4d5d1.chunk.js.map",
+    "static/js/5.68b51eba.chunk.js": "/ibi-project/static/js/5.68b51eba.chunk.js",
+    "static/js/5.68b51eba.chunk.js.map": "/ibi-project/static/js/5.68b51eba.chunk.js.map",
     "IBI_report_20210902.docx": "/ibi-project/IBI_report_20210902.docx",
     "favicon-16.png": "/ibi-project/favicon-16.png",
     "favicon-32.png": "/ibi-project/favicon-32.png",
@@ -23,15 +23,15 @@
     "reportOriginal copy.html": "/ibi-project/reportOriginal copy.html",
     "reportOriginal.html": "/ibi-project/reportOriginal.html",
     "serve.json": "/ibi-project/serve.json",
-    "static/js/2.a7b758bc.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.a7b758bc.chunk.js.LICENSE.txt",
-    "static/js/3.af88b17b.chunk.js.LICENSE.txt": "/ibi-project/static/js/3.af88b17b.chunk.js.LICENSE.txt",
-    "static/js/4.758df5d1.chunk.js.LICENSE.txt": "/ibi-project/static/js/4.758df5d1.chunk.js.LICENSE.txt",
-    "static/js/5.5bf66918.chunk.js.LICENSE.txt": "/ibi-project/static/js/5.5bf66918.chunk.js.LICENSE.txt",
+    "static/js/2.6be8d529.chunk.js.LICENSE.txt": "/ibi-project/static/js/2.6be8d529.chunk.js.LICENSE.txt",
+    "static/js/3.c9a93ff6.chunk.js.LICENSE.txt": "/ibi-project/static/js/3.c9a93ff6.chunk.js.LICENSE.txt",
+    "static/js/4.b9e4d5d1.chunk.js.LICENSE.txt": "/ibi-project/static/js/4.b9e4d5d1.chunk.js.LICENSE.txt",
+    "static/js/5.68b51eba.chunk.js.LICENSE.txt": "/ibi-project/static/js/5.68b51eba.chunk.js.LICENSE.txt",
     "static/media/jsoneditor-icons.svg": "/ibi-project/static/media/jsoneditor-icons.15f2789d.svg"
   },
   "entrypoints": [
-    "static/js/runtime~app.8ff94e85.js",
-    "static/js/2.a7b758bc.chunk.js",
-    "static/js/app.e0c5d1e4.chunk.js"
+    "static/js/runtime~app.c97b73d0.js",
+    "static/js/2.6be8d529.chunk.js",
+    "static/js/app.3abf1511.chunk.js"
   ]
 }
