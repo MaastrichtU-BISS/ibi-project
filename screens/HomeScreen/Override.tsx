@@ -413,7 +413,7 @@ const Bind = [
                 Doel
               </Title>
               <ExplanationText>
-                {`Het Institutional Benchmarking Institute benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet- en regelgeving. Dit Uniform PensioenKOstenoverzicht (UPKO™) geeft belangrijke informatie over de kosten in relatie tot de prestatie van het ${props.variables.pensionFundName}.` }
+                {`Het Institutioneel Benchmarking Instituut benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet- en regelgeving. Dit Uniform PensioenKOstenoverzicht (UPKO™) geeft belangrijke informatie over de kosten in relatie tot de prestaties van het pensioenfonds.` }
               </ExplanationText>
             </Box>
 
