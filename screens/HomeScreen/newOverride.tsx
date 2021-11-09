@@ -6,7 +6,7 @@ import {
 import {
   Page1,
 } from './pages/Page1'
-import './Override.css'
+// import './Override.css'
 
 export const OverrideHTML = ({ data: _data }) => {
   const data = React.useMemo(() => merge(

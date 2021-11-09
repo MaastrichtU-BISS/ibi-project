@@ -8,6 +8,7 @@ module.exports = function (api) {
       : ['babel-preset-expo'],
     plugins: [
       'react-native-reanimated/plugin',
+      ["@babel/plugin-proposal-private-methods", { "loose": true }],
       [
         'module-resolver',
         {

@@ -31,9 +31,10 @@ import { OverrideHTML } from './newOverride'
 
 const CHART_KEYS = Object.keys(ChartExamples).sort((a, b) => b > a)
 
-export const HomeScreen = (props: any) => {
+export default (props: any) => {
   const { } = props
   const toast = useToast()
+
   const windowDimensions = useWindowDimensions()
   const initialData = React.useMemo(() => {
     const urlSearchParams = new URLSearchParams(window.location.search)

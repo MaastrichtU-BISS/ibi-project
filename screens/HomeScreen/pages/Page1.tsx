@@ -150,7 +150,11 @@ export const Page1 = ({ data }) => {
           <TitleBox>
             VERGELIJKBARE PENSIOENFONDSEN
           </TitleBox>
-          <Stack direction="row">
+          <Stack
+            direction="row"
+            w="full"
+            h="500px"
+          >
             <Box
               nativeID="PieChart0Container"
             >

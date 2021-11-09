@@ -4,7 +4,7 @@ const withImages = require('next-images')
 const withFonts = require('next-fonts')
 const withTM = require('next-transpile-modules')([
   // 'react-native-svg',
-  'react-native-render-html',
+  'jsoneditor-react',
   'colay',
   'colay-ui',
 ]) // pass the modules you would like to see transpiled
@@ -16,11 +16,11 @@ const nextConfig = {
     // your project has type errors.
     // !! WARN !!
     ignoreBuildErrors: true,
-    transpileOnly: true
+    transpileOnly: true,
   },
   images: {
-    disableStaticImages: true
-  }
+    disableStaticImages: true,
+  },
 }
 
 module.exports = withPlugins(

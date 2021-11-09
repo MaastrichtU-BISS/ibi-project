@@ -53,7 +53,17 @@
       "@root/*": [
         "./*"
       ]
-    }
+    },
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "jsx": "preserve"
   },
-  "exclude": ["./amplify"]
+  "exclude": [
+    "./amplify"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

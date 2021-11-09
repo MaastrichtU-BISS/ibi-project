@@ -2,12 +2,10 @@ import React from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import 'setimmediate'
-import {
-  isServer,
-} from '@utils'
+import '../screens/HomeScreen/newOverride.css'
 
-const { RootProvider } = isServer
-  ? require('@root/providers/ServerRootProvider')
+const { RootProvider } = true
+  ? require('@root/providers/RootProvider')
   : require('@root/providers/RootProvider')
 
 function MyApp({ Component, pageProps }: AppProps) {
