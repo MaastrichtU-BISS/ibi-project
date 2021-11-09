@@ -205,7 +205,7 @@
   transform: scale(0.25);
   background-color: white;
   width: 1440px;
-  height: 874px;
+  height: 840px;
   z-index: 10;
 }
 
@@ -657,7 +657,7 @@
   position: absolute;
   left: var(--first-left);
   top: 72px;
-  width: 150px;
+  width: 160px;
   height: 50px;
   z-index: 100;
 }
@@ -685,7 +685,7 @@
   position: absolute;
   left: var(--first-right);
   top: 72px;
-  width: 150px;
+  width: 160px;
   height: 50px;
   z-index: 120;
 }
@@ -766,7 +766,7 @@
   position: absolute;
   left: var(--second-right);
   top: 50px;
-  width: 150px;
+  width: 160px;
   background-color: white;
   z-index: 10;
 }
