@@ -829,7 +829,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën.\n\n* 100 basispunten is 1% van het beheerd vermogen.
+              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën.                    {"\n\n"}<sup>*</sup> 100 basispunten is 1% van het beheerd vermogen.
             </ExplanationText>
           ),
         },
@@ -1132,7 +1132,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              PENSIOENBEHEERKOSTEN PER DEELNEMER
+              PENSIOENBEHEERKOSTEN PER DEELNEMER (in Euro's)
             </TitleBox>
           ),
         },
@@ -1190,7 +1190,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.\n\nHogere service leidt in de regel tot hogere kosten.
+              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.{"\n\n"}Hogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
           ),
         },
