@@ -390,7 +390,7 @@
   transform: scale(0.25);
   background-color: white;
   width: var(--barchart-container-width);
-  height: 500px;
+  height: 545px;
   z-index: 10;
 }
 
