@@ -912,7 +912,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100. {"\n\n"}De spreiding heeft de grootste invloed op de kosten van beleggen.'}
+              Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100.{"\n\n"}De spreiding heeft de grootste invloed op de kosten van beleggen.
             </ExplanationText>
           ),
         },
@@ -958,7 +958,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt. {"\n\n"}Actief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
+              Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt.{"\n\n"}Actief beleggen leidt tot hogere kosten met als doel een hoger rendement.
             </ExplanationText>
           ),
         },
