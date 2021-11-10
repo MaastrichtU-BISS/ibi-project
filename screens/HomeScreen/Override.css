@@ -451,9 +451,9 @@
 }
 
 #RadarChart1 {
-  width: 1400px;
-  height: 1300px;
-  padding-left: 50px;
+  width: 1500px;
+  height: 1393px;
+  padding-left: 20px;
 }
 
 #PieChart0ExtraContainer0 {
@@ -480,6 +480,7 @@
   position: absolute;
   left: 262px;
   top: 347px;
+  padding-top: 10px;
   width: 123px;
   height: 50px;
   background-color: white;
@@ -489,6 +490,7 @@
 #PieChart0ExtraContainer3 {
   position: absolute;
   left: 39px;
+  padding:6px;
   top: var(--top-margin);
   width: 350px;
   z-index: 10;
@@ -766,7 +768,7 @@
   position: absolute;
   left: var(--second-right);
   top: 50px;
-  width: 160px;
+  width: 169px;
   background-color: white;
   z-index: 10;
 }
@@ -922,6 +924,7 @@
   left: 420px;
   top: 266px;
   width: 165px;
+  height:65px;
   background-color: white;
   z-index: 10;
 }
