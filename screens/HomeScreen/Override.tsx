@@ -872,7 +872,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De ontvangen pensioenpremie wordt belegd, hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties. De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
+              De ontvangen pensioenpremie wordt belegd, hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties. {"\n\n"}De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
 
             </ExplanationText>
           ),
@@ -912,7 +912,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100.\nDe spreiding heeft de grootste invloed op de kosten van beleggen.'}
+              {'Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100.{"\n\n"}De spreiding heeft de grootste invloed op de kosten van beleggen.'}
             </ExplanationText>
           ),
         },
@@ -958,7 +958,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              {'Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt.\nActief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
+              {'Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt.{"\n\n"}Actief beleggen leidt tot hogere kosten met als doel een hoger rendement.'}
             </ExplanationText>
           ),
         },
@@ -997,7 +997,7 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid. Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
+              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid.{"\n\n"}Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
             </ExplanationText>
           ),
         },
@@ -1132,7 +1132,7 @@ const Bind = [
         {
           component: () => (
             <TitleBox>
-              PENSIOENBEHEERKOSTEN PER DEELNEMER (in Euro's)
+              PENSIOENBEHEERKOSTEN PER DEELNEMER (in euro's per deelnemer)
             </TitleBox>
           ),
         },
