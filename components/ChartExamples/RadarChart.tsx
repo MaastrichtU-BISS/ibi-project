@@ -160,11 +160,11 @@ const LabelComponent = (props) => {
     ? 23
     : 26
   return (
-    <g transform={`translate(${anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0}, -20)`}>
+    <g transform={`translate(${(anchor === 'end' ? -60 : anchor === 'middle' ? -30 : 0) + 25}, -20)`}>
       <foreignObject
         width={width}
         height={height}
-        padding-right:25px;
+        // padding-right:25px;
       >
         <p
           style={{

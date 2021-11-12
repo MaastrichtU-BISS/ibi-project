@@ -179,6 +179,7 @@ export const OverrideHTML = (props) => {
     />
   )
 }
+
 const KEYS = {
   fonds: 'FONDS',
   pension: 'VERGELIJKBARE PENSIOENFONDSEN',
