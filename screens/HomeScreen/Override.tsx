@@ -57,7 +57,7 @@ export const OverrideHTML = (props) => {
       containerNode.innerHTML = result
       data.pages.forEach((chartList, pageIndex) => {
         const pageNode = document.getElementsByClassName(`pc pc${pageIndex + 1} w0 h0`)[0]!
-        const image = pageNode.getElementsByTagName('img')[0]!
+        // const image = pageNode.getElementsByTagName('img')[0]!
         chartList.forEach((chart, chartIndex) => {
           const bindChart = Bind[pageIndex]?.[chartIndex] ?? {}
 
@@ -80,7 +80,8 @@ export const OverrideHTML = (props) => {
           extraElements.map((extraElement, index) => {
             const chartExtraContainer = document.createElement('div')
             chartExtraContainer.id = `${id}ExtraContainer${index}`
-            pageNode.insertBefore(chartExtraContainer, image.nextElementSibling)
+            pageNode.insertBefore(chartExtraContainer, pageNode.children[0])
+            // pageNode.insertBefor(chartExtraContainer, image.nextElementSibling)
             ReactDOM.render(
               <NativeBaseProvider
                 config={NATIVE_BASE_CONFIG}
@@ -121,7 +122,8 @@ export const OverrideHTML = (props) => {
           )
           pageNode.appendChild(dividerContainer)
 
-          pageNode.insertBefore(chartContainer, image.nextElementSibling)
+          pageNode.insertBefore(chartContainer, pageNode.children[0])
+          // pageNode.insertBefore(chartContainer, image.nextElementSibling)
           if (chartData && chartContainer) {
             const Chart = ChartExamples[chartType]
             ReactDOM.render(
@@ -439,7 +441,7 @@ const Bind = [
           component: () => (
             <Box
               width="100%"
-              height="100%"
+              height="7.5px"
               bg={BRAND_COLORS_MAP.orange}
             />
           ),
