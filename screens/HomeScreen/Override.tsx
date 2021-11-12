@@ -1,24 +1,21 @@
+import { GoalSVG } from '@assets/images/goal'
+import { IBILogo } from '@assets/images/ibi-logo'
 import * as ChartExamples from '@components/ChartExamples'
-import { TextBox } from '@components/TextBox'
-import { TitleBox } from '@components/TitleBox'
-import { Title } from '@components/Title'
 import { Subtitle } from '@components/Subtitle'
-import { BRAND_COLORS_MAP, TITLE_COLOR } from '@constants'
-import {
-  colorModeManager, NATIVE_BASE_CONFIG,
-} from '@root/config/native-base'
+import { TextBox } from '@components/TextBox'
+import { Title } from '@components/Title'
+import { TitleBox } from '@components/TitleBox'
+import { BRAND_COLORS_MAP, FONT_WEIGHT, KEYS_MAP } from '@constants'
+import { NATIVE_BASE_CONFIG } from '@root/config/native-base'
 import deepmerge from 'deepmerge'
 import {
-  Box, NativeBaseProvider, Text,
-  Stack, Image,
+  Box, NativeBaseProvider, Stack, Text,
 } from 'native-base'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { View } from 'react-native'
-import './Override.css'
-import { IBILogo } from '@assets/images/ibi-logo'
-import { GoalSVG } from '@assets/images/goal'
 import { html } from './html'
+import './Override.css'
 
 const combineMerge = (target, source, options) => {
   const destination = target.slice()
@@ -41,8 +38,6 @@ const merge = (val: any, val2: any) => deepmerge(
   { arrayMerge: combineMerge },
 )
 
-const FONT_WEIGHT = 600
-
 export const OverrideHTML = (props) => {
   const {
     data,
@@ -53,7 +48,6 @@ export const OverrideHTML = (props) => {
   )
   React.useEffect(() => {
     const call = async () => {
-      // const result = await (await fetch('/report.html')).text()
       const variables = {
         pensionFundName: data.pensionFundName,
         fundName: data.fundName,
@@ -90,7 +84,6 @@ export const OverrideHTML = (props) => {
             ReactDOM.render(
               <NativeBaseProvider
                 config={NATIVE_BASE_CONFIG}
-                colorModeManager={colorModeManager}
               >
                 {extraElement.component(extraElementsData?.[index] ?? {}, { variables })}
               </NativeBaseProvider>,
@@ -103,7 +96,6 @@ export const OverrideHTML = (props) => {
           ReactDOM.render(
             <NativeBaseProvider
               config={NATIVE_BASE_CONFIG}
-              colorModeManager={colorModeManager}
             >
               <TrademarkText />
             </NativeBaseProvider>,
@@ -116,7 +108,6 @@ export const OverrideHTML = (props) => {
           ReactDOM.render(
             <NativeBaseProvider
               config={NATIVE_BASE_CONFIG}
-              colorModeManager={colorModeManager}
             >
               <Box
                 borderColor="blue"
@@ -143,7 +134,6 @@ export const OverrideHTML = (props) => {
                 >
                   <NativeBaseProvider
                     config={NATIVE_BASE_CONFIG}
-                    colorModeManager={colorModeManager}
                   >
                     <Box
                       p={2}
@@ -180,12 +170,6 @@ export const OverrideHTML = (props) => {
   )
 }
 
-const KEYS = {
-  fonds: 'FONDS',
-  pension: 'VERGELIJKBARE PENSIOENFONDSEN',
-  alle: 'ALLE DEELNEMENDE PENSIOENFONDSEN',
-}
-
 const RADAR_CHART_KEYS = {
   costs: 'Benchmarkkosten Index',
   '1yaring': '1-jaring Rendement Index',
@@ -203,9 +187,6 @@ const SPEEDOMETER_SEGMENTS_BIND = [
   {
     color: BRAND_COLORS_MAP.blue,
   },
-  // {
-  //   color: BRAND_COLORS_MAP.blue,
-  // },
 ]
 const SPEEDOMETER_SECOND_SEGMENTS = [
   {
@@ -214,9 +195,6 @@ const SPEEDOMETER_SECOND_SEGMENTS = [
   {
     color: BRAND_COLORS_MAP.cream,
   },
-  // {
-  //   color: BRAND_COLORS_MAP.grean,
-  // },
 ]
 
 const SEGMENTS = [
@@ -414,7 +392,7 @@ const Bind = [
                 Doel
               </Title>
               <ExplanationText>
-                {`Het Institutioneel Benchmarking Instituut benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet- en regelgeving. Dit Uniform PensioenKOstenoverzicht (UPKO™) geeft belangrijke informatie over de kosten in relatie tot de prestaties van het pensioenfonds.` }
+                Het Institutioneel Benchmarking Instituut benchmarkt sinds 2012 de kosten van Nederlandse pensioenfondsen op basis van wet- en regelgeving. Dit Uniform PensioenKOstenoverzicht (UPKO™) geeft belangrijke informatie over de kosten in relatie tot de prestaties van het pensioenfonds.
               </ExplanationText>
             </Box>
 
@@ -423,11 +401,6 @@ const Bind = [
         {
           component: () => (
             <Box>
-              {/* <Image
-                w="51px"
-                h="51px"
-                source={require('@assets/images/goal.png')}
-              /> */}
               <GoalSVG
                 fill="#F09743"
                 width={51}
@@ -460,6 +433,15 @@ const Bind = [
         {
           component: () => (
             <Box />
+          ),
+        },
+        {
+          component: () => (
+            <Box
+              width="100%"
+              height="100%"
+              bg={BRAND_COLORS_MAP.orange}
+            />
           ),
         },
       ],
@@ -830,14 +812,21 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën.                    {"\n\n"}<sup>*</sup> 100 basispunten is 1% van het beheerd vermogen.
+              Benchmarkkosten is een door het Institutioneel Benchmarking Instituut onafhankelijk berekende kostennorm die past bij de door het pensioenfonds gekozen wijze van beleggen. Indien de kosten van het pensioenfonds hoger zijn dan de berekende benchmarkkosten, dan zijn de kosten van het pensioenfonds hoger dan pensioenfondsen die beleggin in dezelfde beleggingscatgorieën.
+              {' '}
+              {'\n\n'}
+              <sup>*</sup>
+              {' '}
+              100 basispunten is 1% van het beheerd vermogen.
             </ExplanationText>
           ),
         },
         {
           component: () => (
             <TitleBox>
-              VERMOGENSBEHEERKOSTEN (IN BASISPUNTEN<sup>*</sup>)
+              VERMOGENSBEHEERKOSTEN (IN BASISPUNTEN
+              <sup>*</sup>
+              )
             </TitleBox>
           ),
         },
@@ -873,7 +862,10 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De ontvangen pensioenpremie wordt belegd, hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties. {"\n\n"}De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
+              De ontvangen pensioenpremie wordt belegd, hierdoor ontstaan transactiekosten. Ook herschikkingen en prijsveranderingen zorgen voor transacties.
+              {' '}
+              {'\n\n'}
+              De hoogte van de aan- en verkoopkosten van beleggingen wordt bepaald door het aantal transacties en het type belegging waarin belegd wordt.
 
             </ExplanationText>
           ),
@@ -913,7 +905,9 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100.{"\n\n"}De spreiding heeft de grootste invloed op de kosten van beleggen.
+              Sommige pensioenfondsen beleggen alleen in obligaties en aandelen. Andere beleggen daarnaast ook in bijvoorbeeld hypotheken en vastgoed. Een brede spreiding leidt tot hogere kosten maar een lager risico. Het gemiddelde  is 100.
+              {'\n\n'}
+              De spreiding heeft de grootste invloed op de kosten van beleggen.
             </ExplanationText>
           ),
         },
@@ -959,7 +953,9 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt.{"\n\n"}Actief beleggen leidt tot hogere kosten met als doel een hoger rendement.
+              Door actief te beleggen proberen pensioenfondsen een hoger rendement te halen dan het gemiddelde van de markt. Hier tegenover staat passief beheer, waarbij het fonds de markt volgt.
+              {'\n\n'}
+              Actief beleggen leidt tot hogere kosten met als doel een hoger rendement.
             </ExplanationText>
           ),
         },
@@ -998,7 +994,9 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid.{"\n\n"}Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
+              Beleggingen kunnen alleen voor het pensioenfonds worden gedaan of worden belegd in bestaande fondsen. Zelf houden is duurder, maar biedt meer vrijheid.
+              {'\n\n'}
+              Hoe hoger deze waarde, hoe meer het fonds via beleggingsfondsen belegd.
             </ExplanationText>
           ),
         },
@@ -1016,7 +1014,7 @@ const Bind = [
     {
       id: 'RadarChart0',
       type: 'RadarChart',
-      keys: [KEYS.alle, KEYS.pension, KEYS.fonds],
+      keys: [KEYS_MAP.alle, KEYS_MAP.pension, KEYS_MAP.fonds],
       colors: [BRAND_COLORS_MAP.blue, BRAND_COLORS_MAP.lightBlue, BRAND_COLORS_MAP.orange],
       extraElements: [
         {
@@ -1044,7 +1042,7 @@ const Bind = [
         {
           component: (_, props) => (
             <ExplanationText>
-              {`Onderstaande spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het pensioenfonds gemaakt heeft en die de uitkomsten bepalen.\n\nVoor de grafiek zijn de cijfers geïndexeerd. Dit betekent dat het gemiddelde van alle deelnemende fondsen een waarde van 100 heeft. De grafiek laat zien hoe het pensioenfonds scoort vergeleken met andere, en vooral vergelijkbare pensioenfondsen. Benchmarkkosten hoger dan 100 betekent dat de kosten hoger zijn dan verwacht.`}
+              {'Onderstaande spingrafiek geeft een overzicht van de behaalde rendementen en kosten en zet deze in verhouding tot de keuzes die het pensioenfonds gemaakt heeft en die de uitkomsten bepalen.\n\nVoor de grafiek zijn de cijfers geïndexeerd. Dit betekent dat het gemiddelde van alle deelnemende fondsen een waarde van 100 heeft. De grafiek laat zien hoe het pensioenfonds scoort vergeleken met andere, en vooral vergelijkbare pensioenfondsen. Benchmarkkosten hoger dan 100 betekent dat de kosten hoger zijn dan verwacht.'}
             </ExplanationText>
           ),
         },
@@ -1191,7 +1189,9 @@ const Bind = [
         {
           component: () => (
             <ExplanationText>
-              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.{"\n\n"}Hogere service leidt in de regel tot hogere kosten.
+              De mate van service verschilt per pensioenfonds o.a. op het gebied van tijdig verwerken van pensioenbetalingen, openingsuren helpdesk, website mogelijkheden en afwerking van klachten. Het gemiddelde is 100.
+              {'\n\n'}
+              Hogere service leidt in de regel tot hogere kosten.
             </ExplanationText>
           ),
         },
@@ -1200,7 +1200,7 @@ const Bind = [
             <TitleBox
               h="23px"
             >
-              {'WELKE SERVICE IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?'}
+              WELKE SERVICE IS AFGESPROKEN MET WERKGEVER EN SOCIALE PARTNERS?
             </TitleBox>
           ),
         },
@@ -1350,7 +1350,7 @@ const Bind = [
     {
       id: 'RadarChart1',
       type: 'RadarChart',
-      keys: [KEYS.alle, KEYS.pension, KEYS.fonds],
+      keys: [KEYS_MAP.alle, KEYS_MAP.pension, KEYS_MAP.fonds],
       colors: [BRAND_COLORS_MAP.blue, BRAND_COLORS_MAP.lightBlue, BRAND_COLORS_MAP.orange],
       extraElements: [
         {
@@ -1516,17 +1516,17 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 105,
-            label: KEYS.fonds,
+            label: KEYS_MAP.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
         ],
@@ -1544,17 +1544,17 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
-            label: KEYS.fonds,
+            label: KEYS_MAP.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
         ],
@@ -1571,17 +1571,17 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
-            label: KEYS.fonds,
+            label: KEYS_MAP.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
         ],
@@ -1598,12 +1598,12 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
         ],
@@ -1620,17 +1620,17 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
-            label: KEYS.fonds,
+            label: KEYS_MAP.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
         ],
@@ -1707,48 +1707,48 @@ export const Pages = [
       data: [
         {
           type: RADAR_CHART_KEYS.costs,
-          [KEYS.alle]: 70,
-          [KEYS.pension]: 20,
-          [KEYS.fonds]: 130,
+          [KEYS_MAP.alle]: 70,
+          [KEYS_MAP.pension]: 20,
+          [KEYS_MAP.fonds]: 130,
 
         },
         {
           type: RADAR_CHART_KEYS['1yaring'],
-          [KEYS.alle]: 10,
-          [KEYS.pension]: 70,
-          [KEYS.fonds]: 20,
+          [KEYS_MAP.alle]: 10,
+          [KEYS_MAP.pension]: 70,
+          [KEYS_MAP.fonds]: 20,
 
         },
         {
           type: RADAR_CHART_KEYS['5jaring'],
-          [KEYS.alle]: 50,
-          [KEYS.pension]: 60,
-          [KEYS.fonds]: 70,
+          [KEYS_MAP.alle]: 50,
+          [KEYS_MAP.pension]: 60,
+          [KEYS_MAP.fonds]: 70,
 
         },
         {
           type: RADAR_CHART_KEYS['10jaring'],
-          [KEYS.alle]: 30,
-          [KEYS.pension]: 50,
-          [KEYS.fonds]: 160,
+          [KEYS_MAP.alle]: 30,
+          [KEYS_MAP.pension]: 50,
+          [KEYS_MAP.fonds]: 160,
         },
         {
           type: RADAR_CHART_KEYS.impleme,
-          [KEYS.alle]: 130,
-          [KEYS.pension]: 10,
-          [KEYS.fonds]: 50,
+          [KEYS_MAP.alle]: 130,
+          [KEYS_MAP.pension]: 10,
+          [KEYS_MAP.fonds]: 50,
         },
         {
           type: RADAR_CHART_KEYS.alpha,
-          [KEYS.alle]: 20,
-          [KEYS.pension]: 130,
-          [KEYS.fonds]: 40,
+          [KEYS_MAP.alle]: 20,
+          [KEYS_MAP.pension]: 130,
+          [KEYS_MAP.fonds]: 40,
         },
         {
           type: RADAR_CHART_KEYS.asset,
-          [KEYS.alle]: 10,
-          [KEYS.pension]: 20,
-          [KEYS.fonds]: 130,
+          [KEYS_MAP.alle]: 10,
+          [KEYS_MAP.pension]: 20,
+          [KEYS_MAP.fonds]: 130,
         },
       ],
     },
@@ -1761,17 +1761,17 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
-            label: KEYS.fonds,
+            label: KEYS_MAP.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
         ],
@@ -1788,17 +1788,17 @@ export const Pages = [
         values: [
           {
             value: 100,
-            label: KEYS.alle,
+            label: KEYS_MAP.alle,
             color: BRAND_COLORS_MAP.green,
           },
           {
             value: 110,
-            label: KEYS.pension,
+            label: KEYS_MAP.pension,
             color: BRAND_COLORS_MAP.lightBlue,
           },
           {
             value: 120,
-            label: KEYS.fonds,
+            label: KEYS_MAP.fonds,
             color: BRAND_COLORS_MAP.orange,
           },
         ],
@@ -1894,48 +1894,48 @@ export const Pages = [
       data: [
         {
           type: 'KOSTEN PENSIOENBEHEER DELNEMER(DEF,PF)',
-          [KEYS.alle]: 70,
-          [KEYS.pension]: 20,
-          [KEYS.fonds]: 130,
+          [KEYS_MAP.alle]: 70,
+          [KEYS_MAP.pension]: 20,
+          [KEYS_MAP.fonds]: 130,
 
         },
         {
           type: 'KOSTEN PENSIOENBEHEER DELNEMER(ALLE)',
-          [KEYS.alle]: 10,
-          [KEYS.pension]: 70,
-          [KEYS.fonds]: 20,
+          [KEYS_MAP.alle]: 10,
+          [KEYS_MAP.pension]: 70,
+          [KEYS_MAP.fonds]: 20,
 
         },
         {
           type: 'SERVICE - INDEX',
-          [KEYS.alle]: 50,
-          [KEYS.pension]: 60,
-          [KEYS.fonds]: 70,
+          [KEYS_MAP.alle]: 50,
+          [KEYS_MAP.pension]: 60,
+          [KEYS_MAP.fonds]: 70,
 
         },
         {
           type: 'COMPLEXITEITS INDEX',
-          [KEYS.alle]: 30,
-          [KEYS.pension]: 50,
-          [KEYS.fonds]: 160,
+          [KEYS_MAP.alle]: 30,
+          [KEYS_MAP.pension]: 50,
+          [KEYS_MAP.fonds]: 160,
         },
         {
           type: 'AUTOMATISERINGS INDEX',
-          [KEYS.alle]: 130,
-          [KEYS.pension]: 10,
-          [KEYS.fonds]: 50,
+          [KEYS_MAP.alle]: 130,
+          [KEYS_MAP.pension]: 10,
+          [KEYS_MAP.fonds]: 50,
         },
         {
           type: 'OVERDRACHTEN INDEX',
-          [KEYS.alle]: 20,
-          [KEYS.pension]: 130,
-          [KEYS.fonds]: 40,
+          [KEYS_MAP.alle]: 20,
+          [KEYS_MAP.pension]: 130,
+          [KEYS_MAP.fonds]: 40,
         },
         {
           type: 'SLAPERS INDEX',
-          [KEYS.alle]: 10,
-          [KEYS.pension]: 20,
-          [KEYS.fonds]: 130,
+          [KEYS_MAP.alle]: 10,
+          [KEYS_MAP.pension]: 20,
+          [KEYS_MAP.fonds]: 130,
         },
       ],
     },

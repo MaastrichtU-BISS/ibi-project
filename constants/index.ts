@@ -5,18 +5,20 @@ export const BRAND_COLORS_MAP = {
   cream: 'rgb(245, 239, 228)',
   green: '#32a866',
 }
-// export const BRAND_COLORS_MAP = {
-//   blue: '#203c65',
-//   orange: '#d58941',
-//   lightBlue: '#99a2bd',
-// }
 
 export const BRAND_COLORS = Object.values(BRAND_COLORS_MAP).sort()
 
 export const TITLE_COLOR = 'rgb(24, 55, 109)'
 
+export const FONT_WEIGHT = 600
+
 export const KEYS = ['FONDS', 'VERGELIJKBARE PENSIOENFONDSEN', 'ALLE DEELNEMENDE PENSIOENFONDSEN']
 
+export const KEYS_MAP = {
+  fonds: 'FONDS',
+  pension: 'VERGELIJKBARE PENSIOENFONDSEN',
+  alle: 'ALLE DEELNEMENDE PENSIOENFONDSEN',
+}
 export const DATA = {
   html: '',
   Speedometer: {
@@ -39,17 +41,14 @@ export const DATA = {
     ],
     segments: [
       {
-        // text: KEYS[0],
         value: 119,
         color: BRAND_COLORS[0],
       },
       {
-        // text: KEYS[1],
         value: 69,
         color: BRAND_COLORS[1],
       },
       {
-        // text: KEYS[2],
         value: 495,
         color: BRAND_COLORS[2],
       },
@@ -127,61 +126,3 @@ export const DATA = {
     },
   ],
 }
-
-// html: `<!DOCTYPE html>
-// <html>
-// <head>
-// <meta name="viewport" content="width=device-width, initial-scale=1">
-// <style>
-// .card {
-//   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-//   transition: 0.3s;
-//   width: 500px;
-//   height: 500px;
-// }
-
-// .card:hover {
-//   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-// }
-
-// .container {
-//   padding: 2px 16px;
-// }
-
-// .content {
-//   max-width: 500px;
-//   margin: auto;
-// }
-// </style>
-// </head>
-// <body>
-// <div class="content">
-//   <h2>Speedometer</h2>
-
-//   <div id="Speedometer" class="card">
-//   </div>
-
-//   <h2>PieChart</h2>
-
-//   <div id="PieChart" class="card">
-
-//   </div>
-//   <h2>RadarChart</h2>
-
-//   <div id="RadarChart" class="card">
-
-//   </div>
-//   <h2>BarChart</h2>
-
-//   <div id="BarChart" class="card">
-
-//   </div>
-//   <h2>HalfPieChart</h2>
-
-//   <div id="HalfPieChart" class="card">
-
-//   </div>
-// </div>
-
-// </body>
-// </html> `,

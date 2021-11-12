@@ -1,33 +1,9 @@
-import AsyncStorage from '@react-native-async-storage/async-storage'
-import {
-  ColorMode, extendTheme, StorageManager,
-} from 'native-base'
+import { extendTheme } from 'native-base'
 import 'react-native-gesture-handler'
 
-export const colorModeManager: StorageManager = {
-  get: async () => {
-    try {
-      const val = await AsyncStorage.getItem('@color-mode')
-      return val === 'dark' ? 'dark' : 'light'
-    } catch (e) {
-      return 'light'
-    }
-  },
-  set: async (value: ColorMode) => {
-    try {
-      await AsyncStorage.setItem('@color-mode', value)
-    } catch (e) {
-      console.log(e)
-    }
-  },
-}
-
 export const NATIVE_BASE_CONFIG = {
-  // dependencies: {
-  //   'linear-gradient': require('expo-linear-gradient').LinearGradient,
-  // },
   theme: extendTheme({
-    config: { initialColorMode: 'dark' },
+    config: { initialColorMode: 'light' },
     colors: {
       primary: {
         50: '#dff1ff',

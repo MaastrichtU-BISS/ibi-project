@@ -6,7 +6,7 @@ import {
 import { View, Box, Text } from 'native-base'
 import { StyleSheet } from 'react-native'
 import { BRAND_COLORS_MAP } from '@constants'
-import GaugeChart from './GaugeChart/lib2'
+import GaugeChart from './GaugeChart'
 
 const MARGIN = 100
 

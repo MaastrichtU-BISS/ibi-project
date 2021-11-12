@@ -39,13 +39,3 @@ export const useChartTheme = (override: any = {}) => {
     colorMode,
   ]
 }
-
-export const BRAND_COLORS_MAP = {
-  blue: '#203c65',
-  orange: '#d58941',
-  lightBlue: '#99a2bd',
-}
-
-export const BRAND_COLORS = Object.values(BRAND_COLORS_MAP).sort()
-
-export const KEYS = ['FONDS', 'VERGELIJKBARE PENSIOENFONDSEN', 'ALLE DEELNEMENDE PENSIOENFONDSEN']

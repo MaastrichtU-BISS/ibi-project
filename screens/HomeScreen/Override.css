@@ -565,6 +565,14 @@
   background-color: var(--background);
 }
 
+#PieChart0ExtraContainer11 {
+  position: absolute;
+  left: 25px;
+  top: 45px;
+  width: 149px;
+  height: 5px;
+}
+
 #Speedometer0ExtraContainer0 {
   position: absolute;
   left: 565px;

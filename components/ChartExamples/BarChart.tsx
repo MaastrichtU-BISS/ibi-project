@@ -1,14 +1,14 @@
-import React from 'react'
+import { BRAND_COLORS, KEYS } from '@constants'
 import { ResponsiveBar } from '@nivo/bar'
 import { Box, Text } from 'native-base'
-import { BRAND_COLORS, KEYS, BRAND_COLORS_MAP } from '@constants'
+import React from 'react'
 import { useChartTheme } from './utils'
 
 const FONT_SIZE = 25
 const MARGIN_TOP = '205px'
 const HEIGHT = 20
 
-export default (props) => {
+export default (props: any) => {
   const {
     keys, data, values, min, max,
   } = props
